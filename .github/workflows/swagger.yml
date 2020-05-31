@@ -13,7 +13,7 @@ jobs:
         mkdir tmp
         mkdir build
         cd tmp
-        apt install libarchive-tools
+        sudo apt install libarchive-tools
     - name: fetch dependencies
       run: |
         curl -o swagger.zip -L https://github.com/swagger-api/swagger-ui/archive/v3.25.5.zip
