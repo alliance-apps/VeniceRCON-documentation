@@ -16,6 +16,8 @@ jobs:
         sudo apt install libarchive-tools
     - name: fetch dependencies
       run: |
+        cwd
+        ls ../
         curl -o swagger.zip -L https://github.com/swagger-api/swagger-ui/archive/v3.25.5.zip
         bsdtar -xf swagger.zip -s'|[^/]*/||'
         rm swagger.zip
