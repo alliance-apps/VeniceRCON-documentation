@@ -8,22 +8,20 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
     - uses: actions/checkout@v1
-    - name: prepare
+    - name: apt install
+      run: |
+        sudo apt install libarchive-tools
+    - name: build docs
       run: |
         mkdir tmp
         mkdir build
         cd tmp
-        sudo apt install libarchive-tools
-    - name: fetch dependencies
-      run: |
-        cwd
-        ls ../
         curl -o swagger.zip -L https://github.com/swagger-api/swagger-ui/archive/v3.25.5.zip
         bsdtar -xf swagger.zip -s'|[^/]*/||'
         rm swagger.zip
         sed -i 's/url=".*"/url="swagger\/meta.yaml"/' ./dist/index.html
         cp -R dist/* ../build/
-        cp -R ../swagger ./
+        cp -R ../swagger ../build/
     - name: Deploy on Github Pages
       uses: JamesIves/github-pages-deploy-action@master
       env:
