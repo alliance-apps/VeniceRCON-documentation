@@ -1,0 +1,31 @@
+name: Swagger
+
+on: [push, pull_request]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+    - uses: actions/checkout@v1
+    - name: prepare
+      run: |
+        mdkir tmp
+        mkdir build
+        cd tmp
+        apt install libarchive-tools
+    - name: fetch dependencies
+      run: |
+        curl -o swagger.zip -L https://github.com/swagger-api/swagger-ui/archive/v3.25.5.zip
+        bsdtar -xf swagger.zip -s'|[^/]*/||'
+        rm swagger.zip
+        sed -i 's/url=".*"/url="swagger/meta.yaml"/' dist/index.html
+        cp -R dist/* ../build/
+        cp -R ../swagger ./
+    - name: Deploy on Github Pages
+      uses: JamesIves/github-pages-deploy-action@master
+      env:
+        ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
+        BASE_BRANCH: master
+        BRANCH: gh-pages
+        FOLDER: build
