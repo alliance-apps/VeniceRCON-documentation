@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: prepare
       run: |
-        mdkir tmp
+        mkdir tmp
         mkdir build
         cd tmp
         apt install libarchive-tools
