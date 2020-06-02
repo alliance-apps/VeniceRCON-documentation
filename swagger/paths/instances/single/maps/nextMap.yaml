@@ -1,0 +1,20 @@
+post:
+  summary: sets the index of the next map to be played
+  description: |
+    sets the index of the next map to be played
+  tags:
+    - "Maps"
+  security:
+    - bearerAuth: ["MAPS#SWITCH"]
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            index:
+              type: integer
+  responses:
+    '200':
+      description: next map set successfully

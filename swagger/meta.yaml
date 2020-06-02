@@ -20,6 +20,8 @@ tags:
     description: player managment related routes
   - name: Bans
     description: banning related routes
+  - name: Maps
+    description: map managment related routes
 paths:
   /api/auth/login:
     $ref: "paths/auth/login.yaml"
@@ -57,3 +59,17 @@ paths:
     $ref: "paths/instances/single/players/ban.yaml"
   /api/instances/{instanceId}/bans:
     $ref: "paths/instances/single/bans.yaml"
+  /api/instances/{instanceId}/maps:
+    $ref: "paths/instances/single/maps/index.yaml"
+  /api/instances/{instanceId}/maps/current:
+    $ref: "paths/instances/single/maps/current.yaml"
+  /api/instances/{instanceId}/maps/endRound:
+    $ref: "paths/instances/single/maps/endRound.yaml"
+  /api/instances/{instanceId}/maps/nextRound:
+    $ref: "paths/instances/single/maps/nextRound.yaml"
+  /api/instances/{instanceId}/maps/restartRound:
+    $ref: "paths/instances/single/maps/restartRound.yaml"
+  /api/instances/{instanceId}/maps/nextMap:
+    $ref: "paths/instances/single/maps/nextMap.yaml"
+  /api/instances/{instanceId}/maps/{mapIndex}:
+    $ref: "paths/instances/single/maps/map.yaml"

@@ -1,0 +1,11 @@
+post:
+  summary: starts the next round
+  description: |
+    starts the next round
+  tags:
+    - "Maps"
+  security:
+    - bearerAuth: ["MAP#SWITCH"]
+  responses:
+    '200':
+      description: map started successfull

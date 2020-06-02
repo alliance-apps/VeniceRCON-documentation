@@ -1,0 +1,42 @@
+get:
+  summary: retrieves a list of maps
+  description: |
+    retrieves a list of maps which are set in the rotation
+  tags:
+    - "Maps"
+  security:
+    - bearerAuth: ["INSTANCE#ACCESS"]
+  responses:
+    '200':
+      description: list of maps currently active
+      content:
+        application/json:
+          schema:
+            $ref: "../../../../schemes/Map.yaml#/Maps"
+post:
+  summary: adds a map to the rotation
+  description: |
+    adds a map to the rotation
+  tags:
+    - "Maps"
+  security:
+    - bearerAuth: ["MAPS#MANAGE"]
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            map:
+              type: string
+            mode:
+              type: string
+            rounds:
+              type: integer
+            index:
+              type: integer
+              nullable: true
+  responses:
+    '200':
+      description: map has been added to the rotation
