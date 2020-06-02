@@ -4,5 +4,5 @@ repo_url: https://github.com/alliance-apps/VeniceRCON-documentation
 nav:
   - Home: index.md
   - Socket: socket.md
-  - API: /api/
+  - API: /VeniceRCON-documentation/api/
 theme: readthedocs
