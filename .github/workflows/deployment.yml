@@ -1,27 +1,43 @@
 name: Swagger
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
     if: github.ref == 'refs/heads/master'
     steps:
     - uses: actions/checkout@v1
     - name: apt install
       run: |
         sudo apt install libarchive-tools
-    - name: build docs
+    - name: setup Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install mkdocs pygments pymdown-extensions
+    - name: build swagger docs
       run: |
         mkdir tmp
         mkdir build
+        mkdir build/api
         cd tmp
         curl -o swagger.zip -L https://github.com/swagger-api/swagger-ui/archive/v3.25.5.zip
         bsdtar -xf swagger.zip -s'|[^/]*/||'
         rm swagger.zip
         sed -i 's/url:\s*".*"/url:"swagger\/meta.yaml"/' ./dist/index.html
-        cp -R ./dist/* ../build/
-        cp -R ../swagger ../build/
+        cp -R ./dist/* ../build/api/
+        cp -R ../swagger ../build/api/
+        cd ..
+    - name: build mkdocs
+      run: |
+        mkdocs build --verbose -d build
     - name: Deploy on Github Pages
       uses: JamesIves/github-pages-deploy-action@master
       env:

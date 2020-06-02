@@ -1,0 +1,8 @@
+site_name: VeniceRCON
+repo_name: alliance-apps/VeniceRCON-documentation
+repo_url: https://github.com/alliance-apps/VeniceRCON-documentation
+nav:
+  - Home: index.md
+  - Socket: socket.md
+  - API: /api/
+theme: readthedocs
