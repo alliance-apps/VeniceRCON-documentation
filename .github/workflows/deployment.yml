@@ -22,11 +22,16 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install mkdocs pygments pymdown-extensions
-    - name: build swagger docs
+    - name: create folders
       run: |
         mkdir tmp
         mkdir build
         mkdir build/api
+    - name: build mkdocs
+      run: |
+        mkdocs build --verbose -d build
+    - name: build swagger docs
+      run: |
         cd tmp
         curl -o swagger.zip -L https://github.com/swagger-api/swagger-ui/archive/v3.25.5.zip
         bsdtar -xf swagger.zip -s'|[^/]*/||'
@@ -35,9 +40,6 @@ jobs:
         cp -R ./dist/* ../build/api/
         cp -R ../swagger ../build/api/
         cd ..
-    - name: build mkdocs
-      run: |
-        mkdocs build --verbose -d build
     - name: Deploy on Github Pages
       uses: JamesIves/github-pages-deploy-action@master
       env:
