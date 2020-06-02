@@ -1,7 +1,4 @@
-
-# Socket Events
-
-> INSTANCE#ADD
+### INSTANCE#ADD
 
 ```javascript
 /**
@@ -16,7 +13,7 @@ socket.on("INSTANCE#ADD", event => {
 ```
 
 
-> INSTANCE#UPDATE
+### INSTANCE#UPDATE
 
 ```javascript
 /**
@@ -31,7 +28,7 @@ socket.on("INSTANCE#UPDATE", event => {
 ```
 
 
-> INSTANCE#REMOVE
+### INSTANCE#REMOVE
 
 ```javascript
 /**
@@ -41,16 +38,5 @@ socket.on("INSTANCE#UPDATE", event => {
  */
 socket.on("INSTANCE#REMOVE", event => {
   console.log(`removed from instance ${event.id}`)
-})
-```
-
-> SELF#PERMISSION_UPDATE
-
-```javascript
-/**
- * gets fired when own permissions have been updated
- */
-socket.on("SELF#PERMISSION_UPDATE", () => {
-  //get new permissions via /api/auth/whoami
 })
 ```

@@ -3,6 +3,10 @@ repo_name: alliance-apps/VeniceRCON-documentation
 repo_url: https://github.com/alliance-apps/VeniceRCON-documentation
 nav:
   - Home: index.md
-  - Socket: socket.md
+  - Installation: installation/index.md
+  - Socket:
+    - Instance: socket/instance.md
+    - Self: socket/self.md
+  - Scopes: scopes/index.md
   - API: /VeniceRCON-documentation/api/
 theme: readthedocs
