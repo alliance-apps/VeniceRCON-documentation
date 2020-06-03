@@ -6,15 +6,6 @@ post:
     - "Maps"
   security:
     - bearerAuth: ["MAPS#SWITCH"]
-  requestBody:
-    required: true
-    content:
-      application/json:
-        schema:
-          type: object
-          properties:
-            index:
-              type: integer
   responses:
     '200':
       description: next map set successfully

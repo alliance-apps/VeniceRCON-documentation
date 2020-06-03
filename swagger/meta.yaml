@@ -69,7 +69,7 @@ paths:
     $ref: "paths/instances/single/maps/nextRound.yaml"
   /api/instances/{instanceId}/maps/restartRound:
     $ref: "paths/instances/single/maps/restartRound.yaml"
-  /api/instances/{instanceId}/maps/nextMap:
-    $ref: "paths/instances/single/maps/nextMap.yaml"
+  /api/instances/{instanceId}/maps/{mapIndex}/next:
+    $ref: "paths/instances/single/maps/next.yaml"
   /api/instances/{instanceId}/maps/{mapIndex}:
     $ref: "paths/instances/single/maps/map.yaml"
