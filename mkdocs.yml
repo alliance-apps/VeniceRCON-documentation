@@ -7,6 +7,8 @@ nav:
   - Socket:
     - Instance: socket/instance.md
     - Self: socket/self.md
+  - Plugins:
+    - Meta: plugin/meta.md
   - Scopes: scopes/index.md
   - API: /VeniceRCON-documentation/api/
 theme: readthedocs
