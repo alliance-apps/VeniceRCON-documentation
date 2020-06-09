@@ -22,6 +22,8 @@ tags:
     description: banning related routes
   - name: Maps
     description: map managment related routes
+  - name: ReservedSlot
+    description: battlefield reserved slot list
 paths:
   /api/auth/login:
     $ref: "paths/auth/login.yaml"
@@ -73,3 +75,7 @@ paths:
     $ref: "paths/instances/single/maps/next.yaml"
   /api/instances/{instanceId}/maps/{mapIndex}:
     $ref: "paths/instances/single/maps/map.yaml"
+  /api/instances/{instanceId}/reservedslot:
+    $ref: "paths/instances/single/reservedslot/index.yaml"
+  /api/instances/{instanceId}/reservedslot/{slot}:
+    $ref: "paths/instances/single/reservedslot/slot.yaml"
