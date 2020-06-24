@@ -12,4 +12,4 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../../schemes/Player.yaml#/Player"
+            $ref: "../../../schemes/Player.yaml#/Player"

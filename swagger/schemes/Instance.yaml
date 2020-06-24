@@ -11,6 +11,11 @@ Instance:
       type: string
     port:
       type: number
+    version:
+      type: string
+      enum:
+        - BF3
+        - VU
     state:
       type: number
       enum:
@@ -24,3 +29,9 @@ Instance:
       $ref: "ServerInfo.yaml#/ServerInfo"
     players:
       $ref: "Player.yaml#/Players"
+    maps:
+      $ref: "Map.yaml#/Maps"
+    vars:
+      $ref: "Vars.yaml#/Variables"
+    mapInfo:
+      $ref: "Map.yaml#/Info"

@@ -12,7 +12,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../schemes/Ban.yaml#/Bans"
+            $ref: "../../schemes/Ban.yaml#/Bans"
 post:
   summary: creates a new ban
   description: |

@@ -13,3 +13,10 @@ Map:
       type: number
     index:
       type: number
+Info:
+  type: object
+  properties:
+    index:
+      type: number
+    next:
+      type: number

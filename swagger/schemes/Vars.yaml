@@ -1,0 +1,13 @@
+Options:
+  type: object
+  properties:
+    getters:
+      type: array
+      items:
+        type: string
+    setters:
+      type: array
+      items:
+        type: string
+Variables:
+  type: object

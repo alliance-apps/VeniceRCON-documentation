@@ -12,7 +12,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../../schemes/Map.yaml#/Maps"
+            $ref: "../../../schemes/Map.yaml#/Maps"
 post:
   summary: adds a map to the rotation
   description: |

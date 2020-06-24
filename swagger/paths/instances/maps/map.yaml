@@ -12,7 +12,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../../schemes/Map.yaml#/Map"
+            $ref: "../../../schemes/Map.yaml#/Map"
 delete:
   summary: removes the map from the current rotation
   description: |

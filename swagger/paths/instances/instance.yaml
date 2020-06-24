@@ -19,7 +19,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: "../../../schemes/Instance.yaml#/Instance"
+            $ref: "../../schemes/Instance.yaml#/Instance"
 delete:
   summary: removes an instance
   description: |
