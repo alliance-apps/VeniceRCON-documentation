@@ -1,0 +1,37 @@
+post:
+  summary: sends a message
+  description: |
+    sends a message to the given subset
+  tags:
+    - "Instance"
+  security:
+    - bearerAuth: ["PLAYER#MESSAGE"]
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            message:
+              type: string
+            subset:
+              type: string
+              enum:
+                - player
+                - squad
+                - team
+                - all
+              nullable: true
+            subsetId:
+              type: string
+              nullable: true
+            yell:
+              type: boolean
+              nullable: true
+            yellDuration:
+              type: number
+              nullable: true
+  responses:
+    '200':
+      description: message has been sent successfully
