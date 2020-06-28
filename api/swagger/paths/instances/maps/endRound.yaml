@@ -1,0 +1,20 @@
+post:
+  summary: ends the current round with a set winning team
+  description: |
+    ends the current round with a set winning team
+  tags:
+    - "Maps"
+  security:
+    - bearerAuth: ["MAPS#SWITCH"]
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            winner:
+              type: integer
+  responses:
+    '200':
+      description: map ended successfully

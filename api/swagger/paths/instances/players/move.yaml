@@ -1,0 +1,26 @@
+post:
+  summary: moves a player to another team / squad
+  description: |
+    moves a player to another team / squad
+  tags:
+    - "Player"
+  security:
+    - bearerAuth: ["PLAYER#MOVE"]
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            teamId:
+              type: number
+            squadId:
+              type: number
+              nullable: true
+            kill:
+              type: boolean
+              nullable: true
+  responses:
+    '200':
+      description: player has been moved successfully

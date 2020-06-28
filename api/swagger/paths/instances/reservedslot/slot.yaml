@@ -1,0 +1,11 @@
+delete:
+  summary: deletes the vip slot
+  description: |
+    deletes the vip slot
+  tags:
+    - "ReservedSlot"
+  security:
+    - bearerAuth: ["RESERVEDSLOT#DELETE"]
+  responses:
+    '200':
+      description: slot has been deleted

@@ -1,0 +1,37 @@
+get:
+  summary: retrieves a list of vip slots
+  description: |
+    retrieves a list of vip slots
+  tags:
+    - "ReservedSlot"
+  security:
+    - bearerAuth: ["RESERVEDSLOT#ACCESS"]
+  responses:
+    '200':
+      description: list of users
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+post:
+  summary: adds a name to the vip list
+  description: |
+    adds a name to the vip list
+  tags:
+    - "ReservedSlot"
+  security:
+    - bearerAuth: ["RESERVEDSLOT#CREATE"]
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+  responses:
+    '200':
+      description: slot has been added successfully

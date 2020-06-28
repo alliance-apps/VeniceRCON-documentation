@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Scopes - VeniceRCON</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Scopes";
+    var mkdocs_page_input_path = "scopes/index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> VeniceRCON</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Socket</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../socket/instance/">Instance</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../socket/self/">Self</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Plugins</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../plugin/meta/">Meta</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Scopes</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="/VeniceRCON-documentation/api/">API</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">VeniceRCON</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Scopes</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/alliance-apps/VeniceRCON-documentation/edit/master/docs/scopes/index.md"> Edit on alliance-apps/VeniceRCON-documentation</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="permission-scopes">Permission Scopes</h2>
+<p>Permission Scopes are being saved as a bitmask, their validity can be for only a specific instance or globally.</p>
+<table>
+<thead>
+<tr>
+<th>scope</th>
+<th>bit</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INSTANCE#ACCESS</code></td>
+<td><code>0x01</code></td>
+<td>read access for an instance</td>
+</tr>
+<tr>
+<td><code>INSTANCE#CREATE</code></td>
+<td><code>0x02</code></td>
+<td>create an instance</td>
+</tr>
+<tr>
+<td><code>INSTANCE#UPDATE</code></td>
+<td><code>0x04</code></td>
+<td>modify an instance</td>
+</tr>
+<tr>
+<td><code>INSTANCE#DELETE</code></td>
+<td><code>0x08</code></td>
+<td>delete an instance</td>
+</tr>
+<tr>
+<td><code>INSTANCEUSER#ACCESS</code></td>
+<td><code>0x100</code></td>
+<td>read access for an instance</td>
+</tr>
+<tr>
+<td><code>INSTANCEUSER#CREATE</code></td>
+<td><code>0x200</code></td>
+<td>create invite tokens for an instance</td>
+</tr>
+<tr>
+<td><code>INSTANCEUSER#UPDATE</code></td>
+<td><code>0x400</code></td>
+<td>update permissions from an instace</td>
+</tr>
+<tr>
+<td><code>INSTANCEUSER#REMOVE</code></td>
+<td><code>0x800</code></td>
+<td>remove users from an instance</td>
+</tr>
+<tr>
+<td><code>BAN#ACCESS</code></td>
+<td><code>0x010000</code></td>
+<td>view the current ban list</td>
+</tr>
+<tr>
+<td><code>BAN#CREATE</code></td>
+<td><code>0x020000</code></td>
+<td>create bans</td>
+</tr>
+<tr>
+<td><code>BAN#DELETE</code></td>
+<td><code>0x040000</code></td>
+<td>remove bans</td>
+</tr>
+<tr>
+<td><code>PLAYER#KILL</code></td>
+<td><code>0x01000000</code></td>
+<td>kill a player</td>
+</tr>
+<tr>
+<td><code>PLAYER#KICK</code></td>
+<td><code>0x02000000</code></td>
+<td>kick a player</td>
+</tr>
+<tr>
+<td><code>PLAYER#MESSAGE</code></td>
+<td><code>0x04000000</code></td>
+<td>messages a player</td>
+</tr>
+<tr>
+<td><code>PLAYER#MOVE</code></td>
+<td><code>0x08000000</code></td>
+<td>moves a player</td>
+</tr>
+<tr>
+<td><code>MAP#SWITCH</code></td>
+<td><code>0x0100000000</code></td>
+<td>change map</td>
+</tr>
+<tr>
+<td><code>MAP#MANAGE</code></td>
+<td><code>0x0200000000</code></td>
+<td>delete or add new maps</td>
+</tr>
+<tr>
+<td><code>RESERVEDSLOT#ACCESS</code></td>
+<td><code>0x010000000000</code></td>
+<td>access the reserved slot list</td>
+</tr>
+<tr>
+<td><code>RESERVEDSLOT#CREATE</code></td>
+<td><code>0x020000000000</code></td>
+<td>adds someone to reserved slot list</td>
+</tr>
+<tr>
+<td><code>RESERVEDSLOT#DELETE</code></td>
+<td><code>0x020000000000</code></td>
+<td>deletes someone from the reserved slot list</td>
+</tr>
+<tr>
+<td><code>PLUGIN#ACCESS</code></td>
+<td><code>0x01000000000000</code></td>
+<td>access plugin informations</td>
+</tr>
+<tr>
+<td><code>PLUGIN#MODIFY</code></td>
+<td><code>0x02000000000000</code></td>
+<td>modify settings of plugins</td>
+</tr>
+<tr>
+<td><code>VARIABLE#MODIFY</code></td>
+<td><code>0x0200000000000000</code></td>
+<td>modify variables</td>
+</tr>
+<tr>
+<td><code>EVENT#CHAT</code></td>
+<td><code>0x010000000000000000</code></td>
+<td>access chat events</td>
+</tr>
+<tr>
+<td><code>EVENT#KILL</code></td>
+<td><code>0x020000000000000000</code></td>
+<td>access kill events</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../plugin/meta/" class="btn btn-neutral" title="Meta"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../plugin/meta/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

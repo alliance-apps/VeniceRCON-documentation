@@ -1,0 +1,36 @@
+get:
+  summary: retrieves a list of variables for the current instance
+  description: |
+    retrieves a list of variables for the current instance
+  tags:
+    - "Vars"
+  security:
+    - bearerAuth: ["INSTANCE#ACCESS"]
+  responses:
+    '200':
+      description: object with variables
+      content:
+        application/json:
+          schema:
+            $ref: "../../../schemes/Vars.yaml#/Variables"
+post:
+  summary: updates variables in this instance
+  description: |
+    updates variables in this instance
+  tags:
+    - "Vars"
+  security:
+    - bearerAuth: ["INSTANCE#ACCESS"]
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+  responses:
+    '200':
+      description: updated successfully
+      content:
+        application/json:
+          schema:
+            $ref: "../../../schemes/Vars.yaml#/Variables"

@@ -1,0 +1,22 @@
+Maps:
+  type: array
+  items:
+    $ref: "#/Map"
+Map:
+  type: object
+  properties:
+    map:
+      type: string
+    mode:
+      type: string
+    rounds:
+      type: number
+    index:
+      type: number
+Info:
+  type: object
+  properties:
+    index:
+      type: number
+    next:
+      type: number
