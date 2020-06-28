@@ -28,5 +28,6 @@ Permission Scopes are being saved as a bitmask, their validity can be for only a
 | `PLUGIN#ACCESS`       | `0x01000000000000`     | access plugin informations
 | `PLUGIN#MODIFY`       | `0x02000000000000`     | modify settings of plugins
 | `VARIABLE#MODIFY`     | `0x0200000000000000`   | modify variables
-| `EVENT#CHAT`          | `0x010000000000000000n`| access chat events
+| `EVENT#CHAT`          | `0x010000000000000000` | access chat events
+| `EVENT#KILL`          | `0x020000000000000000` | access kill events
 

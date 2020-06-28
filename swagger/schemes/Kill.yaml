@@ -1,0 +1,32 @@
+Kills:
+  type: array
+  items:
+    $ref: "#/Kill"
+Kill:
+  type: object
+  properties:
+    id:
+      type: number
+    instance:
+      type: number
+    weapon:
+      type: string
+    headshot:
+      type: boolean
+    created:
+      type: string
+    killer:
+      type: object
+      properties:
+        name:
+          type: string
+        guid:
+          type: string
+      nullable: true
+    killed:
+      type: object
+      properties:
+        name:
+          type: string
+        guid:
+          type: string

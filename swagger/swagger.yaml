@@ -95,3 +95,5 @@ paths:
     $ref: "paths/instances/vars/options.yaml"
   /api/instances/{instanceId}/events/chat:
     $ref: "paths/instances/events/chat.yaml"
+  /api/instances/{instanceId}/events/kill:
+    $ref: "paths/instances/events/kill.yaml"
