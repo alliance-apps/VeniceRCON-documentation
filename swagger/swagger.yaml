@@ -26,6 +26,8 @@ tags:
     description: battlefield reserved slot list
   - name: Vars
     description: server variables
+  - name: Events
+    description: various queryable events
 paths:
   /api/auth/login:
     $ref: "paths/auth/login.yaml"
@@ -91,3 +93,5 @@ paths:
     $ref: "paths/instances/vars/index.yaml"
   /api/instances/{instanceId}/vars/options:
     $ref: "paths/instances/vars/options.yaml"
+  /api/instances/{instanceId}/events/chat:
+    $ref: "paths/instances/events/chat.yaml"

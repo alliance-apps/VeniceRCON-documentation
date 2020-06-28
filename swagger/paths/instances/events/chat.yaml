@@ -1,0 +1,28 @@
+get:
+  summary: retrieves chat messages
+  description: |
+    retrieves a certain amount of chat messages from a specific date
+    Required Scope: EVENT#CHAT
+  tags:
+    - "Events"
+  security:
+    - bearerAuth: ["EVENT#CHAT"]
+  parameters:
+    - in: query
+      name: count
+      schema:
+        type: integer
+      description: amount of messages to retrieve
+    - in: query
+      name: from
+      schema:
+        type: string
+        format: date
+      description: date to retrieve messages from
+  responses:
+    '200':
+      description: object with variables
+      content:
+        application/json:
+          schema:
+            $ref: "../../../schemes/ChatMessage.yaml#/Messages"
