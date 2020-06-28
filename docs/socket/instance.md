@@ -32,11 +32,35 @@ socket.on("INSTANCE#UPDATE", event => {
 
 ```javascript
 /**
- * removed instance, either permissions have been revoked or instance has been deleted
+ * removes instance, either permissions have been revoked or instance has been deleted
  * @property {object} event
  * @property {number} event.id the instance which should get removed
  */
 socket.on("INSTANCE#REMOVE", event => {
   console.log(`removed from instance ${event.id}`)
+})
+```
+
+### INSTANCE#CHAT
+
+```javascript
+/**
+ * gets emitted when a chat event gets received from the server
+ * @property {object} event see https://alliance-apps.github.io/VeniceRCON-documentation/api/#/Events/get_api_instances__instanceId__events_chat
+ */
+socket.on("INSTANCE#CHAT", event => {
+  //do stuff here
+})
+```
+
+### INSTANCE#KILL
+
+```javascript
+/**
+ * gets emitted when a kill event gets received from the server
+ * @property {object} event see https://alliance-apps.github.io/VeniceRCON-documentation/api/#/Events/get_api_instances__instanceId__events_kill
+ */
+socket.on("INSTANCE#KILL", event => {
+  //do stuff here
 })
 ```

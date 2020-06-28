@@ -17,12 +17,12 @@ Kill:
       type: string
     killer:
       type: object
+      nullable: true
       properties:
         name:
           type: string
         guid:
           type: string
-      nullable: true
     killed:
       type: object
       properties:
