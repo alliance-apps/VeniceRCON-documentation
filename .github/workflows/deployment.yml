@@ -1,31 +1,31 @@
-name: Swagger
+name: Documentation
 
-on: [push]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.8]
-    if: github.ref == 'refs/heads/master'
     steps:
     - uses: actions/checkout@v1
     - name: apt install
       run: |
         sudo apt install libarchive-tools
-    - name: setup Python ${{ matrix.python-version }}
+    - name: Setup Python
       uses: actions/setup-python@v2
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: 3.8
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install mkdocs pygments pymdown-extensions
-    - name: build mkdocs
+    - name: Build Mkdocs
       run: |
         mkdocs build --verbose -d build
-    - name: build swagger docs
+    - name: Build Swagger docs
       run: |
         mkdir tmp
         mkdir build/api
@@ -39,8 +39,8 @@ jobs:
         cd ..
     - name: Deploy on Github Pages
       uses: JamesIves/github-pages-deploy-action@master
-      env:
-        ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
-        BASE_BRANCH: master
+      if: github.ref == 'refs/heads/master'
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: build
