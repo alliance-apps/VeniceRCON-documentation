@@ -28,6 +28,8 @@ tags:
     description: server variables
   - name: Events
     description: various queryable events
+  - name: Plugin
+    description: all plugin related routes
 paths:
   /api/auth/login:
     $ref: "paths/auth/login.yaml"
@@ -97,3 +99,15 @@ paths:
     $ref: "paths/instances/events/chat.yaml"
   /api/instances/{instanceId}/events/kill:
     $ref: "paths/instances/events/kill.yaml"
+  /api/instances/{instanceId}/plugins:
+    $ref: "paths/instances/plugins/index.yaml"
+  /api/instances/{instanceId}/plugins/available:
+    $ref: "paths/instances/plugins/available.yaml"
+  /api/instances/{instanceId}/plugins/{id}:
+    $ref: "paths/instances/plugins/plugin.yaml"
+  /api/instances/{instanceId}/plugins/{id}/start:
+    $ref: "paths/instances/plugins/start.yaml"
+  /api/instances/{instanceId}/plugins/{id}/stop:
+    $ref: "paths/instances/plugins/stop.yaml"
+  /api/instances/{instanceId}/plugins/{id}/config:
+    $ref: "paths/instances/plugins/config.yaml"

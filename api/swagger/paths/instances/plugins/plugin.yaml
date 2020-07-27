@@ -1,0 +1,15 @@
+get:
+  summary: retrieves a list of plugins which can be used
+  description: |
+    retrieves a list of plugins which can be used
+  tags:
+    - "Plugin"
+  security:
+    - bearerAuth: ["PLUGIN#ACCESS"]
+  responses:
+    '200':
+      description: array of Plugin Meta files
+      content:
+        application/json:
+          schema:
+            $ref: "../../../schemes/Plugin.yaml#/Metas"

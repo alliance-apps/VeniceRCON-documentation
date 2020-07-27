@@ -68,6 +68,8 @@
     <ul class="current">
     </ul>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../script/">Script</a>
+                    </li>
                 </ul>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../../scopes/">Scopes</a>
@@ -123,8 +125,9 @@ name: &quot;Test Plugin&quot;
 description: &quot;plugin to test the rcon plugin interface&quot;
 #the version string for the plugin
 version: &quot;1.0.0&quot;
-#plugin language type currently only &quot;JS&quot; is supported
-backend: &quot;JS&quot;
+#plugin server backend type &quot;VU&quot; and &quot;BF3&quot; allowed
+#if &quot;BF3&quot; has been chosen then it will run on servers with VU and BF3
+backend: &quot;BF3&quot;
 #plugin entry point
 entry: &quot;index.js&quot;
 vars:
@@ -149,7 +152,7 @@ vars:
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../scopes/" class="btn btn-neutral float-right" title="Scopes">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../script/" class="btn btn-neutral float-right" title="Script">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../../socket/self/" class="btn btn-neutral" title="Self"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -181,7 +184,7 @@ vars:
         <span><a href="../../socket/self/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../scopes/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../script/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

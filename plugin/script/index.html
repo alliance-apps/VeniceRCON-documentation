@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Instance - VeniceRCON</title>
+  <title>Script - VeniceRCON</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Instance";
-    var mkdocs_page_input_path = "socket/instance.md";
+    var mkdocs_page_name = "Script";
+    var mkdocs_page_input_path = "plugin/script.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -56,19 +56,17 @@
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Socket</span></p>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Instance</a>
-    <ul class="current">
-    </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../socket/instance/">Instance</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../self/">Self</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../socket/self/">Self</a>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Plugins</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../plugin/meta/">Meta</a>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../meta/">Meta</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../plugin/script/">Script</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Script</a>
                     </li>
                 </ul>
                 <ul>
@@ -100,14 +98,14 @@
     
       
         
-          <li>Socket &raquo;</li>
+          <li>Plugins &raquo;</li>
         
       
     
-    <li>Instance</li>
+    <li>Script</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/alliance-apps/VeniceRCON-documentation/edit/master/docs/socket/instance.md"> Edit on alliance-apps/VeniceRCON-documentation</a>
+        <a href="https://github.com/alliance-apps/VeniceRCON-documentation/edit/master/docs/plugin/script.md"> Edit on alliance-apps/VeniceRCON-documentation</a>
       
     </li>
   </ul>
@@ -117,59 +115,17 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="instanceadd">INSTANCE#ADD</h3>
-<pre><code class="javascript">/**
- * socket got added to an instance
- * @property {object} event
- * @property {number} event.id the instance which has been changed
- * @property {object} event.state current state of the instance
- */
-socket.on(&quot;INSTANCE#ADD&quot;, event =&gt; {
-  console.log(&quot;got added to instance&quot;, event.id, event.state.serverinfo.name)
-})
-</code></pre>
-
-<h3 id="instanceupdate">INSTANCE#UPDATE</h3>
-<pre><code class="javascript">/**
- * instance property has been changed inside the state
- * @property {object} event
- * @property {number} event.id the instance which has been changed
- * @property {[string, string|number|boolean|undefined|(number|string|boolean)[]][]&gt;} event.changes
- */
-socket.on(&quot;INSTANCE#UPDATE&quot;, event =&gt; {
-  console.log(`received updates for instance with id ${event.id}`, event.changes)
-})
-</code></pre>
-
-<h3 id="instanceremove">INSTANCE#REMOVE</h3>
-<pre><code class="javascript">/**
- * removes instance, either permissions have been revoked or instance has been deleted
- * @property {object} event
- * @property {number} event.id the instance which should get removed
- */
-socket.on(&quot;INSTANCE#REMOVE&quot;, event =&gt; {
-  console.log(`removed from instance ${event.id}`)
-})
-</code></pre>
-
-<h3 id="instancechat">INSTANCE#CHAT</h3>
-<pre><code class="javascript">/**
- * gets emitted when a chat event gets received from the server
- * @property {object} event see https://alliance-apps.github.io/VeniceRCON-documentation/api/#/Events/get_api_instances__instanceId__events_chat
- */
-socket.on(&quot;INSTANCE#CHAT&quot;, event =&gt; {
-  //do stuff here
-})
-</code></pre>
-
-<h3 id="instancekill">INSTANCE#KILL</h3>
-<pre><code class="javascript">/**
- * gets emitted when a kill event gets received from the server
- * @property {object} event see https://alliance-apps.github.io/VeniceRCON-documentation/api/#/Events/get_api_instances__instanceId__events_kill
- */
-socket.on(&quot;INSTANCE#KILL&quot;, event =&gt; {
-  //do stuff here
-})
+                <p>Entry point of a Plugin looks like following:</p>
+<pre><code class="javascript">//as an entry point a function should be exported
+//this will receive a single argument as object with following properteis
+// config - config which can be set via webinterface
+// battlefield - the battlefield rcon instance
+module.exports = async ({ config, battlefield }) =&gt; {
+  // will log { foo: 1, bar: 2 }
+  console.log(config)
+  //logs the current battlefield server infos
+  console.log(await battlefield.serverInfo())
+}
 </code></pre>
               
             </div>
@@ -178,10 +134,10 @@ socket.on(&quot;INSTANCE#KILL&quot;, event =&gt; {
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../self/" class="btn btn-neutral float-right" title="Self">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../scopes/" class="btn btn-neutral float-right" title="Scopes">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../installation/" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../meta/" class="btn btn-neutral" title="Meta"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -207,10 +163,10 @@ socket.on(&quot;INSTANCE#KILL&quot;, event =&gt; {
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../installation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../meta/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../self/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../scopes/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
