@@ -1,0 +1,19 @@
+patch:
+  summary: modifies the configuration of a plugin
+  description: |
+    modifies the configuration of the plugin
+  tags:
+    - "Plugin"
+  security:
+    - bearerAuth: ["PLUGIN#MODIFY"]
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          description: |
+            the configuration object depends on the plugin which gets configured
+          type: object
+  responses:
+    '200':
+      description: instance has been updated successfully

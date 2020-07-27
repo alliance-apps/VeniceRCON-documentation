@@ -1,0 +1,56 @@
+Plugins:
+  type: array
+  items:
+    $ref: "#/Plugin"
+Metas:
+  type: array
+  items:
+    $ref: "#/Meta"
+Plugin:
+  type: object
+  properties:
+    id:
+      type: number
+    name:
+      type: string
+    state:
+      type: number
+      enum: 
+        - STOPPED
+        - STARTED
+    meta:
+      $ref: "#/Meta"
+    config:
+      type: object
+PluginVar:
+  type: object
+  properties:
+    name:
+      type: string
+    description:
+      type: string
+    type:
+      type: string
+    default:
+      type: any
+Meta:
+  type: object
+  properties:
+    name:
+      type: string
+    description:
+      type: string
+    version:
+      type: string
+    backend:
+      type: string
+    entry:
+      type: string
+    dependency:
+      type: array
+      items: string
+      nullable: true
+    vars:
+      type: array
+      items: "#/PluginVar"
+      nullable: true
