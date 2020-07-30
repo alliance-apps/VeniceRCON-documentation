@@ -1,0 +1,15 @@
+get:
+  summary: retrieves a list of log messages
+  description: |
+    retrieves a list of log messages for the specified instance
+  tags:
+    - "Logs"
+  security:
+    - bearerAuth: ["INSTANCE#LOG"]
+  responses:
+    '200':
+      description: array of log messages
+      content:
+        application/json:
+          schema:
+            $ref: "../../../schemes/LogMessage.yaml#/LogMessages"

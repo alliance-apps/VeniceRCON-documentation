@@ -111,3 +111,7 @@ paths:
     $ref: "paths/instances/plugins/stop.yaml"
   /api/instances/{instanceId}/plugins/{id}/config:
     $ref: "paths/instances/plugins/config.yaml"
+  /api/instances/{instanceId}/logs/instance:
+    $ref: "paths/instances/logs/instance.yaml"
+  /api/instances/{instanceId}/logs/plugin/{pluginName}:
+    $ref: "paths/instances/logs/plugin.yaml"
