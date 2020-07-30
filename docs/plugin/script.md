@@ -5,10 +5,11 @@ Entry point of a Plugin looks like following:
 //this will receive a single argument as object with following properteis
 // config - config which can be set via webinterface
 // battlefield - the battlefield rcon instance
-module.exports = async ({ config, battlefield }) => {
+// logger - logger instance has methods `info`, `warn`, `error` which will be sent to frontend logging
+module.exports = async ({ config, battlefield, logger }) => {
   // will log { foo: 1, bar: 2 }
-  console.log(config)
+  logger.info(config)
   //logs the current battlefield server infos
-  console.log(await battlefield.serverInfo())
+  logger.info(await battlefield.serverInfo())
 }
 ```

@@ -64,3 +64,16 @@ socket.on("INSTANCE#KILL", event => {
   //do stuff here
 })
 ```
+
+### INSTANCE#LOG
+
+```javascript
+/**
+ * gets emitted when one or more log messages gets received
+ * @property {object[]} event
+ */
+socket.on("INSTANCE#LOG", event => {
+  //do stuff here
+})
+```
+

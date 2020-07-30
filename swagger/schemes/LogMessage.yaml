@@ -1,0 +1,23 @@
+LogMessages:
+  type: array
+  items:
+    $ref: "#/LogMessage"
+LogMessage:
+  type: object
+  properties:
+    instanceId:
+      type: number
+    message:
+      type: string
+    level:
+      type: string
+    source:
+      type: number
+      enum:
+        - Instance
+        - Plugin
+    sourceLocation:
+      nullable: true
+      type: number
+    created:
+      type: string
