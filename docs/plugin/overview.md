@@ -7,8 +7,8 @@ Each Battlefield Instance gets its own worker assigned where it can run their Pl
 There is a dedicated Folder for Plugins, in order to create a new Plugin simply create an additional sub folder and create 2 files with following structure
 
 ```
-|
-|- Plugin
+| root
+|- plugins
 |-- your_plugin
 |--- meta.yaml
 |--- index.js

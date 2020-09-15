@@ -4,12 +4,13 @@ repo_url: https://github.com/alliance-apps/VeniceRCON-documentation
 nav:
   - Home: index.md
   - Installation: installation/index.md
+  - Scopes: scopes/index.md
+  - API: /VeniceRCON-documentation/api/
   - Socket:
     - Instance: socket/instance.md
     - Self: socket/self.md
   - Plugins:
+    - Overview: plugin/overview.md
     - Meta: plugin/meta.md
     - Script: plugin/script.md
-  - Scopes: scopes/index.md
-  - API: /VeniceRCON-documentation/api/
 theme: readthedocs
