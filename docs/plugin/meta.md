@@ -9,8 +9,7 @@ name: "Test Plugin"
 description: "plugin to test the rcon plugin interface"
 #the version string for the plugin
 version: "1.0.0"
-#plugin server backend type "VU" and "BF3" allowed
-#if "BF3" has been chosen then it will run on servers with VU and BF3
+#plugin language type currently only "JS" is supported
 backend: "BF3"
 #plugin entry point
 entry: "index.js"

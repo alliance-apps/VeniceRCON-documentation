@@ -1,15 +1,22 @@
 Entry point of a Plugin looks like following:
 
 ```javascript
-//as an entry point a function should be exported
-//this will receive a single argument as object with following properteis
-// config - config which can be set via webinterface
-// battlefield - the battlefield rcon instance
-// logger - logger instance has methods `info`, `warn`, `error` which will be sent to frontend logging
-module.exports = async ({ config, battlefield, logger }) => {
-  // will log { foo: 1, bar: 2 }
-  logger.info(config)
-  //logs the current battlefield server infos
-  logger.info(await battlefield.serverInfo())
+/**
+ * @typedef {Object} Logger
+ * @property {(message: string) => void} info
+ * @property {(message: string) => void} warn
+ * @property {(message: string) => void} error
+ */
+
+/**
+ * 
+ * @param {object} data
+ * @param {Record<string, any>} data.config configuration with the key value pairs from meta.yaml
+ * @param {Battlefield} data.battlefield rcon connection to the battlefield server see https://github.com/Multivit4min/vu-rcon
+ * @param {object} data.dependency optional depdendencies which has been defined in meta.yaml
+ * @param {Logger} logger logger instance to log messages to frontend and database
+ */
+module.exports = (data) => {
+  console.log(data)
 }
 ```
