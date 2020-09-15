@@ -113,6 +113,20 @@
               
                 <h1 id="plugin-concept">Plugin Concept</h1>
 <p>Each Battlefield Instance gets its own worker assigned where it can run their Plugin inside, this allows to run possible blocking Plugins not affecting other instances because the NodeJS main event loop gets blocked.</p>
+<h1 id="plugin-installation">Plugin Installation</h1>
+<p>There is a dedicated Folder for Plugins, in order to create a new Plugin simply create an additional sub folder and create 2 files with following structure</p>
+<pre><code>|
+|- Plugin
+|-- your_plugin
+|--- meta.yaml
+|--- index.js
+
+</code></pre>
+
+<h3 id="metayaml">meta.yaml</h3>
+<p>Meta yaml will hold configurations of your plugin</p>
+<h3 id="indexjs">index.js</h3>
+<p>this is the entry point for your plugin</p>
               
             </div>
           </div>

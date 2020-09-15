@@ -131,8 +131,8 @@
  * @param {object} data.dependency optional depdendencies which has been defined in meta.yaml
  * @param {Logger} logger logger instance to log messages to frontend and database
  */
-module.exports = (data) =&gt; {
-  console.log(data)
+module.exports = ({ logger }) =&gt; {
+  logger.info(&quot;Hello from plugin test&quot;)
 }
 </code></pre>
               
