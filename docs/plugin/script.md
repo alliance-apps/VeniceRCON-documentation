@@ -16,7 +16,7 @@ Entry point of a Plugin looks like following:
  * @param {object} data.dependency optional depdendencies which has been defined in meta.yaml
  * @param {Logger} logger logger instance to log messages to frontend and database
  */
-module.exports = (data) => {
-  console.log(data)
+module.exports = ({ logger }) => {
+  logger.info("Hello from plugin test")
 }
 ```
