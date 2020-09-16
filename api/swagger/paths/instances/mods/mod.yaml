@@ -1,0 +1,22 @@
+post:
+  summary: enables a mod
+  description: |
+    enables a mod, changes are active with the next restart
+  tags:
+    - "Mods"
+  security:
+    - bearerAuth: ["MOD#CREATE"]
+  responses:
+    '200':
+      description: mod has been added successfully
+delete:
+  summary: disables a mod
+  description: |
+    enables a mod, changes are active with the next restart
+  tags:
+    - "Mods"
+  security:
+    - bearerAuth: ["MOD#DELETE"]
+  responses:
+    '200':
+      description: mod has been removed successfully

@@ -30,6 +30,8 @@ tags:
     description: various queryable events
   - name: Plugin
     description: all plugin related routes
+  - name: Mods
+    description: all Venice Unleashed related mod routes
 paths:
   /api/auth/login:
     $ref: "paths/auth/login.yaml"
@@ -115,3 +117,11 @@ paths:
     $ref: "paths/instances/logs/instance.yaml"
   /api/instances/{instanceId}/logs/plugin/{pluginName}:
     $ref: "paths/instances/logs/plugin.yaml"
+  /api/instances/{instanceId}/mods:
+    $ref: "paths/instances/mods/index.yaml"
+  /api/instances/{instanceId}/mods/clear:
+    $ref: "paths/instances/mods/clear.yaml"
+  /api/instances/{instanceId}/mods/reload:
+    $ref: "paths/instances/mods/reload.yaml"
+  /api/instances/{instanceId}/mods/{mod}:
+    $ref: "paths/instances/mods/mod.yaml"
