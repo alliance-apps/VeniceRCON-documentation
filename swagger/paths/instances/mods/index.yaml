@@ -1,0 +1,17 @@
+get:
+  summary: retrieve all available instances
+  description: |
+    retrieve a list of instances you have access to
+  tags:
+    - "Mods"
+  security:
+    - bearerAuth: ["MOD#ACCESS"]
+  responses:
+    '200':
+      description: list of mods available
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
