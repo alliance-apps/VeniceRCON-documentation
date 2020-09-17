@@ -34,8 +34,8 @@ jobs:
         bsdtar -xf swagger.zip -s'|[^/]*/||'
         rm swagger.zip
         sed -i 's/url:\s*".*"/url:"swagger\/swagger.yaml"/' ./dist/index.html
-        cp -R ./dist/* ../build/api/
-        cp -R ../swagger ../build/api/
+        cp -R ./dist/* ../build/swagger/
+        cp -R ../swagger ../build/swagger/
         cd ..
     - name: Deploy on Github Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3

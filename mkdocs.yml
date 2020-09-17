@@ -36,4 +36,4 @@ nav:
   - /api:
     - /auth: api/auth.md
   - External Resources:
-    - API: /VeniceRCON-documentation/api/
+    - API: /VeniceRCON-documentation/swagger/
