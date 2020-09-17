@@ -3,10 +3,21 @@ repo_name: alliance-apps/VeniceRCON-documentation
 repo_url: https://github.com/alliance-apps/VeniceRCON-documentation
 theme:
   name: material
+  features:
+    - instant
+plugins:
+  - macros
+  - search
 markdown_extensions:
-  - admonition
-  - pymdownx.highlight
   - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - toc:
+      permalink: ⚓︎
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 nav:
   - Home: index.md
   - General:
@@ -22,5 +33,7 @@ nav:
     - Types:
       - Logger: plugin/types/Logger.md
       - PluginRouter: plugin/types/PluginRouter.md
+  - /api:
+    - /auth: api/auth.md
   - External Resources:
     - API: /VeniceRCON-documentation/api/

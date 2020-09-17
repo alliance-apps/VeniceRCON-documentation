@@ -1,0 +1,32 @@
+{% macro route(method = "GET", path = "_UNKNOWN_PATH_") -%}
+
+??? {{method|method_content_tab}} "{{method}} {{path}} {% if kwargs.loggedIn %}:lock:{% endif %}"
+
+    #### ⚓︎ {{method}} {{path}}
+
+    {{kwargs.description}}
+
+    ```javascript
+      const fetch = require("node-fetch")
+      {% if kwargs.loggedIn -%} const token = "_YOUR_JWT_TOKEN_" {%- endif %}
+
+      const response = await fetch("{{path}}", {
+        method: "{{method}}",
+        headers: {
+          {% if kwargs.loggedIn %}"Authorization": `Bearer ${token}`{% endif %}
+          {% if kwargs.body %}"Content-Type": "application/json"{% endif %}
+        }
+        {%- if kwargs.body %},
+        body: {{kwargs.body|jsonify(2, 8)}}
+        {%- endif %}
+      })
+
+      {% if kwargs.response -%}
+      {% if kwargs.responseText %} //{{ kwargs.responseText }} {% endif %}
+      console.log(await response.json())
+      /* 
+      {{kwargs.response|jsonify(2, 8)}}
+      */
+      {% endif %}
+    ```
+{%- endmacro %}
