@@ -28,7 +28,7 @@ jobs:
     - name: Build Swagger docs
       run: |
         mkdir tmp
-        mkdir build/api
+        mkdir build/swagger
         cd tmp
         curl -o swagger.zip -L https://github.com/swagger-api/swagger-ui/archive/v3.25.5.zip
         bsdtar -xf swagger.zip -s'|[^/]*/||'
