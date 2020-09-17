@@ -1,6 +1,8 @@
 site_name: VeniceRCON
 repo_name: alliance-apps/VeniceRCON-documentation
 repo_url: https://github.com/alliance-apps/VeniceRCON-documentation
+theme:
+    name: rtd-dropdown
 nav:
   - Home: index.md
   - Installation: installation/index.md
@@ -13,4 +15,3 @@ nav:
     - Overview: plugin/overview.md
     - Meta: plugin/meta.md
     - Script: plugin/script.md
-theme: readthedocs
