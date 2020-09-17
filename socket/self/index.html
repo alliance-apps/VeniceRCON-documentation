@@ -441,11 +441,49 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
+      /api
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="/api" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        /api
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/auth/" title="/auth" class="md-nav__link">
+      /auth
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
       External Resources
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="External Resources" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         <span class="md-nav__icon md-icon"></span>
         External Resources
       </label>
@@ -458,7 +496,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/VeniceRCON-documentation/api/" title="API" class="md-nav__link">
+    <a href="/VeniceRCON-documentation/swagger/" title="API" class="md-nav__link">
       API
     </a>
   </li>
@@ -519,7 +557,7 @@
                 
                   <h1>Self</h1>
                 
-                <h3 id="selfpermission_update">SELF#PERMISSION_UPDATE</h3>
+                <h3 id="selfpermission_update">SELF#PERMISSION_UPDATE<a class="headerlink" href="#selfpermission_update" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * gets fired when own permissions have been updated</span>
 <span class="cm"> */</span>
@@ -599,7 +637,7 @@
       <script>
         app = initialize({
           base: "../..",
-          features: [],
+          features: ["instant"],
           search: Object.assign({
             worker: "../../assets/javascripts/worker/search.5eca75d3.min.js"
           }, typeof search !== "undefined" && search)

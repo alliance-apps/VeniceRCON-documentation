@@ -15,7 +15,7 @@
     
     
       
-        <title>Meta - VeniceRCON</title>
+        <title>/auth - VeniceRCON</title>
       
     
     
@@ -49,7 +49,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#plugin-metayaml" class="md-skip">
+        <a href="#post-apiauthlogin" class="md-skip">
           Skip to content
         </a>
       
@@ -77,7 +77,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Meta
+              /auth
             
           </span>
         </div>
@@ -287,12 +287,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Plugins
@@ -312,7 +310,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../overview/" title="Overview" class="md-nav__link">
+    <a href="../../plugin/overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -322,45 +320,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Meta
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Meta" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../plugin/meta/" title="Meta" class="md-nav__link">
       Meta
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#plugin-metayaml" class="md-nav__link">
-    Plugin meta.yaml
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -370,7 +334,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../script/" title="Script" class="md-nav__link">
+    <a href="../../plugin/script/" title="Script" class="md-nav__link">
       Script
     </a>
   </li>
@@ -403,7 +367,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../types/Logger/" title="Logger" class="md-nav__link">
+    <a href="../../plugin/types/Logger/" title="Logger" class="md-nav__link">
       Logger
     </a>
   </li>
@@ -415,7 +379,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../types/PluginRouter/" title="PluginRouter" class="md-nav__link">
+    <a href="../../plugin/types/PluginRouter/" title="PluginRouter" class="md-nav__link">
       PluginRouter
     </a>
   </li>
@@ -435,10 +399,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       /api
@@ -456,11 +422,66 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../api/auth/" title="/auth" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        /auth
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="/auth" class="md-nav__link md-nav__link--active">
       /auth
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#post-apiauthlogin" class="md-nav__link">
+    ⚓︎ POST /api/auth/login
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-apiauthwhoami" class="md-nav__link">
+    ⚓︎ GET /api/auth/whoami
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-apiauthinvite" class="md-nav__link">
+    ⚓︎ POST /api/auth/invite
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-apiauthregister" class="md-nav__link">
+    ⚓︎ POST /api/auth/register
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -529,8 +550,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#plugin-metayaml" class="md-nav__link">
-    Plugin meta.yaml
+  <a href="#post-apiauthlogin" class="md-nav__link">
+    ⚓︎ POST /api/auth/login
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-apiauthwhoami" class="md-nav__link">
+    ⚓︎ GET /api/auth/whoami
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-apiauthinvite" class="md-nav__link">
+    ⚓︎ POST /api/auth/invite
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-apiauthregister" class="md-nav__link">
+    ⚓︎ POST /api/auth/register
   </a>
   
 </li>
@@ -547,7 +589,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/alliance-apps/VeniceRCON-documentation/edit/master/docs/plugin/meta.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/alliance-apps/VeniceRCON-documentation/edit/master/docs/api/auth.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -555,35 +597,106 @@
                   
                 
                 
-                  <h1>Meta</h1>
+                  <h1>/auth</h1>
                 
-                <h2 id="plugin-metayaml">Plugin meta.yaml<a class="headerlink" href="#plugin-metayaml" title="Permanent link">⚓︎</a></h2>
-<p>The plugins <code>meta.yaml</code> describes multiple properties of a plugin, currently it should looke like this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#name of the plugin</span>
-<span class="nt">name</span><span class="p">:</span> <span class="s">&quot;Test</span><span class="nv"> </span><span class="s">Plugin&quot;</span>
-<span class="c1">#description of the plugin</span>
-<span class="nt">description</span><span class="p">:</span> <span class="s">&quot;plugin</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">test</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">rcon</span><span class="nv"> </span><span class="s">plugin</span><span class="nv"> </span><span class="s">interface&quot;</span>
-<span class="c1">#the version string for the plugin</span>
-<span class="nt">version</span><span class="p">:</span> <span class="s">&quot;1.0.0&quot;</span>
-<span class="c1">#plugin language type currently only &quot;JS&quot; is supported</span>
-<span class="nt">backend</span><span class="p">:</span> <span class="s">&quot;BF3&quot;</span>
-<span class="c1">#plugin entry point</span>
-<span class="nt">entry</span><span class="p">:</span> <span class="s">&quot;index.js&quot;</span>
-<span class="nt">vars</span><span class="p">:</span>
-    <span class="c1">#arbitary key to identify the config entry in the config object</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;foo&quot;</span>
-    <span class="c1">#meaningful description which can describe a key on the webinterface</span>
-    <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;set</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">foo&quot;</span>
-    <span class="c1">#type of the value which gets used, available types are:</span>
-    <span class="c1">#string, boolean, number</span>
-    <span class="nt">type</span><span class="p">:</span> <span class="s">&quot;string&quot;</span>
-    <span class="c1">#default value which will be set if there is a null value</span>
-    <span class="nt">default</span><span class="p">:</span> <span class="s">&quot;baz&quot;</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;bar&quot;</span>
-    <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;set</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">value</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">bar&quot;</span>
-    <span class="nt">type</span><span class="p">:</span> <span class="s">&quot;number&quot;</span>
-    <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+                <details class="done"><summary>POST /api/auth/login </summary><h4 id="post-apiauthlogin">⚓︎ POST /api/auth/login<a class="headerlink" href="#post-apiauthlogin" title="Permanent link">⚓︎</a></h4>
+<p>tries to log you into the specified account</p>
+<div class="highlight"><pre><span></span><code>  <span class="kr">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;node-fetch&quot;</span><span class="p">)</span>
+
+
+  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/auth/login&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">method</span><span class="o">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+    <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+
+      <span class="s2">&quot;Content-Type&quot;</span><span class="o">:</span> <span class="s2">&quot;application/json&quot;</span>
+    <span class="p">},</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;password&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">}</span>
+  <span class="p">})</span>
+
+   <span class="c1">//responds with the jwt token </span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+  <span class="cm">/* </span>
+<span class="cm">  {</span>
+<span class="cm">      &quot;token&quot;: &quot;string&quot;</span>
+<span class="cm">    }</span>
+<span class="cm">  */</span>
 </code></pre></div>
+
+</details>
+<details class="info"><summary>GET /api/auth/whoami <img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /></summary><h4 id="get-apiauthwhoami">⚓︎ GET /api/auth/whoami<a class="headerlink" href="#get-apiauthwhoami" title="Permanent link">⚓︎</a></h4>
+<p>retrieves informations about the currently used token</p>
+<div class="highlight"><pre><span></span><code>  <span class="kr">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;node-fetch&quot;</span><span class="p">)</span>
+  <span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
+
+  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/auth/whoami&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">method</span><span class="o">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+    <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Authorization&quot;</span><span class="o">:</span> <span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span>
+
+    <span class="p">}</span>
+  <span class="p">})</span>
+</code></pre></div>
+
+</details>
+<details class="done"><summary>POST /api/auth/invite <img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /></summary><h4 id="post-apiauthinvite">⚓︎ POST /api/auth/invite<a class="headerlink" href="#post-apiauthinvite" title="Permanent link">⚓︎</a></h4>
+<p>use and consume a login token in order to gain access to an additional instance</p>
+<div class="highlight"><pre><span></span><code>  <span class="kr">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;node-fetch&quot;</span><span class="p">)</span>
+  <span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
+
+  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/auth/invite&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">method</span><span class="o">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+    <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;Authorization&quot;</span><span class="o">:</span> <span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span>
+      <span class="s2">&quot;Content-Type&quot;</span><span class="o">:</span> <span class="s2">&quot;application/json&quot;</span>
+    <span class="p">},</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;password&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;token&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">}</span>
+  <span class="p">})</span>
+
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+  <span class="cm">/* </span>
+<span class="cm">  {</span>
+<span class="cm">      &quot;token&quot;: &quot;string&quot;</span>
+<span class="cm">    }</span>
+<span class="cm">  */</span>
+</code></pre></div>
+
+</details>
+<details class="done"><summary>POST /api/auth/register </summary><h4 id="post-apiauthregister">⚓︎ POST /api/auth/register<a class="headerlink" href="#post-apiauthregister" title="Permanent link">⚓︎</a></h4>
+<p>creates an user with an invite token</p>
+<div class="highlight"><pre><span></span><code>  <span class="kr">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;node-fetch&quot;</span><span class="p">)</span>
+
+
+  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/auth/register&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">method</span><span class="o">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+    <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+
+      <span class="s2">&quot;Content-Type&quot;</span><span class="o">:</span> <span class="s2">&quot;application/json&quot;</span>
+    <span class="p">},</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;password&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;token&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">}</span>
+  <span class="p">})</span>
+
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+  <span class="cm">/* </span>
+<span class="cm">  {</span>
+<span class="cm">      &quot;token&quot;: &quot;string&quot;</span>
+<span class="cm">    }</span>
+<span class="cm">  */</span>
+</code></pre></div>
+
+</details>
                 
               
               
@@ -602,7 +715,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../overview/" title="Overview" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../plugin/types/PluginRouter/" title="PluginRouter" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -611,25 +724,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Overview
+                PluginRouter
               </div>
             </div>
           </a>
         
-        
-          <a href="../script/" title="Script" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Script
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
         
       </nav>
     </div>

@@ -476,11 +476,49 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
+      /api
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="/api" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        /api
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/auth/" title="/auth" class="md-nav__link">
+      /auth
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
       External Resources
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="External Resources" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         <span class="md-nav__icon md-icon"></span>
         External Resources
       </label>
@@ -493,7 +531,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/VeniceRCON-documentation/api/" title="API" class="md-nav__link">
+    <a href="/VeniceRCON-documentation/swagger/" title="API" class="md-nav__link">
       API
     </a>
   </li>
@@ -589,7 +627,7 @@
                 
                   <h1>Instance</h1>
                 
-                <h3 id="instanceadd">INSTANCE#ADD</h3>
+                <h3 id="instanceadd">INSTANCE#ADD<a class="headerlink" href="#instanceadd" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * socket got added to an instance</span>
 <span class="cm"> * @property {object} event</span>
@@ -601,7 +639,7 @@
 <span class="p">})</span>
 </code></pre></div>
 
-<h3 id="instanceupdate">INSTANCE#UPDATE</h3>
+<h3 id="instanceupdate">INSTANCE#UPDATE<a class="headerlink" href="#instanceupdate" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * instance property has been changed inside the state</span>
 <span class="cm"> * @property {object} event</span>
@@ -613,7 +651,7 @@
 <span class="p">})</span>
 </code></pre></div>
 
-<h3 id="instanceremove">INSTANCE#REMOVE</h3>
+<h3 id="instanceremove">INSTANCE#REMOVE<a class="headerlink" href="#instanceremove" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * removes instance, either permissions have been revoked or instance has been deleted</span>
 <span class="cm"> * @property {object} event</span>
@@ -624,7 +662,7 @@
 <span class="p">})</span>
 </code></pre></div>
 
-<h3 id="instancechat">INSTANCE#CHAT</h3>
+<h3 id="instancechat">INSTANCE#CHAT<a class="headerlink" href="#instancechat" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * gets emitted when a chat event gets received from the server</span>
 <span class="cm"> * @property {object} event see https://alliance-apps.github.io/VeniceRCON-documentation/api/#/Events/get_api_instances__instanceId__events_chat</span>
@@ -634,7 +672,7 @@
 <span class="p">})</span>
 </code></pre></div>
 
-<h3 id="instancekill">INSTANCE#KILL</h3>
+<h3 id="instancekill">INSTANCE#KILL<a class="headerlink" href="#instancekill" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * gets emitted when a kill event gets received from the server</span>
 <span class="cm"> * @property {object} event see https://alliance-apps.github.io/VeniceRCON-documentation/api/#/Events/get_api_instances__instanceId__events_kill</span>
@@ -644,7 +682,7 @@
 <span class="p">})</span>
 </code></pre></div>
 
-<h3 id="instancelog">INSTANCE#LOG</h3>
+<h3 id="instancelog">INSTANCE#LOG<a class="headerlink" href="#instancelog" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * gets emitted when one or more log messages gets received</span>
 <span class="cm"> * @property {object[]} event</span>
@@ -725,7 +763,7 @@
       <script>
         app = initialize({
           base: "../..",
-          features: [],
+          features: ["instant"],
           search: Object.assign({
             worker: "../../assets/javascripts/worker/search.5eca75d3.min.js"
           }, typeof search !== "undefined" && search)
