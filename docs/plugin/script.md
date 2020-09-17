@@ -1,22 +1,26 @@
-Entry point of a Plugin looks like following:
+A Plugin should export a single function which receives a single argument which consists of following parameters:
+
+```typescript
+export interface PluginProps {
+  /** config parameters from the webinterface */
+  config: Record<string, any>
+  /** the vu-rcon instance */
+  battlefield: Battlefield
+  /** declared dependencies from other modules */
+  dependency: Record<string, any>
+  /** logger instance */
+  logger: Logger
+  /** router instance */
+  router: PluginRouter
+}
+```
 
 ```javascript
 /**
- * @typedef {Object} Logger
- * @property {(message: string) => void} info
- * @property {(message: string) => void} warn
- * @property {(message: string) => void} error
- */
-
-/**
- * 
- * @param {object} data
- * @param {Record<string, any>} data.config configuration with the key value pairs from meta.yaml
- * @param {Battlefield} data.battlefield rcon connection to the battlefield server see https://github.com/Multivit4min/vu-rcon
- * @param {object} data.dependency optional depdendencies which has been defined in meta.yaml
- * @param {Logger} logger logger instance to log messages to frontend and database
+ * @param {PluginProps} data
  */
 module.exports = ({ logger }) => {
   logger.info("Hello from plugin test")
+  router.get("somename", ({ next }) => next({ message: "Hello from the plugin" }))
 }
 ```

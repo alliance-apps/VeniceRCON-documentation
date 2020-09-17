@@ -2,7 +2,7 @@ site_name: VeniceRCON
 repo_name: alliance-apps/VeniceRCON-documentation
 repo_url: https://github.com/alliance-apps/VeniceRCON-documentation
 theme:
-    name: material
+  name: material
 markdown_extensions:
   - admonition
   - pymdownx.highlight
@@ -19,5 +19,8 @@ nav:
     - Overview: plugin/overview.md
     - Meta: plugin/meta.md
     - Script: plugin/script.md
+      - Types:
+        - Logger: plugin/types/Logger.md
+        - PluginRouter: plugin/types/PluginRouter.md
   - External Resources:
     - API: /VeniceRCON-documentation/api/
