@@ -4,7 +4,9 @@ repo_url: https://github.com/alliance-apps/VeniceRCON-documentation
 theme:
     name: material
 markdown_extensions:
-- admonition
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
 nav:
   - Home: index.md
   - General:
