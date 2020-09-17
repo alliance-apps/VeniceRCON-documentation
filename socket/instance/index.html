@@ -411,6 +411,56 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Types
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Types" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon"></span>
+        Types
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../plugin/types/Logger/" title="Logger" class="md-nav__link">
+      Logger
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../plugin/types/PluginRouter/" title="PluginRouter" class="md-nav__link">
+      PluginRouter
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -540,69 +590,69 @@
                   <h1>Instance</h1>
                 
                 <h3 id="instanceadd">INSTANCE#ADD</h3>
-<pre><code class="javascript">/**
- * socket got added to an instance
- * @property {object} event
- * @property {number} event.id the instance which has been changed
- * @property {object} event.state current state of the instance
- */
-socket.on(&quot;INSTANCE#ADD&quot;, event =&gt; {
-  console.log(&quot;got added to instance&quot;, event.id, event.state.serverinfo.name)
-})
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * socket got added to an instance</span>
+<span class="cm"> * @property {object} event</span>
+<span class="cm"> * @property {number} event.id the instance which has been changed</span>
+<span class="cm"> * @property {object} event.state current state of the instance</span>
+<span class="cm"> */</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;INSTANCE#ADD&quot;</span><span class="p">,</span> <span class="nx">event</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;got added to instance&quot;</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">serverinfo</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div>
 
 <h3 id="instanceupdate">INSTANCE#UPDATE</h3>
-<pre><code class="javascript">/**
- * instance property has been changed inside the state
- * @property {object} event
- * @property {number} event.id the instance which has been changed
- * @property {[string, string|number|boolean|undefined|(number|string|boolean)[]][]&gt;} event.changes
- */
-socket.on(&quot;INSTANCE#UPDATE&quot;, event =&gt; {
-  console.log(`received updates for instance with id ${event.id}`, event.changes)
-})
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * instance property has been changed inside the state</span>
+<span class="cm"> * @property {object} event</span>
+<span class="cm"> * @property {number} event.id the instance which has been changed</span>
+<span class="cm"> * @property {[string, string|number|boolean|undefined|(number|string|boolean)[]][]&gt;} event.changes</span>
+<span class="cm"> */</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;INSTANCE#UPDATE&quot;</span><span class="p">,</span> <span class="nx">event</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`received updates for instance with id </span><span class="si">${</span><span class="nx">event</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">changes</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div>
 
 <h3 id="instanceremove">INSTANCE#REMOVE</h3>
-<pre><code class="javascript">/**
- * removes instance, either permissions have been revoked or instance has been deleted
- * @property {object} event
- * @property {number} event.id the instance which should get removed
- */
-socket.on(&quot;INSTANCE#REMOVE&quot;, event =&gt; {
-  console.log(`removed from instance ${event.id}`)
-})
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * removes instance, either permissions have been revoked or instance has been deleted</span>
+<span class="cm"> * @property {object} event</span>
+<span class="cm"> * @property {number} event.id the instance which should get removed</span>
+<span class="cm"> */</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;INSTANCE#REMOVE&quot;</span><span class="p">,</span> <span class="nx">event</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`removed from instance </span><span class="si">${</span><span class="nx">event</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div>
 
 <h3 id="instancechat">INSTANCE#CHAT</h3>
-<pre><code class="javascript">/**
- * gets emitted when a chat event gets received from the server
- * @property {object} event see https://alliance-apps.github.io/VeniceRCON-documentation/api/#/Events/get_api_instances__instanceId__events_chat
- */
-socket.on(&quot;INSTANCE#CHAT&quot;, event =&gt; {
-  //do stuff here
-})
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * gets emitted when a chat event gets received from the server</span>
+<span class="cm"> * @property {object} event see https://alliance-apps.github.io/VeniceRCON-documentation/api/#/Events/get_api_instances__instanceId__events_chat</span>
+<span class="cm"> */</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;INSTANCE#CHAT&quot;</span><span class="p">,</span> <span class="nx">event</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="c1">//do stuff here</span>
+<span class="p">})</span>
+</code></pre></div>
 
 <h3 id="instancekill">INSTANCE#KILL</h3>
-<pre><code class="javascript">/**
- * gets emitted when a kill event gets received from the server
- * @property {object} event see https://alliance-apps.github.io/VeniceRCON-documentation/api/#/Events/get_api_instances__instanceId__events_kill
- */
-socket.on(&quot;INSTANCE#KILL&quot;, event =&gt; {
-  //do stuff here
-})
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * gets emitted when a kill event gets received from the server</span>
+<span class="cm"> * @property {object} event see https://alliance-apps.github.io/VeniceRCON-documentation/api/#/Events/get_api_instances__instanceId__events_kill</span>
+<span class="cm"> */</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;INSTANCE#KILL&quot;</span><span class="p">,</span> <span class="nx">event</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="c1">//do stuff here</span>
+<span class="p">})</span>
+</code></pre></div>
 
 <h3 id="instancelog">INSTANCE#LOG</h3>
-<pre><code class="javascript">/**
- * gets emitted when one or more log messages gets received
- * @property {object[]} event
- */
-socket.on(&quot;INSTANCE#LOG&quot;, event =&gt; {
-  //do stuff here
-})
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * gets emitted when one or more log messages gets received</span>
+<span class="cm"> * @property {object[]} event</span>
+<span class="cm"> */</span>
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;INSTANCE#LOG&quot;</span><span class="p">,</span> <span class="nx">event</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="c1">//do stuff here</span>
+<span class="p">})</span>
+</code></pre></div>
                 
               
               

@@ -351,6 +351,56 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Types
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Types" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon"></span>
+        Types
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/Logger/" title="Logger" class="md-nav__link">
+      Logger
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/PluginRouter/" title="PluginRouter" class="md-nav__link">
+      PluginRouter
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -433,18 +483,21 @@
 <p>Each Battlefield Instance gets its own worker assigned where it can run their Plugin inside, this allows to run possible blocking Plugins not affecting other instances because the NodeJS main event loop gets blocked.</p>
 <h1 id="plugin-installation">Plugin Installation</h1>
 <p>There is a dedicated Folder for Plugins, in order to create a new Plugin simply create an additional sub folder and create 2 files with following structure</p>
-<pre><code>| root
+<div class="highlight"><pre><span></span><code>| root
 |- plugins
 |-- your_plugin
 |--- meta.yaml
 |--- index.js
+</code></pre></div>
 
-</code></pre>
-
-<h3 id="metayaml">meta.yaml</h3>
-<p>Meta yaml will hold configurations of your plugin</p>
-<h3 id="indexjs">index.js</h3>
-<p>this is the entry point for your plugin</p>
+<div class="admonition info">
+<p class="admonition-title">meta.yaml</p>
+<p>meta.yaml will hold the basic configurations of your plugin</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">index.js</p>
+<p>this is the entry point for your plugin and should export a single function</p>
+</div>
                 
               
               

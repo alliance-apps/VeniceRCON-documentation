@@ -344,6 +344,56 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      Types
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Types" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        <span class="md-nav__icon md-icon"></span>
+        Types
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/Logger/" title="Logger" class="md-nav__link">
+      Logger
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/PluginRouter/" title="PluginRouter" class="md-nav__link">
+      PluginRouter
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -409,26 +459,29 @@
                 
                   <h1>Script</h1>
                 
-                <p>Entry point of a Plugin looks like following:</p>
-<pre><code class="javascript">/**
- * @typedef {Object} Logger
- * @property {(message: string) =&gt; void} info
- * @property {(message: string) =&gt; void} warn
- * @property {(message: string) =&gt; void} error
- */
+                <p>A Plugin should export a single function which receives a single argument which consists of following parameters:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">PluginProps</span> <span class="p">{</span>
+  <span class="cm">/** config parameters from the webinterface */</span>
+  <span class="nx">config</span>: <span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="nx">any</span><span class="o">&gt;</span>
+  <span class="cm">/** the vu-rcon instance */</span>
+  <span class="nx">battlefield</span>: <span class="kt">Battlefield</span>
+  <span class="cm">/** declared dependencies from other modules */</span>
+  <span class="nx">dependency</span>: <span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="nx">any</span><span class="o">&gt;</span>
+  <span class="cm">/** logger instance */</span>
+  <span class="nx">logger</span>: <span class="kt">Logger</span>
+  <span class="cm">/** router instance */</span>
+  <span class="nx">router</span>: <span class="kt">PluginRouter</span>
+<span class="p">}</span>
+</code></pre></div>
 
-/**
- * 
- * @param {object} data
- * @param {Record&lt;string, any&gt;} data.config configuration with the key value pairs from meta.yaml
- * @param {Battlefield} data.battlefield rcon connection to the battlefield server see https://github.com/Multivit4min/vu-rcon
- * @param {object} data.dependency optional depdendencies which has been defined in meta.yaml
- * @param {Logger} logger logger instance to log messages to frontend and database
- */
-module.exports = ({ logger }) =&gt; {
-  logger.info(&quot;Hello from plugin test&quot;)
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * @param {PluginProps} data</span>
+<span class="cm"> */</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">logger</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">logger</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s2">&quot;Hello from plugin test&quot;</span><span class="p">)</span>
+  <span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;somename&quot;</span><span class="p">,</span> <span class="p">({</span> <span class="nx">next</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="nx">next</span><span class="p">({</span> <span class="nx">message</span><span class="o">:</span> <span class="s2">&quot;Hello from the plugin&quot;</span> <span class="p">}))</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
@@ -461,6 +514,20 @@ module.exports = ({ logger }) =&gt; {
             </div>
           </a>
         
+        
+          <a href="../types/Logger/" title="Logger" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Logger
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>
