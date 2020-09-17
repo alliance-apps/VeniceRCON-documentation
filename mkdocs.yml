@@ -19,8 +19,8 @@ nav:
     - Overview: plugin/overview.md
     - Meta: plugin/meta.md
     - Script: plugin/script.md
-      - Types:
-        - Logger: plugin/types/Logger.md
-        - PluginRouter: plugin/types/PluginRouter.md
+    - Types:
+      - Logger: plugin/types/Logger.md
+      - PluginRouter: plugin/types/PluginRouter.md
   - External Resources:
     - API: /VeniceRCON-documentation/api/
