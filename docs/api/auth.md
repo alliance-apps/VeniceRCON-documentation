@@ -1,5 +1,4 @@
 {% from "templates/route.md.jinja" import route %}
-{% from "api/schemas/Whoami.yaml" import Whoami %}
 
 {{ route(
   method = "POST",
@@ -21,8 +20,7 @@
   path = "/api/auth/whoami",
   description = "retrieves informations about the currently used token",
   loggedIn = True,
-  responseText = "responds with informations about your token",
-  response = parse_schema(Whoami)
+  responseText = "responds with informations about your token"
 ) }}
 
 {{ route(

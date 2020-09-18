@@ -38,3 +38,6 @@ nav:
     - /auth: api/auth.md
   - External Resources:
     - API: /VeniceRCON-documentation/swagger/
+extra:
+  api:
+    schema_path: docs/api/schemas
