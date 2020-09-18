@@ -634,7 +634,10 @@
     <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
       <span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="s2">&quot;application/json&quot;</span>
     <span class="p">}</span>
-    <span class="n">body</span> <span class="o">=</span> <span class="n">body</span><span class="p">,</span>
+    <span class="n">body</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">}</span>
 
   <span class="p">)</span>
   <span class="c1">#responds with the jwt token</span>
@@ -661,12 +664,6 @@
       <span class="nx">Authorization</span><span class="o">:</span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span>
     <span class="p">}</span>
   <span class="p">})</span>
-
-  <span class="c1">//responds with informations about your token</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-  <span class="cm">/* </span>
-<span class="cm">  &quot;NOT_IMPLEMENTED&quot;</span>
-<span class="cm">  */</span>
 </code></pre></div>
 
 </div>
@@ -681,11 +678,6 @@
     <span class="p">}</span>
 
   <span class="p">)</span>
-  <span class="c1">#responds with informations about your token</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
-  <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">  &quot;NOT_IMPLEMENTED&quot;</span>
-<span class="sd">  &quot;&quot;&quot;</span>
 </code></pre></div>
 
 </div>
@@ -729,7 +721,11 @@
     <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
       <span class="n">Authorization</span><span class="p">:</span><span class="s2">&quot;Bearer </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">token</span><span class="p">,</span><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="s2">&quot;application/json&quot;</span>
     <span class="p">}</span>
-    <span class="n">body</span> <span class="o">=</span> <span class="n">body</span><span class="p">,</span>
+    <span class="n">body</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">}</span>
 
   <span class="p">)</span>
 
@@ -780,7 +776,11 @@
     <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
       <span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="s2">&quot;application/json&quot;</span>
     <span class="p">}</span>
-    <span class="n">body</span> <span class="o">=</span> <span class="n">body</span><span class="p">,</span>
+    <span class="n">body</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+    <span class="p">}</span>
 
   <span class="p">)</span>
 
