@@ -13,6 +13,7 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.highlight
+  - pymdownx.tabbed
   - toc:
       permalink: ⚓︎
   - pymdownx.emoji:

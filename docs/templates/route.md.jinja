@@ -1,4 +1,7 @@
 {% macro route(method = "GET", path = "_UNKNOWN_PATH_") -%}
+{% set headers = {} %}
+{% set headers = headers|append_if(kwargs.loggedIn, { "Authorization": { "js": "`Bearer ${token}`", "python": "\"Bearer %s\" % token" }}) %}
+{% set headers = headers|append_if(kwargs.body, { "Content-Type": { "*": "\"application/json\"" }}) %}
 
 ??? {{method|method_content_tab}} "{{method}} {{path}} {% if kwargs.loggedIn %}:lock:{% endif %}"
 
@@ -6,27 +9,74 @@
 
     {{kwargs.description}}
 
-    ```javascript
-      const fetch = require("node-fetch")
-      {% if kwargs.loggedIn -%} const token = "_YOUR_JWT_TOKEN_" {%- endif %}
+    === "JavaScript"
 
-      const response = await fetch("{{path}}", {
-        method: "{{method}}",
-        headers: {
-          {% if kwargs.loggedIn %}"Authorization": `Bearer ${token}`{% endif %}
-          {% if kwargs.body %}"Content-Type": "application/json"{% endif %}
-        }
-        {%- if kwargs.body %},
-        body: {{kwargs.body|jsonify(2, 8)}}
-        {%- endif %}
-      })
+        ```javascript
+          const fetch = require("node-fetch"){% if kwargs.loggedIn %}
+          const token = "_YOUR_JWT_TOKEN_" {%- endif %}
 
-      {% if kwargs.response -%}
-      {% if kwargs.responseText %} //{{ kwargs.responseText }} {% endif %}
-      console.log(await response.json())
-      /* 
-      {{kwargs.response|jsonify(2, 8)}}
-      */
-      {% endif %}
-    ```
+          const response = await fetch("{{path}}", {
+            method: "{{method}}",{% if headers|len > 0 %}
+            headers: {
+              {% for key in headers -%}
+              {{key}}:
+                {%- if "js" in headers[key] -%}
+                  {{headers[key]["js"]}}
+                {%- else -%}
+                  {{headers[key]["*"]}}
+                {%- endif -%}
+                {%- if not loop.last %},
+              {% endif -%}
+              {%- endfor %}
+            }
+            {%- endif -%}
+            {%- if kwargs.body %},
+            body: {{kwargs.body|jsonify(2, 12)}}
+            {%- endif %}
+          })
+
+          {% if kwargs.response -%}
+          {%- if kwargs.responseText %}//{{ kwargs.responseText }}{% endif %}
+          console.log(await response.json())
+          /* 
+          {{kwargs.response|jsonify(2, 10)}}
+          */
+          {%- endif %}
+        ```
+
+    === "Python"
+
+        ```python
+          import requests
+          {% if kwargs.loggedIn -%} token = "_YOUR_JWT_TOKEN_" {%- endif %}
+
+          r = requests.{{method|lower}}(
+            url = "{{path}}",
+            {%- if headers|len > 0 %}
+            headers = {
+              {% for key in headers -%}
+              {{key}}:
+                {%- if "python" in headers[key] -%}
+                  {{headers[key]["python"]}}
+                {%- else -%}
+                  {{headers[key]["*"]}}
+                {%- endif -%}
+                {%- if not loop.last %},
+              {%- endif -%}
+              {%- endfor %}
+            }
+            {% endif %}
+            {%- if kwargs.body -%}
+            body = body,
+            {% endif %}
+          )
+          {% if kwargs.response %}
+          {%- if kwargs.responseText %}#{{ kwargs.responseText }}{% endif %}
+          print(r.json())
+          """
+          {{kwargs.response|jsonify(2, 10)}}
+          """
+          {%- endif %}
+        ```
+
 {%- endmacro %}
