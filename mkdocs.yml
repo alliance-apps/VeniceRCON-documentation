@@ -1,11 +1,11 @@
 site_name: VeniceRCON
 repo_name: alliance-apps/VeniceRCON-documentation
 repo_url: https://github.com/alliance-apps/VeniceRCON-documentation
+site_url: https://alliance-apps.github.io/VeniceRCON-documentation/
 theme:
   name: material
   features:
     - instant
-    - tabs
 plugins:
   - macros
   - search
