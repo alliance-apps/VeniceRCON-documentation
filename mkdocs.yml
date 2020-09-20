@@ -6,7 +6,6 @@ theme:
   features:
     - instant
     - tabs
-    - navigation.expand
 plugins:
   - macros
   - search
@@ -37,20 +36,22 @@ nav:
     - Types:
       - Logger: plugin/types/Logger.md
       - PluginRouter: plugin/types/PluginRouter.md
-  - api:
-    - api/auth: api/auth.md
-    - api/instance: api/instance/index.md
-    - api/instance/{instanceId}: api/instance/instance.md
-    - api/instance/{instanceId}/users: api/instance/users.md
-    - api/instance/{instanceId}/players: api/instance/players.md
-    - api/instance/{instanceId}/bans: api/instance/bans.md
-    - api/instance/{instanceId}/maps: api/instance/maps.md
-    - api/instance/{instanceId}/reservedslot: api/instance/reservedslot.md
-    - api/instance/{instanceId}/vars: api/instance/vars.md
-    - api/instance/{instanceId}/events: api/instance/events.md
-    - api/instance/{instanceId}/plugins: api/instance/plugins.md
-    - api/instance/{instanceId}/mods: api/instance/mods.md
-    - api/instance/{instanceId}/logs: api/instance/logs.md
+  - api/:
+    - auth: api/auth.md
+    - instance: api/instance/index.md
+    - instance/{instanceId}: api/instance/instance.md
+    - instance/{instanceId}/users: api/instance/users.md
+    - instance/{instanceId}/players: api/instance/players.md
+    - instance/{instanceId}/bans: api/instance/bans.md
+    - instance/{instanceId}/maps: api/instance/maps.md
+    - instance/{instanceId}/reservedslot: api/instance/reservedslot.md
+    - instance/{instanceId}/vars: api/instance/vars.md
+    - instance/{instanceId}/events: api/instance/events.md
+    - instance/{instanceId}/plugins: api/instance/plugins.md
+    - instance/{instanceId}/mods: api/instance/mods.md
+    - instance/{instanceId}/logs: api/instance/logs.md
 extra:
   api:
     schema_path: docs/api/schemas
+extra_css:
+  - assets/stylesheet.css
