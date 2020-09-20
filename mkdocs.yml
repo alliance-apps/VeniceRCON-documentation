@@ -6,6 +6,7 @@ theme:
   name: material
   features:
     - instant
+    - tabs
 plugins:
   - macros
   - search
@@ -36,20 +37,20 @@ nav:
     - Types:
       - Logger: plugin/types/Logger.md
       - PluginRouter: plugin/types/PluginRouter.md
-  - api/:
-    - auth: api/auth.md
-    - instance: api/instance/index.md
-    - instance/{instanceId}: api/instance/instance.md
-    - instance/{instanceId}/users: api/instance/users.md
-    - instance/{instanceId}/players: api/instance/players.md
-    - instance/{instanceId}/bans: api/instance/bans.md
-    - instance/{instanceId}/maps: api/instance/maps.md
-    - instance/{instanceId}/reservedslot: api/instance/reservedslot.md
-    - instance/{instanceId}/vars: api/instance/vars.md
-    - instance/{instanceId}/events: api/instance/events.md
-    - instance/{instanceId}/plugins: api/instance/plugins.md
-    - instance/{instanceId}/mods: api/instance/mods.md
-    - instance/{instanceId}/logs: api/instance/logs.md
+  - /api:
+    - /auth: api/auth.md
+    - /instance: api/instance/index.md
+    - /instance/{instanceId}: api/instance/instance.md
+    - /instance/{instanceId}/users: api/instance/users.md
+    - /instance/{instanceId}/players: api/instance/players.md
+    - /instance/{instanceId}/bans: api/instance/bans.md
+    - /instance/{instanceId}/maps: api/instance/maps.md
+    - /instance/{instanceId}/reservedslot: api/instance/reservedslot.md
+    - /instance/{instanceId}/vars: api/instance/vars.md
+    - /instance/{instanceId}/events: api/instance/events.md
+    - /instance/{instanceId}/plugins: api/instance/plugins.md
+    - /instance/{instanceId}/mods: api/instance/mods.md
+    - /instance/{instanceId}/logs: api/instance/logs.md
 extra:
   api:
     schema_path: docs/api/schemas
