@@ -20,7 +20,8 @@
   path = "/api/auth/whoami",
   description = "retrieves informations about the currently used token",
   loggedIn = True,
-  responseText = "responds with informations about your token"
+  responseText = "responds with informations about your token",
+  response = parse_schema(schemas.Whoami)
 ) }}
 
 {{ route(

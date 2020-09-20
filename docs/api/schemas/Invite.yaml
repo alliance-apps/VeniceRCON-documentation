@@ -17,3 +17,8 @@ Invite:
       type: number
     instanceId:
       type: number
+InviteToken:
+  type: object
+  properties:
+    token:
+      type: string

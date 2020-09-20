@@ -1,0 +1,5 @@
+Mods:
+  type: array
+  items: "#/Mod"
+Mod:
+  type: string

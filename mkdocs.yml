@@ -5,6 +5,8 @@ theme:
   name: material
   features:
     - instant
+    - tabs
+    - navigation.expand
 plugins:
   - macros
   - search
@@ -15,12 +17,13 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.tabbed
   - toc:
-      permalink: ⚓︎
+      toc_depth : "1-1"
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 nav:
-  - Home: index.md
   - General:
     - Installation: installation/index.md
     - Permissions: scopes/index.md
@@ -36,8 +39,18 @@ nav:
       - PluginRouter: plugin/types/PluginRouter.md
   - /api:
     - /auth: api/auth.md
-  - External Resources:
-    - API: /VeniceRCON-documentation/swagger/
+    - /instance: api/instance/index.md
+    - /instance/{instanceId}: api/instance/instance.md
+    - /instance/{instanceId}/users: api/instance/users.md
+    - /instance/{instanceId}/players: api/instance/players.md
+    - /instance/{instanceId}/bans: api/instance/bans.md
+    - /instance/{instanceId}/maps: api/instance/maps.md
+    - /instance/{instanceId}/reservedslot: api/instance/reservedslot.md
+    - /instance/{instanceId}/vars: api/instance/vars.md
+    - /instance/{instanceId}/events: api/instance/events.md
+    - /instance/{instanceId}/plugins: api/instance/plugins.md
+    - /instance/{instanceId}/mods: api/instance/mods.md
+    - /instance/{instanceId}/logs: api/instance/logs.md
 extra:
   api:
     schema_path: docs/api/schemas

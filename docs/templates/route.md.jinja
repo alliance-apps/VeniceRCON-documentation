@@ -5,9 +5,14 @@
 
 ??? {{method|method_content_tab}} "{{method}} {{path}} {% if kwargs.loggedIn %}:lock:{% endif %}"
 
-    #### ⚓︎ {{method}} {{path}}
-
     {{kwargs.description}}
+
+    {% if kwargs.scopes %}
+    #### Required Scopes:
+    {%- for scope in kwargs.scopes %}
+    * [x] {{scope}}
+    {% endfor %}
+    {% endif %}
 
     === "JavaScript"
 
@@ -78,5 +83,13 @@
           """
           {%- endif %}
         ```
+
+{%- endmacro %}
+
+{% macro codeblocks(method = "GET", path = "_UNKNOWN_PATH_") -%}
+{% set headers = {} %}
+{% set headers = headers|append_if(kwargs.loggedIn, { "Authorization": { "js": "`Bearer ${token}`", "python": "\"Bearer %s\" % token" }}) %}
+{% set headers = headers|append_if(kwargs.body, { "Content-Type": { "*": "\"application/json\"" }}) %}
+
 
 {%- endmacro %}
