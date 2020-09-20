@@ -1,3 +1,8 @@
+AddPlugin:
+  type: object
+  properties:
+    identifier:
+      type: string
 Plugins:
   type: array
   items:

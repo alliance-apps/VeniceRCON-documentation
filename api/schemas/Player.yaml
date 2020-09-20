@@ -2,6 +2,7 @@ Players:
   type: object
   additionalProperties:
     $ref: "#/Player"
+  identifiedBy: "player.guid"
 Player:
   type: object
   properties:

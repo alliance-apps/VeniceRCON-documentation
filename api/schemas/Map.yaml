@@ -20,3 +20,21 @@ Info:
       type: number
     next:
       type: number
+MapIndex:
+  type: object
+  index:
+    type: number
+  next:
+    type: number
+AddMap:
+  type: object
+  properties:
+    map:
+      type: string
+    mode:
+      type: string
+    rounds:
+      type: integer
+    index:
+      type: integer
+      nullable: true

@@ -26,12 +26,12 @@ Instance:
         - DISCONNECTED
         - RECONNECTING
     serverinfo:
-      $ref: "ServerInfo.yaml#/ServerInfo"
+      $ref: "#/ServerInfo"
     players:
-      $ref: "Player.yaml#/Players"
+      $ref: "#/Players"
     maps:
-      $ref: "Map.yaml#/Maps"
+      $ref: "#/Maps"
     vars:
-      $ref: "Vars.yaml#/Variables"
+      $ref: "#/Variables"
     mapInfo:
-      $ref: "Map.yaml#/Info"
+      $ref: "#/Info"
