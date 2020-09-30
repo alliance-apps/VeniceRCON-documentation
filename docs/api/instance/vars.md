@@ -15,6 +15,7 @@
   scopes = ["VARIABLE#MODIFY"],
   description = "updates variables in this instance",
   loggedIn = True,
+  see = "/general/variables/",
   body = {
     "[variablename]": "string|number|boolean"
   },
