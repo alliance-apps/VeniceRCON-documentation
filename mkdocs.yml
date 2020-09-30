@@ -25,18 +25,19 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 nav:
   - General:
-    - Installation: installation/index.md
-    - Permissions: scopes/index.md
+    - Installation: general/installation.md
+    - Permissions: general/scopes.md
+    - Variables: general/variables.md
   - Socket:
-    - Instance: socket/instance.md
-    - Self: socket/self.md
+    - Instance: general/socket/instance.md
+    - Self: general/socket/self.md
   - Plugins:
-    - Overview: plugin/overview.md
-    - Meta: plugin/meta.md
-    - Script: plugin/script.md
+    - Overview: general/plugin/overview.md
+    - Meta: general/plugin/meta.md
+    - Script: general/plugin/script.md
     - Types:
-      - Logger: plugin/types/Logger.md
-      - PluginRouter: plugin/types/PluginRouter.md
+      - Logger: general/plugin/types/Logger.md
+      - PluginRouter: general/plugin/types/PluginRouter.md
   - /api:
     - /auth: api/auth.md
     - /instance: api/instance/index.md
