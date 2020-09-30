@@ -13,8 +13,12 @@ Invite:
       type: string
     token:
       type: string
-    issuerId:
-      type: number
+    issuer:
+      type: object
+      $ref: "#/UserShort"
+    user:
+      type: object
+      $ref: "#/UserShort"
     instanceId:
       type: number
 InviteToken:
