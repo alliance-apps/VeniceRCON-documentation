@@ -11,9 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: apt install
-      run: |
-        sudo apt install libarchive-tools
     - name: Setup Python
       uses: actions/setup-python@v2
       with:
@@ -25,18 +22,6 @@ jobs:
     - name: Build Mkdocs
       run: |
         mkdocs build --verbose -d build
-    - name: Build Swagger docs
-      run: |
-        mkdir tmp
-        mkdir build/swagger
-        cd tmp
-        curl -o swagger.zip -L https://github.com/swagger-api/swagger-ui/archive/v3.25.5.zip
-        bsdtar -xf swagger.zip -s'|[^/]*/||'
-        rm swagger.zip
-        sed -i 's/url:\s*".*"/url:"swagger\/swagger.yaml"/' ./dist/index.html
-        cp -R ./dist/* ../build/swagger/
-        cp -R ../swagger ../build/swagger/
-        cd ..
     - name: Deploy on Github Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       if: github.ref == 'refs/heads/master'
