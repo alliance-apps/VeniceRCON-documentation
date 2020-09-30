@@ -14,6 +14,10 @@
     {% endfor %}
     {% endif %}
 
+    {%- if kwargs.see %}
+      :link: For more informations see [here]({{kwargs.see}})
+    {% endif %}
+
     === "JavaScript"
 
         ```javascript
