@@ -28,6 +28,7 @@ nav:
     - Installation: general/installation.md
     - Permissions: general/scopes.md
     - Variables: general/variables.md
+    - FAQ: general/faq.md
   - Socket:
     - Instance: general/socket/instance.md
     - Self: general/socket/self.md
