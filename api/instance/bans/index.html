@@ -721,7 +721,7 @@
 </div>
 </div>
 </details>
-<details class="error"><summary>DELETE /api/instances/{instanceId}/bans <img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /></summary><p>delete a ban from this instance</p>
+<details class="error"><summary>DELETE /api/instances/{instanceId}/bans/{subset}/{id} <img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /></summary><p>delete a ban from this instance</p>
 <h4>Required Scopes:</h4>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> BAN#DELETE</li>
@@ -730,15 +730,10 @@
 <div class="highlight"><pre><span></span><code>  <span class="kr">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;node-fetch&quot;</span><span class="p">)</span>
   <span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
 
-  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/instances/{instanceId}/bans&quot;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/instances/{instanceId}/bans/{subset}/{id}&quot;</span><span class="p">,</span> <span class="p">{</span>
     <span class="nx">method</span><span class="o">:</span> <span class="s2">&quot;DELETE&quot;</span><span class="p">,</span>
     <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">Authorization</span><span class="o">:</span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
-      <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span><span class="s2">&quot;application/json&quot;</span>
-    <span class="p">},</span>
-    <span class="nx">body</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;subset&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span>
+      <span class="nx">Authorization</span><span class="o">:</span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span>
     <span class="p">}</span>
   <span class="p">})</span>
 </code></pre></div>
@@ -749,13 +744,9 @@
   <span class="n">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
 
   <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/api/instances/</span><span class="si">{instanceId}</span><span class="s2">/bans&quot;</span><span class="p">,</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/api/instances/</span><span class="si">{instanceId}</span><span class="s2">/bans/</span><span class="si">{subset}</span><span class="s2">/</span><span class="si">{id}</span><span class="s2">&quot;</span><span class="p">,</span>
     <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="n">Authorization</span><span class="p">:</span><span class="s2">&quot;Bearer </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">token</span><span class="p">,</span><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="s2">&quot;application/json&quot;</span>
-    <span class="p">}</span>
-    <span class="n">body</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;subset&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+      <span class="n">Authorization</span><span class="p">:</span><span class="s2">&quot;Bearer </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">token</span>
     <span class="p">}</span>
 
   <span class="p">)</span>
