@@ -21,9 +21,8 @@
 
 {{ route(
   method = "DELETE",
-  path = "/api/instances/{instanceId}/bans",
+  path = "/api/instances/{instanceId}/bans/{subset}/{id}",
   scopes = ["BAN#DELETE"],
   description = "delete a ban from this instance",
-  loggedIn = True,
-  body = parse_schema(schemas.DeleteBan)
+  loggedIn = True
 ) }}
