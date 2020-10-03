@@ -4,28 +4,9 @@
   method = "GET",
   path = "/api/instances/{instanceId}/plugins",
   scopes = ["PLUGIN#ACCESS"],
-  description = "retrieves a list of plugins which have been setup on this server",
+  description = "retrieves a list of plugins which are startable on this instance",
   loggedIn = True,
   response = parse_schema(schemas.Plugins)
-) }}
-
-{{ route(
-  method = "POST",
-  path = "/api/instances/{instanceId}/plugins",
-  scopes = ["PLUGIN#MODIFY"],
-  description = "adds a new plugin to the server",
-  loggedIn = True,
-  response = parse_schema(schemas.AddPlugin),
-  body = { "id": 0 }
-) }}
-
-{{ route(
-  method = "GET",
-  path = "/api/instances/{instanceId}/plugins/available",
-  scopes = ["PLUGIN#ACCESS"],
-  description = "retrieves a list of plugins which can be installed",
-  loggedIn = True,
-  response = parse_schema(schemas.Plugins),
 ) }}
 
 {{ route(
@@ -51,6 +32,33 @@
   path = "/api/instances/{instanceId}/plugins/{id}/config",
   scopes = ["PLUGIN#MODIFY"],
   description = "modifies the configuration of the plugin",
+  loggedIn = True,
+  response = {}
+) }}
+
+{{ route(
+  method = "DLETE",
+  path = "/api/instances/{instanceId}/plugins/{id}",
+  scopes = ["PLUGIN#REMOVE"],
+  description = "removes a plugin from the instance",
+  loggedIn = True,
+  response = {}
+) }}
+
+{{ route(
+  method = "GET",
+  path = "/api/instances/{instanceId}/plugins/store",
+  scopes = ["PLUGIN#ACCESS"],
+  description = "retrieves a list of plugins which can be downloaded from the store",
+  loggedIn = True,
+  response = {}
+) }}
+
+{{ route(
+  method = "POST",
+  path = "/api/instances/{instanceId}/plugins/store/{storeName}/{pluginName}",
+  scopes = ["PLUGIN#CREATE"],
+  description = "downloads a plugin to the instance plugin folder",
   loggedIn = True,
   response = {}
 ) }}
