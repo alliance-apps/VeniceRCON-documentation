@@ -51,7 +51,7 @@
   scopes = ["PLUGIN#ACCESS"],
   description = "retrieves a list of plugins which can be downloaded from the store",
   loggedIn = True,
-  response = {}
+  response = parse_schema(schemas.StoreItems)
 ) }}
 
 {{ route(
