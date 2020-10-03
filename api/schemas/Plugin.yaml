@@ -59,3 +59,18 @@ Meta:
       type: array
       items: "#/PluginVar"
       nullable: true
+StoreItems:
+  type: array
+  items:
+    $ref: "#/StoreItem"
+StoreItem:
+  type: object
+  properties:
+    store:
+      type: string
+    name:
+      type: string
+    description:
+      type: string
+    version:
+      type: string
