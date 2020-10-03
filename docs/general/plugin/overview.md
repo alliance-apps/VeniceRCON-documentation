@@ -8,11 +8,11 @@ There is a dedicated Folder for Plugins, in order to create a new Plugin simply 
 
 ```
 | root
-|- plugins
-|-- your_plugin
-|--- meta.yaml
-|--- index.js
-
+|-- plugins
+|---- 2 //the instance id of your server where you want to test plugins
+|------ your_plugin_name
+|-------- meta.yaml
+|-------- index.js
 ```
 
 !!! info "meta.yaml"
@@ -20,3 +20,11 @@ There is a dedicated Folder for Plugins, in order to create a new Plugin simply 
 
 !!! info "index.js"
     this is the entry point for your plugin and should export a single function
+
+# Publishing
+
+If you want other people to be able to use your rcon plugin you can let them install it via a repository, for this you will need to put your plugin into a github repository and provide the commit string and github repository url to a repository provider like [this one](https://github.com/Multivit4min/vu-plugin-repo)
+
+## Limitations
+
+If you use dependencies from yarn or npm then you will need to have those in your repository aswell, as those wont be automatically downloaded, in order to require those modules you will need to use reltive paths to those modules 

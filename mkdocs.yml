@@ -36,6 +36,7 @@ nav:
     - Overview: general/plugin/overview.md
     - Meta: general/plugin/meta.md
     - Script: general/plugin/script.md
+    - Repository: general/plugin/repository.md
     - Types:
       - Logger: general/plugin/types/Logger.md
       - PluginRouter: general/plugin/types/PluginRouter.md
