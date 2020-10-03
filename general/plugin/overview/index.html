@@ -377,16 +377,28 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../repository/" title="Repository" class="md-nav__link">
+      Repository
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
     
-    <label class="md-nav__link" for="nav-3-4">
+    <label class="md-nav__link" for="nav-3-5">
       Types
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Types" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-4">
+      <label class="md-nav__title" for="nav-3-5">
         <span class="md-nav__icon md-icon"></span>
         Types
       </label>
@@ -646,10 +658,11 @@
 <h1 id="plugin-installation">Plugin Installation</h1>
 <p>There is a dedicated Folder for Plugins, in order to create a new Plugin simply create an additional sub folder and create 2 files with following structure</p>
 <div class="highlight"><pre><span></span><code>| root
-|- plugins
-|-- your_plugin
-|--- meta.yaml
-|--- index.js
+|-- plugins
+|---- 2 //the instance id of your server where you want to test plugins
+|------ your_plugin_name
+|-------- meta.yaml
+|-------- index.js
 </code></pre></div>
 
 <div class="admonition info">
@@ -660,6 +673,10 @@
 <p class="admonition-title">index.js</p>
 <p>this is the entry point for your plugin and should export a single function</p>
 </div>
+<h1 id="publishing">Publishing</h1>
+<p>If you want other people to be able to use your rcon plugin you can let them install it via a repository, for this you will need to put your plugin into a github repository and provide the commit string and github repository url to a repository provider like <a href="https://github.com/Multivit4min/vu-plugin-repo">this one</a></p>
+<h2>Limitations</h2>
+<p>If you use dependencies from yarn or npm then you will need to have those in your repository aswell, as those wont be automatically downloaded, in order to require those modules you will need to use reltive paths to those modules </p>
                 
               
               
