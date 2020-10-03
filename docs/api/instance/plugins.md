@@ -37,7 +37,7 @@
 ) }}
 
 {{ route(
-  method = "DLETE",
+  method = "DELETE",
   path = "/api/instances/{instanceId}/plugins/{id}",
   scopes = ["PLUGIN#REMOVE"],
   description = "removes a plugin from the instance",
