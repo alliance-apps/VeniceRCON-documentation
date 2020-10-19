@@ -19,6 +19,7 @@
   responseText = "created instance",
   response = parse_schema(schemas.Instance),
   body = {
+    "test?": False,
     "host": "string",
     "port": 0,
     "password": "string"

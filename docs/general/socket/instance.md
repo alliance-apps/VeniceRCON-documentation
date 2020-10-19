@@ -77,3 +77,17 @@ socket.on("INSTANCE#LOG", event => {
 })
 ```
 
+
+### INSTANCE#LOG
+
+```javascript
+/**
+ * gets emitted when one or more log messages gets received
+ * @property {object} event
+ * @property {object[]} event.messages messages which has been sent/received
+ */
+socket.on("INSTANCE#CONSOLE", event => {
+  //do stuff here
+})
+```
+

@@ -9,6 +9,8 @@ Permission Scopes are being saved as a bitmask, their validity can be for only a
 | `INSTANCE#CREATE`     | `0x02`                 | create an instance
 | `INSTANCE#UPDATE`     | `0x04`                 | modify an instance
 | `INSTANCE#DELETE`     | `0x08`                 | delete an instance
+| `INSTANCE#LOGS`       | `0x08`                 | allows access to server logs
+| `INSTANCE#CONSOLE`    | `0x08`                 | allows console events
 | `INSTANCEUSER#ACCESS` | `0x100`                | read access for an instance
 | `INSTANCEUSER#CREATE` | `0x200`                | create invite tokens for an instance
 | `INSTANCEUSER#UPDATE` | `0x400`                | update permissions from an instace

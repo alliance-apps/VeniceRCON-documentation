@@ -48,3 +48,14 @@
     "yellDuration": 0
   }
 ) }}
+
+{{ route(
+  method = "POST",
+  path = "/api/instance/{instanceId}/raw",
+  scopes = ["INSTANCE#CONSOLE"],
+  description = "sends a raw command to the instance",
+  loggedIn = True,
+  body = {
+    "words": ["string"]
+  }
+) }}
