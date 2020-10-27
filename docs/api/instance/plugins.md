@@ -14,8 +14,7 @@
   path = "/api/instances/{instanceId}/plugins/{id}/start",
   scopes = ["PLUGIN#MODIFY"],
   description = "enables the plugin",
-  loggedIn = True,
-  response = parse_schema(schemas.AddPlugin)
+  loggedIn = True
 ) }}
 
 {{ route(
@@ -23,8 +22,7 @@
   path = "/api/instances/{instanceId}/plugins/{id}/stop",
   scopes = ["PLUGIN#MODIFY"],
   description = "disables the plugin",
-  loggedIn = True,
-  response = parse_schema(schemas.AddPlugin)
+  loggedIn = True
 ) }}
 
 {{ route(
