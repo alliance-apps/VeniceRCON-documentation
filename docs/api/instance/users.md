@@ -53,5 +53,9 @@
   path = "/api/instances/{instanceId}/users/{userId}/permissions",
   scopes = ["INSTANCEUSER#UPDATE"],
   description = "updates permissions from a user for this instance",
-  loggedIn = True
+  loggedIn = True,
+  body = {
+    "add?": ["SCOPES"],
+    "remove?": ["SCOPES"]
+  }
 ) }}
