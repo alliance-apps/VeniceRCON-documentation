@@ -5,6 +5,8 @@ site_url: https://alliance-apps.github.io/VeniceRCON-documentation/
 theme:
   name: material
   features:
+    - navigation.instant
+    - navigation.tabs
     - instant
     - tabs
 plugins:
