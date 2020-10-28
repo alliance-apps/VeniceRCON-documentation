@@ -148,6 +148,70 @@
       
       
         
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../installation/" class="md-tabs__link">
+          General
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../socket/instance/" class="md-tabs__link">
+          Socket
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../overview/" class="md-tabs__link md-tabs__link--active">
+          Plugins
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../api/auth/" class="md-tabs__link">
+          /api
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
@@ -660,7 +724,8 @@
                 <h1 id="about-this-repository">About this Repository</h1>
 <p>Plugin Repositories provide a place to collect and share VeniceRCON Plugins, it is a central place to download VeniceRCON plugins. If you want to create your own repository you can clone <a href="https://github.com/Multivit4min/vu-plugin-repo">this</a> repository and add it in your VeniceRCON's <code>config.yaml</code>!</p>
 <h2>repository.yaml</h2>
-<p>The <code>repository.yaml</code> will hold all downloadable plugins, the required fields per plugin are:</p>
+<p>This is the main file from where VeniceRCON will get plugin informations from.
+At the moment there is a single key named <code>plugins</code> which is an array with following fields:</p>
 <table>
 <thead>
 <tr>
@@ -697,6 +762,29 @@
 </tr>
 </tbody>
 </table>
+<p>An example would look like:
+<div class="highlight"><pre><span></span><code><span class="nt">plugins</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;showcase&quot;</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;simple</span><span class="nv"> </span><span class="s">showcase</span><span class="nv"> </span><span class="s">plugin&quot;</span>
+    <span class="nt">version</span><span class="p">:</span> <span class="s">&quot;1.0.0&quot;</span>
+    <span class="nt">repository</span><span class="p">:</span> <span class="s">&quot;https://github.com/Multivit4min/VeniceRCON-showcase-plugin&quot;</span>
+    <span class="nt">commit</span><span class="p">:</span> <span class="s">&quot;57edeb66196e0c4fdf9c1e475965a9c8404219cc&quot;</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;other_arbitary_plugin&quot;</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;arbitary</span><span class="nv"> </span><span class="s">non</span><span class="nv"> </span><span class="s">existing</span><span class="nv"> </span><span class="s">plugin&quot;</span>
+    <span class="nt">version</span><span class="p">:</span> <span class="s">&quot;2.5.1&quot;</span>
+    <span class="nt">repository</span><span class="p">:</span> <span class="s">&quot;https://github.com/doesnotexist/thisneither&quot;</span>
+    <span class="nt">commit</span><span class="p">:</span> <span class="s">&quot;123456789abcdefghijklmnopqrstuvwxyz123456&quot;</span>
+</code></pre></div></p>
+<p>Inside your VENICERCON config you add this repository to the path: <code>instance.plugins.repos</code></p>
+<p>This should look like following: 
+<div class="highlight"><pre><span></span><code><span class="nt">instance</span><span class="p">:</span>
+  <span class="nt">plugins</span><span class="p">:</span>
+    <span class="nt">repos</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;main&quot;</span>
+        <span class="nt">repository</span><span class="p">:</span> <span class="s">&quot;https://github.com/Multivit4min/vu-plugin-repo/&quot;</span>
+</code></pre></div></p>
+<p><strong>name</strong> this is the arbitary name to identify your plugin provider repository so it is possible to identify where to get updates for a specific plugin from</p>
+<p><strong>repository</strong> this is the general to the repository which should contain the repository.yaml</p>
                 
               
               
@@ -769,7 +857,7 @@
       <script>
         app = initialize({
           base: "../../..",
-          features: ['instant', 'tabs'],
+          features: ['navigation.instant', 'navigation.tabs', 'instant', 'tabs'],
           search: Object.assign({
             worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
