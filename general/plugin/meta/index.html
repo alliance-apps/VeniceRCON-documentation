@@ -758,6 +758,18 @@
 <td>type of the field</td>
 </tr>
 <tr>
+<td>multiline</td>
+<td>YES</td>
+<td>boolean</td>
+<td>only used with <code>string</code> type</td>
+</tr>
+<tr>
+<td>vars</td>
+<td>YES</td>
+<td>array of objects</td>
+<td>only used with <code>array</code> type</td>
+</tr>
+<tr>
 <td>conditions</td>
 <td>YES</td>
 <td>array of objects</td>
@@ -768,14 +780,11 @@
 <h3>Allowed Field Types and optional fields</h3>
 <ul>
 <li><strong>string</strong> displays a textfield</li>
-<li><strong>multiline</strong> true or false - displays a multiline field</li>
 <li><strong>number</strong> displays a number input</li>
 <li><strong>boolean</strong> displays a checkbox</li>
 <li><strong>strings</strong> allows array of strings</li>
 <li><strong>select</strong> displays a select field with multiple input types</li>
-<li><strong>options</strong> this is an key/value object the key is the identifier for the selected field and the value the field description</li>
 <li><strong>array</strong> allows nested variable configuration</li>
-<li><strong>vars</strong> this is a nested variable field with another variable schema</li>
 </ul>
 <h2>Conditions type</h2>
 <p>This allows for a more dynamic configuration approach.
