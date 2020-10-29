@@ -36,19 +36,18 @@ field        | optional | type             | description
 name         | NO       | string           | the field key identifier
 description  | NO       | string           | the field descriptor
 type         | NO       | string           | type of the field
+multiline    | YES      | boolean          | only used with `string` type
+vars         | YES      | array of objects | only used with `array` type
 conditions   | YES      | array of objects | conditionals in order to hide / display field in frontend
 
 ### Allowed Field Types and optional fields
 
 - **string** displays a textfield
-  - **multiline** true or false - displays a multiline field
 - **number** displays a number input
 - **boolean** displays a checkbox
 - **strings** allows array of strings
 - **select** displays a select field with multiple input types
-  - **options** this is an key/value object the key is the identifier for the selected field and the value the field description
 - **array** allows nested variable configuration
-  - **vars** this is a nested variable field with another variable schema
 
 ## Conditions type
 
