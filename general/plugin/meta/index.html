@@ -728,6 +728,83 @@
     <span class="nt">type</span><span class="p">:</span> <span class="s">&quot;number&quot;</span>
     <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
 </code></pre></div>
+<h2>General Variable Schema</h2>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>optional</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>NO</td>
+<td>string</td>
+<td>the field key identifier</td>
+</tr>
+<tr>
+<td>description</td>
+<td>NO</td>
+<td>string</td>
+<td>the field descriptor</td>
+</tr>
+<tr>
+<td>type</td>
+<td>NO</td>
+<td>string</td>
+<td>type of the field</td>
+</tr>
+<tr>
+<td>conditions</td>
+<td>YES</td>
+<td>array of objects</td>
+<td>conditionals in order to hide / display field in frontend</td>
+</tr>
+</tbody>
+</table>
+<h3>Allowed Field Types and optional fields</h3>
+<ul>
+<li><strong>string</strong> displays a textfield</li>
+<li><strong>multiline</strong> true or false - displays a multiline field</li>
+<li><strong>number</strong> displays a number input</li>
+<li><strong>boolean</strong> displays a checkbox</li>
+<li><strong>strings</strong> allows array of strings</li>
+<li><strong>select</strong> displays a select field with multiple input types</li>
+<li><strong>options</strong> this is an key/value object the key is the identifier for the selected field and the value the field description</li>
+<li><strong>array</strong> allows nested variable configuration</li>
+<li><strong>vars</strong> this is a nested variable field with another variable schema</li>
+</ul>
+<h2>Conditions type</h2>
+<p>This allows for a more dynamic configuration approach.
+It enables fields based on certain conditions</p>
+<p>Example Configuration:
+<div class="highlight"><pre><span></span><code><span class="nt">vars</span><span class="p">:</span>
+  <span class="c1"># bar is a boolean</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;bar&quot;</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;...&quot;</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="s">&quot;boolean&quot;</span>
+  <span class="c1"># baz is a select field with 2 options &quot;optionA&quot; and &quot;optionB&quot;</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;baz&quot;</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;...&quot;</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="s">&quot;select&quot;</span>
+    <span class="nt">options</span><span class="p">:</span>
+      <span class="nt">optionA</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">descriptor for optionA</span>
+      <span class="nt">optionB</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">descriptor for optionB</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;foo&quot;</span>
+    <span class="nt">description</span><span class="p">:</span> <span class="s">&quot;...&quot;</span>
+    <span class="nt">type</span><span class="p">:</span> <span class="s">&quot;string&quot;</span>
+    <span class="nt">conditions</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">baz</span><span class="p">:</span> <span class="s">&quot;optionA&quot;</span>
+        <span class="nt">bar</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="p p-Indicator">-</span> <span class="nt">baz</span><span class="p">:</span> <span class="s">&quot;optionB</span>
+</code></pre></div></p>
+<p>Field <code>foo</code> will only be displayed when:</p>
+<p><code>baz</code> equals <code>"optionA"</code> <strong>AND</strong> <code>bar</code> equals <code>true</code></p>
+<p><strong>OR</strong></p>
+<p><code>baz</code> equals <code>"optionB"</code></p>
                 
               
               
