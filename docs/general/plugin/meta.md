@@ -28,3 +28,60 @@ vars:
     type: "number"
     default: 0
 ```
+
+## General Variable Schema
+
+field        | optional | type             | description
+-------------|----------|------------------|------
+name         | NO       | string           | the field key identifier
+description  | NO       | string           | the field descriptor
+type         | NO       | string           | type of the field
+conditions   | YES      | array of objects | conditionals in order to hide / display field in frontend
+
+### Allowed Field Types and optional fields
+
+- **string** displays a textfield
+  - **multiline** true or false - displays a multiline field
+- **number** displays a number input
+- **boolean** displays a checkbox
+- **strings** allows array of strings
+- **select** displays a select field with multiple input types
+  - **options** this is an key/value object the key is the identifier for the selected field and the value the field description
+- **array** allows nested variable configuration
+  - **vars** this is a nested variable field with another variable schema
+
+## Conditions type
+
+This allows for a more dynamic configuration approach.
+It enables fields based on certain conditions
+
+Example Configuration:
+```yaml
+vars:
+  # bar is a boolean
+  - name: "bar"
+    description: "..."
+    type: "boolean"
+  # baz is a select field with 2 options "optionA" and "optionB"
+  - name: "baz"
+    description: "..."
+    type: "select"
+    options:
+      optionA: descriptor for optionA
+      optionB: descriptor for optionB
+  - name: "foo"
+    description: "..."
+    type: "string"
+    conditions:
+      - baz: "optionA"
+        bar: true
+      - baz: "optionB
+```
+
+Field `foo` will only be displayed when:
+
+`baz` equals `"optionA"` **AND** `bar` equals `true`
+
+**OR**
+
+`baz` equals `"optionB"`
