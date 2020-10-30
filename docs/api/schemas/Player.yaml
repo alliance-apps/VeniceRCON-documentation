@@ -1,3 +1,16 @@
+DatabasePlayers:
+  type: array
+  items:
+    $ref: "#/DatabasePlayer"
+DatabasePlayer:
+  type: object
+  properties:
+    id:
+      type: string
+    name:
+      type: string
+    guid:
+      type: string
 Players:
   type: object
   additionalProperties:

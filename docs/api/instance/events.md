@@ -23,5 +23,5 @@
     count: 0,
     from: "date"
   },
-  response = parse_schema(schemas.Kills)
+  response = parse_schema(schemas.Messages)
 ) }}

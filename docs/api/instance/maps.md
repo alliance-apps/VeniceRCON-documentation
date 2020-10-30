@@ -78,3 +78,11 @@
   description = "sets the index of the next map to be played",
   loggedIn = True
 ) }}
+
+{{ route(
+  method = "PATCH",
+  path = "/api/instances/{instanceId}/maps/{index}/position/{toIndex}",
+  scopes = ["MAPS#MANAGE"],
+  description = "moves the map to another index",
+  loggedIn = True
+) }}

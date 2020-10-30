@@ -49,6 +49,38 @@
 ) }}
 
 {{ route(
+  method = "GET",
+  path = "/api/instances/{instanceId}/users/{userId}/bind",
+  scopes = ["INSTANCEUSER#UPDATE"],
+  description = "lists bound players for this user",
+  loggedIn = True,
+  responseText = "retrieves all player bindings for this user",
+  response = parse_schema(schemas.DatabasePlayers)
+) }}
+
+{{ route(
+  method = "POST",
+  path = "/api/instances/{instanceId}/users/{userId}/bind",
+  scopes = ["INSTANCEUSER#UPDATE"],
+  description = "creates a binding between player and user",
+  loggedIn = True,
+  body = {
+    "playerId": 0
+  }
+) }}
+
+{{ route(
+  method = "DELETE",
+  path = "/api/instances/{instanceId}/users/{userId}/bind",
+  scopes = ["INSTANCEUSER#UPDATE"],
+  description = "removes a binding between player and user",
+  loggedIn = True,
+  body = {
+    "playerId": 0
+  }
+) }}
+
+{{ route(
   method = "PATCH",
   path = "/api/instances/{instanceId}/users/{userId}/permissions",
   scopes = ["INSTANCEUSER#UPDATE"],

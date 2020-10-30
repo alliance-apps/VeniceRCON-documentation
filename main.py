@@ -64,7 +64,8 @@ def define_env(env):
       "array": parse_schema_array,
       "string": parse_schema_string,
       "number": parse_schema_number,
-      "boolean": parse_schema_boolean
+      "boolean": parse_schema_boolean,
+      "any": parse_schema_any
     }
     if (is_ref(schema)):
       schema = resolve_ref(schema["$ref"])
@@ -89,6 +90,9 @@ def define_env(env):
   def parse_schema_boolean(schema):
     return False
 
+  def parse_schema_any(schema):
+    return "any"
+
   def parse_schema_array(schema):
     return [parse_schema(schema["items"])]
 
@@ -100,7 +104,7 @@ def define_env(env):
       if is_ref(schema["additionalProperties"]):
         props = parse_schema(resolve_ref(schema["additionalProperties"]["$ref"]))
       else:
-        props = parse_schema(props)
+        props = parse_schema(schema["additionalProperties"])
       schema["properties"][key] = schema["additionalProperties"]
     elif "properties" in schema:
       for key in schema["properties"]:

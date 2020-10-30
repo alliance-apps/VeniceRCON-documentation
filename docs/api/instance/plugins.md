@@ -31,7 +31,10 @@
   scopes = ["PLUGIN#MODIFY"],
   description = "modifies the configuration of the plugin",
   loggedIn = True,
-  response = {}
+  response = {},
+  body = {
+    "vars.key": "any"
+  }
 ) }}
 
 {{ route(
