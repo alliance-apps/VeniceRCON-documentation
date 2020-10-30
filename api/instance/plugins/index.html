@@ -724,9 +724,9 @@
 <span class="cm">    {</span>
 <span class="cm">      &quot;id&quot;: 0,</span>
 <span class="cm">      &quot;storeVersion&quot;: &quot;string&quot;,</span>
-<span class="cm">      &quot;name&quot;: &quot;string&quot;,</span>
-<span class="cm">      &quot;store&quot;: &quot;string&quot;,</span>
 <span class="cm">      &quot;uuid&quot;: &quot;string&quot;,</span>
+<span class="cm">      &quot;store&quot;: &quot;string&quot;,</span>
+<span class="cm">      &quot;name&quot;: &quot;string&quot;,</span>
 <span class="cm">      &quot;state&quot;: 0,</span>
 <span class="cm">      &quot;meta&quot;: {</span>
 <span class="cm">        &quot;name&quot;: &quot;string&quot;,</span>
@@ -735,10 +735,22 @@
 <span class="cm">        &quot;backend&quot;: &quot;string&quot;,</span>
 <span class="cm">        &quot;entry&quot;: &quot;string&quot;,</span>
 <span class="cm">        &quot;dependency?&quot;: [</span>
-<span class="cm">          &quot;_UNKNOWN_&quot;</span>
+<span class="cm">          &quot;string&quot;</span>
 <span class="cm">        ],</span>
-<span class="cm">        &quot;vars?&quot;: [</span>
-<span class="cm">          &quot;_UNKNOWN_&quot;</span>
+<span class="cm">        &quot;vars&quot;: [</span>
+<span class="cm">          {</span>
+<span class="cm">            &quot;name&quot;: &quot;string&quot;,</span>
+<span class="cm">            &quot;description&quot;: &quot;string&quot;,</span>
+<span class="cm">            &quot;type&quot;: &quot;string|number|boolean|strings|select|array&quot;,</span>
+<span class="cm">            &quot;multiline?&quot;: false,</span>
+<span class="cm">            &quot;default&quot;: &quot;any&quot;,</span>
+<span class="cm">            &quot;options&quot;: [</span>
+<span class="cm">              null</span>
+<span class="cm">            ],</span>
+<span class="cm">            &quot;conditions&quot;: [</span>
+<span class="cm">              null</span>
+<span class="cm">            ]</span>
+<span class="cm">          }</span>
 <span class="cm">        ]</span>
 <span class="cm">      },</span>
 <span class="cm">      &quot;config&quot;: {}</span>
@@ -765,9 +777,9 @@
 <span class="sd">    {</span>
 <span class="sd">      &quot;id&quot;: 0,</span>
 <span class="sd">      &quot;storeVersion&quot;: &quot;string&quot;,</span>
-<span class="sd">      &quot;name&quot;: &quot;string&quot;,</span>
-<span class="sd">      &quot;store&quot;: &quot;string&quot;,</span>
 <span class="sd">      &quot;uuid&quot;: &quot;string&quot;,</span>
+<span class="sd">      &quot;store&quot;: &quot;string&quot;,</span>
+<span class="sd">      &quot;name&quot;: &quot;string&quot;,</span>
 <span class="sd">      &quot;state&quot;: 0,</span>
 <span class="sd">      &quot;meta&quot;: {</span>
 <span class="sd">        &quot;name&quot;: &quot;string&quot;,</span>
@@ -776,10 +788,22 @@
 <span class="sd">        &quot;backend&quot;: &quot;string&quot;,</span>
 <span class="sd">        &quot;entry&quot;: &quot;string&quot;,</span>
 <span class="sd">        &quot;dependency?&quot;: [</span>
-<span class="sd">          &quot;_UNKNOWN_&quot;</span>
+<span class="sd">          &quot;string&quot;</span>
 <span class="sd">        ],</span>
-<span class="sd">        &quot;vars?&quot;: [</span>
-<span class="sd">          &quot;_UNKNOWN_&quot;</span>
+<span class="sd">        &quot;vars&quot;: [</span>
+<span class="sd">          {</span>
+<span class="sd">            &quot;name&quot;: &quot;string&quot;,</span>
+<span class="sd">            &quot;description&quot;: &quot;string&quot;,</span>
+<span class="sd">            &quot;type&quot;: &quot;string|number|boolean|strings|select|array&quot;,</span>
+<span class="sd">            &quot;multiline?&quot;: false,</span>
+<span class="sd">            &quot;default&quot;: &quot;any&quot;,</span>
+<span class="sd">            &quot;options&quot;: [</span>
+<span class="sd">              null</span>
+<span class="sd">            ],</span>
+<span class="sd">            &quot;conditions&quot;: [</span>
+<span class="sd">              null</span>
+<span class="sd">            ]</span>
+<span class="sd">          }</span>
 <span class="sd">        ]</span>
 <span class="sd">      },</span>
 <span class="sd">      &quot;config&quot;: {}</span>
@@ -866,7 +890,11 @@
   <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/instances/{instanceId}/plugins/{id}/config&quot;</span><span class="p">,</span> <span class="p">{</span>
     <span class="nx">method</span><span class="o">:</span> <span class="s2">&quot;PATCH&quot;</span><span class="p">,</span>
     <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">Authorization</span><span class="o">:</span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span>
+      <span class="nx">Authorization</span><span class="o">:</span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+      <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span><span class="s2">&quot;application/json&quot;</span>
+    <span class="p">},</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;vars.key&quot;</span><span class="o">:</span> <span class="s2">&quot;any&quot;</span>
     <span class="p">}</span>
   <span class="p">})</span>
 </code></pre></div>
@@ -878,7 +906,10 @@
   <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span>
     <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/api/instances/</span><span class="si">{instanceId}</span><span class="s2">/plugins/</span><span class="si">{id}</span><span class="s2">/config&quot;</span><span class="p">,</span>
     <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="n">Authorization</span><span class="p">:</span><span class="s2">&quot;Bearer </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">token</span>
+      <span class="n">Authorization</span><span class="p">:</span><span class="s2">&quot;Bearer </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">token</span><span class="p">,</span><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="s2">&quot;application/json&quot;</span>
+    <span class="p">}</span>
+    <span class="n">body</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;vars.key&quot;</span><span class="p">:</span> <span class="s2">&quot;any&quot;</span>
     <span class="p">}</span>
 
   <span class="p">)</span>
@@ -942,7 +973,8 @@
 <span class="cm">      &quot;store&quot;: &quot;string&quot;,</span>
 <span class="cm">      &quot;name&quot;: &quot;string&quot;,</span>
 <span class="cm">      &quot;description&quot;: &quot;string&quot;,</span>
-<span class="cm">      &quot;version&quot;: &quot;string&quot;</span>
+<span class="cm">      &quot;version&quot;: &quot;string&quot;,</span>
+<span class="cm">      &quot;uuid&quot;: &quot;string&quot;</span>
 <span class="cm">    }</span>
 <span class="cm">  ]</span>
 <span class="cm">  */</span>
@@ -967,7 +999,8 @@
 <span class="sd">      &quot;store&quot;: &quot;string&quot;,</span>
 <span class="sd">      &quot;name&quot;: &quot;string&quot;,</span>
 <span class="sd">      &quot;description&quot;: &quot;string&quot;,</span>
-<span class="sd">      &quot;version&quot;: &quot;string&quot;</span>
+<span class="sd">      &quot;version&quot;: &quot;string&quot;,</span>
+<span class="sd">      &quot;uuid&quot;: &quot;string&quot;</span>
 <span class="sd">    }</span>
 <span class="sd">  ]</span>
 <span class="sd">  &quot;&quot;&quot;</span>

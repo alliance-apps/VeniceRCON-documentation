@@ -13,11 +13,11 @@ Plugin:
       type: number
     storeVersion:
       type: string
-    name:
+    uuid:
       type: string
     store:
       type: string
-    uuid:
+    name:
       type: string
     state:
       type: number
@@ -28,17 +28,6 @@ Plugin:
       $ref: "#/Meta"
     config:
       type: object
-PluginVar:
-  type: object
-  properties:
-    name:
-      type: string
-    description:
-      type: string
-    type:
-      type: string
-    default:
-      type: any
 Meta:
   type: object
   properties:
@@ -54,12 +43,13 @@ Meta:
       type: string
     dependency:
       type: array
-      items: string
+      items: 
+        type: string
       nullable: true
     vars:
       type: array
-      items: "#/PluginVar"
-      nullable: true
+      items: 
+        $ref: "#/PluginVariables"
 StoreItems:
   type: array
   items:
@@ -75,3 +65,41 @@ StoreItem:
       type: string
     version:
       type: string
+    uuid:
+      type: string
+PluginVariables:
+  type: object
+  properties:
+    name: 
+      type: string
+    description:
+      type: string
+    type:
+      type: string
+      enum: 
+        - string
+        - number
+        - boolean
+        - strings
+        - select
+        - array
+    multiline?:
+      type: boolean
+    default:
+      type: any
+    options:
+      type: array
+      items:
+        type: object
+        additionalProperties:
+          type: string
+    conditions:
+      $ref: "#/Conditions"
+Conditions:
+  type: array
+  items:
+    $ref: "#/Condition"
+Condition:
+  type: object
+  additionalProperties:
+    type: any
