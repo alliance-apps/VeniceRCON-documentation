@@ -57,6 +57,7 @@ nav:
     - /instance/{instanceId}/mods: api/instance/mods.md
     - /instance/{instanceId}/logs: api/instance/logs.md
 extra:
+  backend_repo_url: https://github.com/alliance-apps/VeniceRCON-backend
   api:
     schema_path: docs/api/schemas
 extra_css:
