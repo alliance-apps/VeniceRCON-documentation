@@ -11,7 +11,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.2">
     
     
       
@@ -19,10 +19,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.19190aaf.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.24b84193.min.css">
         
       
     
@@ -701,9 +701,20 @@
                 
                   <h1>Installation</h1>
                 
-                <h2>Installation</h2>
+                <h3>Prerequisites</h3>
+<ul>
+<li>minimum NodeJS v14 installed</li>
+<li>npm installed</li>
+</ul>
+<h3>Installation</h3>
 <p>In order to install VeniceRCON you will need to have NodeJS and npm preinstalled on your server</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#install dependencies</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#clone the repository</span>
+git clone https://github.com/alliance-apps/VeniceRCON-backend
+
+<span class="c1">#switch into the cloned repo</span>
+<span class="nb">cd</span> VeniceRCON-backend
+
+<span class="c1">#install dependencies</span>
 npm install
 
 <span class="c1">#copy the default config.default.yaml to config.yaml</span>
@@ -711,6 +722,9 @@ cp config.default.yaml config.yaml
 
 <span class="c1">#edit the configuration to your needs</span>
 nano config.yaml
+
+<span class="c1">#build the compiled typescript files</span>
+npm run build
 
 <span class="c1">#start the tool with</span>
 npm start
@@ -767,8 +781,8 @@ npm start
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="../../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
