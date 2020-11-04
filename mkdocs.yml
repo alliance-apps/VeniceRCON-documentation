@@ -31,6 +31,7 @@ nav:
     - Permissions: general/scopes.md
     - Variables: general/variables.md
     - FAQ: general/faq.md
+    - Proxy: general/proxy.md
   - Socket:
     - Instance: general/socket/instance.md
     - Self: general/socket/self.md
