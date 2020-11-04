@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://alliance-apps.github.io/VeniceRCON-documentation/general/variables/">
+        <link rel="canonical" href="https://alliance-apps.github.io/VeniceRCON-documentation/general/proxy/">
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
@@ -15,7 +15,7 @@
     
     
       
-        <title>Variables - VeniceRCON</title>
+        <title>Proxy - VeniceRCON</title>
       
     
     
@@ -85,7 +85,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Variables
+              Proxy
             
           </span>
         </div>
@@ -294,18 +294,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../variables/" class="md-nav__link">
       Variables
     </a>
-    
   </li>
 
         
@@ -325,11 +318,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../proxy/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Proxy
     </a>
+    
   </li>
 
         
@@ -706,340 +706,37 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/alliance-apps/VeniceRCON-documentation/edit/master/docs/general/variables.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/alliance-apps/VeniceRCON-documentation/edit/master/docs/general/proxy.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Variables</h1>
+                  <h1>Proxy</h1>
                 
-                <h2>Permission Scopes</h2>
-<p>Available <strong>Battlefield 3</strong> Variables are:</p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>renark</th>
-<th>type</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>serverName</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>string</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>autoBalance</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>friendlyFire</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>maxPlayers</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>serverDescription</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>string</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>serverMessage</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>string</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>killCam</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>miniMap</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>hud</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>3dSpotting</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>miniMapSpotting</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>nametag</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>3pCam</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>regenerateHealth</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>teamKillCountForKick</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>teamKillValueForKick</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>teamKillValueIncrease</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>teamKillValueDecreasePerSecond</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>teamKillKickForBan</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>idleTimeout</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>idleBanRounds</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>roundStartPlayerCount</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>roundRestartPlayerCount</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>roundLockdownCountdown</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>vehicleSpawnAllowed</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>vehicleSpawnDelay</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>soldierHealth</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>playerRespawnTime</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>playerManDownTime</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>bulletDamage</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>gameModeCounter</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>onlySquadLeaderSpawn</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>premiumStatus</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>ranked</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>unlockMode</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>gamePassword</code></td>
-<td><code>only unranked</code></td>
-<td><code>string</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>Available <strong>Venice Unleashed</strong> Variables are:</p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>renark</th>
-<th>type</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>DestructionEnabled</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>SuppressionMultiplier</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>DesertingAllowed</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>VehicleDisablingEnabled</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>HighPerformanceReplication</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>ServerBanner</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>string</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>FrequencyMode</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>SpectatorCount</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>SunFlareEnabled</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>ColorCorrectionEnabled</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>TimeScale</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>SquadSize</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>FadeOutAll</code></td>
-<td><code>write only</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>FadeInAll</code></td>
-<td><code>write only</code></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+                <h2>NGINX</h2>
+<p>for NGINX the recommended configuration would look like</p>
+<div class="highlight"><pre><span></span><code><span class="k">server</span> <span class="p">{</span>
+  <span class="kn">listen</span> <span class="mi">443</span><span class="p">;</span>
+  <span class="kn">server_name</span> <span class="s">vurcon.example.com</span><span class="p">;</span>
+
+  <span class="kn">ssl</span> <span class="no">on</span><span class="p">;</span>
+  <span class="kn">ssl_certificate</span> <span class="s">/path/to/your/certfile/fullchain.pen</span><span class="p">;</span>
+  <span class="kn">ssl_certificate_key</span> <span class="s">/path/to/your/certfile/privkey.pem</span><span class="p">;</span>  
+
+  <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+                      <span class="c1">#set the correct ip + port to your application</span>
+    <span class="kn">proxy_pass</span>        <span class="s">http://127.0.0.1:8000</span><span class="p">;</span>
+    <span class="kn">proxy_set_header</span>  <span class="s">Host</span>              <span class="nv">$host</span><span class="p">;</span>
+    <span class="kn">proxy_set_header</span>  <span class="s">X-Forwarded-For</span>   <span class="nv">$remote_addr</span><span class="p">;</span>
+                      <span class="c1">#set to http if no ssl is used</span>
+                      <span class="c1">#altough SSL is strongly recommended</span>
+    <span class="kn">proxy_set_header</span>  <span class="s">X-Forwarded-Proto</span> <span class="s">https</span>
+    <span class="s">proxy_set_header</span>  <span class="s">Upgrade</span>           <span class="nv">$http_upgrade</span><span class="p">;</span>
+    <span class="kn">proxy_set_header</span>  <span class="s">Connection</span>        <span class="s">upgrade</span><span class="p">;</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
@@ -1058,7 +755,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../scopes/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../faq/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1067,19 +764,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Permissions
+                FAQ
               </div>
             </div>
           </a>
         
         
-          <a href="../faq/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../socket/instance/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                FAQ
+                Instance
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
