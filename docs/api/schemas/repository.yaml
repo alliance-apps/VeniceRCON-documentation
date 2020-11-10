@@ -1,0 +1,40 @@
+Repositories:
+  type: array
+  items:
+    $ref: "#/Repository"
+RepositoryPluginItem:
+  type: object
+  properties:
+    name:
+      type: string
+    description:
+      type: string
+    uuid:
+      type: string
+    version:
+      type: string
+Repository:
+  type: object
+  properties:
+    id:
+      type: number
+    created:
+      type: string
+    modified:
+      type: string
+    url:
+      type: string
+    branch:
+      type: string
+    headers:
+      type: string
+    enabled:
+      type: boolean
+    reloadTime:
+      type: number
+    repositoryUrl:
+      type: string
+    plugins:
+      type: array
+      items:
+        $ref: "#/RepositoryPluginItem"

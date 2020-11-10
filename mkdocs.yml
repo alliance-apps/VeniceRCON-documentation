@@ -45,6 +45,8 @@ nav:
       - PluginRouter: general/plugin/types/PluginRouter.md
   - /api:
     - /auth: api/auth.md
+    - /repository: api/repository/index.md
+    - /repository/{repositoryId}: api/repository/repository.md
     - /instance: api/instance/index.md
     - /instance/{instanceId}: api/instance/instance.md
     - /instance/{instanceId}/users: api/instance/users.md

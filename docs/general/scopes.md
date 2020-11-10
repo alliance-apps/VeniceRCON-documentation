@@ -31,7 +31,11 @@ Permission Scopes are being saved as a bitmask, their validity can be for only a
 | `PLUGIN#MODIFY`       | `0x02000000000000`     | modify settings of plugins
 | `VARIABLE#MODIFY`     | `0x0200000000000000`   | modify variables
 | `EVENT#CHAT`          | `0x010000000000000000` | access chat events
-| `MOD#ACCESS`          | `0x0200000000000000000` | access mod related data
+| `MOD#ACCESS`          | `0x0100000000000000000` | access mod related data
 | `MOD#CREATE`          | `0x0200000000000000000` | add mods
-| `MOD#UPDATE`          | `0x0200000000000000000` | update mod related stuff
-| `MOD#DELETE`          | `0x0200000000000000000` | delete mods
+| `MOD#UPDATE`          | `0x0400000000000000000` | update mod related stuff
+| `MOD#DELETE`          | `0x0800000000000000000` | delete mods
+| `REPOSITORY#ACCESS`   | `0x010000000000000000000` | access repository informations
+| `REPOSITORY#MODIFY`   | `0x020000000000000000000` | modify a repository
+| `REPOSITORY#CREATE`   | `0x040000000000000000000` | add a repository
+| `REPOSITORY#REMOVE`   | `0x080000000000000000000` | delete a repository
