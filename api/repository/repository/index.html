@@ -8,22 +8,22 @@
       
       
       
-        <link rel="canonical" href="https://alliance-apps.github.io/VeniceRCON-documentation/api/auth/">
+        <link rel="canonical" href="https://alliance-apps.github.io/VeniceRCON-documentation/api/repository/repository/">
       
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.4">
     
     
       
-        <title>/auth - VeniceRCON</title>
+        <title>/repository/{repositoryId} - VeniceRCON</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.358818c7.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.358818c7.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.f0267088.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f0267088.min.css">
         
       
     
@@ -38,7 +38,7 @@
     
     
     
-      <link rel="stylesheet" href="../../assets/stylesheet.css">
+      <link rel="stylesheet" href="../../../assets/stylesheet.css">
     
     
       
@@ -86,7 +86,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              /auth
+              /repository/{repositoryId}
             
           </span>
         </div>
@@ -157,7 +157,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../general/installation/" class="md-tabs__link">
+        <a href="../../../general/installation/" class="md-tabs__link">
           General
         </a>
       
@@ -170,7 +170,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../general/socket/instance/" class="md-tabs__link">
+        <a href="../../../general/socket/instance/" class="md-tabs__link">
           Socket
         </a>
       
@@ -183,7 +183,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../general/plugin/overview/" class="md-tabs__link">
+        <a href="../../../general/plugin/overview/" class="md-tabs__link">
           Plugins
         </a>
       
@@ -196,7 +196,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" class="md-tabs__link md-tabs__link--active">
+        <a href="../../auth/" class="md-tabs__link md-tabs__link--active">
           /api
         </a>
       
@@ -271,7 +271,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../general/installation/" class="md-nav__link">
+    <a href="../../../general/installation/" class="md-nav__link">
       Installation
     </a>
   </li>
@@ -283,7 +283,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../general/scopes/" class="md-nav__link">
+    <a href="../../../general/scopes/" class="md-nav__link">
       Permissions
     </a>
   </li>
@@ -295,7 +295,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../general/variables/" class="md-nav__link">
+    <a href="../../../general/variables/" class="md-nav__link">
       Variables
     </a>
   </li>
@@ -307,7 +307,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../general/faq/" class="md-nav__link">
+    <a href="../../../general/faq/" class="md-nav__link">
       FAQ
     </a>
   </li>
@@ -319,7 +319,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../general/proxy/" class="md-nav__link">
+    <a href="../../../general/proxy/" class="md-nav__link">
       Proxy
     </a>
   </li>
@@ -357,7 +357,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../general/socket/instance/" class="md-nav__link">
+    <a href="../../../general/socket/instance/" class="md-nav__link">
       Instance
     </a>
   </li>
@@ -369,7 +369,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../general/socket/self/" class="md-nav__link">
+    <a href="../../../general/socket/self/" class="md-nav__link">
       Self
     </a>
   </li>
@@ -407,7 +407,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../general/plugin/overview/" class="md-nav__link">
+    <a href="../../../general/plugin/overview/" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -419,7 +419,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../general/plugin/meta/" class="md-nav__link">
+    <a href="../../../general/plugin/meta/" class="md-nav__link">
       Meta
     </a>
   </li>
@@ -431,7 +431,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../general/plugin/script/" class="md-nav__link">
+    <a href="../../../general/plugin/script/" class="md-nav__link">
       Script
     </a>
   </li>
@@ -443,7 +443,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../general/plugin/repository/" class="md-nav__link">
+    <a href="../../../general/plugin/repository/" class="md-nav__link">
       Repository
     </a>
   </li>
@@ -476,7 +476,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../general/plugin/types/Logger/" class="md-nav__link">
+    <a href="../../../general/plugin/types/Logger/" class="md-nav__link">
       Logger
     </a>
   </li>
@@ -488,7 +488,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../general/plugin/types/PluginRouter/" class="md-nav__link">
+    <a href="../../../general/plugin/types/PluginRouter/" class="md-nav__link">
       PluginRouter
     </a>
   </li>
@@ -531,18 +531,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../auth/" class="md-nav__link">
       /auth
     </a>
-    
   </li>
 
         
@@ -552,7 +545,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../repository/" class="md-nav__link">
+    <a href="../" class="md-nav__link">
       /repository
     </a>
   </li>
@@ -562,11 +555,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../repository/repository/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       /repository/{repositoryId}
     </a>
+    
   </li>
 
         
@@ -576,7 +576,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../instance/" class="md-nav__link">
+    <a href="../../instance/" class="md-nav__link">
       /instance
     </a>
   </li>
@@ -588,7 +588,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../instance/instance/" class="md-nav__link">
+    <a href="../../instance/instance/" class="md-nav__link">
       /instance/{instanceId}
     </a>
   </li>
@@ -600,7 +600,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../instance/users/" class="md-nav__link">
+    <a href="../../instance/users/" class="md-nav__link">
       /instance/{instanceId}/users
     </a>
   </li>
@@ -612,7 +612,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../instance/players/" class="md-nav__link">
+    <a href="../../instance/players/" class="md-nav__link">
       /instance/{instanceId}/players
     </a>
   </li>
@@ -624,7 +624,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../instance/bans/" class="md-nav__link">
+    <a href="../../instance/bans/" class="md-nav__link">
       /instance/{instanceId}/bans
     </a>
   </li>
@@ -636,7 +636,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../instance/maps/" class="md-nav__link">
+    <a href="../../instance/maps/" class="md-nav__link">
       /instance/{instanceId}/maps
     </a>
   </li>
@@ -648,7 +648,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../instance/reservedslot/" class="md-nav__link">
+    <a href="../../instance/reservedslot/" class="md-nav__link">
       /instance/{instanceId}/reservedslot
     </a>
   </li>
@@ -660,7 +660,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../instance/vars/" class="md-nav__link">
+    <a href="../../instance/vars/" class="md-nav__link">
       /instance/{instanceId}/vars
     </a>
   </li>
@@ -672,7 +672,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../instance/events/" class="md-nav__link">
+    <a href="../../instance/events/" class="md-nav__link">
       /instance/{instanceId}/events
     </a>
   </li>
@@ -684,7 +684,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../instance/plugins/" class="md-nav__link">
+    <a href="../../instance/plugins/" class="md-nav__link">
       /instance/{instanceId}/plugins
     </a>
   </li>
@@ -696,7 +696,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../instance/mods/" class="md-nav__link">
+    <a href="../../instance/mods/" class="md-nav__link">
       /instance/{instanceId}/mods
     </a>
   </li>
@@ -708,7 +708,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../instance/logs/" class="md-nav__link">
+    <a href="../../instance/logs/" class="md-nav__link">
       /instance/{instanceId}/logs
     </a>
   </li>
@@ -731,147 +731,144 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/alliance-apps/VeniceRCON-documentation/edit/master/docs/api/auth.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/alliance-apps/VeniceRCON-documentation/edit/master/docs/api/repository/repository.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>/auth</h1>
+                  <h1>/repository/{repositoryId}</h1>
                 
-                <details class="done"><summary>POST /api/auth/login </summary><p>tries to log you into the specified account</p>
+                <details class="info"><summary>GET /api/repository/{id} <img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /></summary><p>gets a repository with the specified id</p>
+<h4>Required Scopes:</h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> REPOSITORY#ACCESS</li>
+</ul>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">JavaScript</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>  <span class="kr">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;node-fetch&quot;</span><span class="p">)</span>
-
-  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/auth/login&quot;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">method</span><span class="o">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
-    <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span><span class="s2">&quot;application/json&quot;</span>
-    <span class="p">},</span>
-    <span class="nx">body</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;password&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span>
-    <span class="p">}</span>
-  <span class="p">})</span>
-
-  <span class="c1">//responds with the jwt token</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-  <span class="cm">/* </span>
-<span class="cm">  {</span>
-<span class="cm">    &quot;token&quot;: &quot;string&quot;</span>
-<span class="cm">  }</span>
-<span class="cm">  */</span>
-</code></pre></div>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Python</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>  <span class="kn">import</span> <span class="nn">requests</span>
-
-
-  <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/api/auth/login&quot;</span><span class="p">,</span>
-    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="s2">&quot;application/json&quot;</span>
-    <span class="p">}</span>
-    <span class="n">body</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
-    <span class="p">}</span>
-
-  <span class="p">)</span>
-  <span class="c1">#responds with the jwt token</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
-  <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">  {</span>
-<span class="sd">    &quot;token&quot;: &quot;string&quot;</span>
-<span class="sd">  }</span>
-<span class="sd">  &quot;&quot;&quot;</span>
-</code></pre></div>
-</div>
-</div>
-</details>
-<details class="info"><summary>GET /api/auth/whoami <img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /></summary><p>retrieves informations about the currently used token</p>
-<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">JavaScript</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>  <span class="kr">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;node-fetch&quot;</span><span class="p">)</span>
   <span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
 
-  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/auth/whoami&quot;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/repository/{id}&quot;</span><span class="p">,</span> <span class="p">{</span>
     <span class="nx">method</span><span class="o">:</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
     <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
       <span class="nx">Authorization</span><span class="o">:</span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span>
     <span class="p">}</span>
   <span class="p">})</span>
 
-  <span class="c1">//responds with informations about your token</span>
+
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
   <span class="cm">/* </span>
 <span class="cm">  {</span>
-<span class="cm">    &quot;permissions&quot;: [</span>
+<span class="cm">    &quot;id&quot;: 0,</span>
+<span class="cm">    &quot;created&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;modified&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;url&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;branch&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;headers&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;enabled&quot;: false,</span>
+<span class="cm">    &quot;reloadTime&quot;: 0,</span>
+<span class="cm">    &quot;repositoryUrl&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;plugins&quot;: [</span>
 <span class="cm">      {</span>
-<span class="cm">        &quot;instance?&quot;: 0,</span>
-<span class="cm">        &quot;root?&quot;: false,</span>
-<span class="cm">        &quot;scopes&quot;: [</span>
-<span class="cm">          &quot;string&quot;</span>
-<span class="cm">        ]</span>
+<span class="cm">        &quot;name&quot;: &quot;string&quot;,</span>
+<span class="cm">        &quot;description&quot;: &quot;string&quot;,</span>
+<span class="cm">        &quot;uuid&quot;: &quot;string&quot;,</span>
+<span class="cm">        &quot;version&quot;: &quot;string&quot;</span>
 <span class="cm">      }</span>
-<span class="cm">    ],</span>
-<span class="cm">    &quot;token&quot;: {</span>
-<span class="cm">      &quot;id&quot;: 0,</span>
-<span class="cm">      &quot;username&quot;: &quot;string&quot;,</span>
-<span class="cm">      &quot;iat&quot;: 0</span>
-<span class="cm">    }</span>
+<span class="cm">    ]</span>
 <span class="cm">  }</span>
 <span class="cm">  */</span>
 </code></pre></div>
 </div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Python</label><div class="tabbed-content">
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Python</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>  <span class="kn">import</span> <span class="nn">requests</span>
   <span class="n">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
 
   <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/api/auth/whoami&quot;</span><span class="p">,</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/api/repository/</span><span class="si">{id}</span><span class="s2">&quot;</span><span class="p">,</span>
     <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
       <span class="n">Authorization</span><span class="p">:</span><span class="s2">&quot;Bearer </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">token</span>
     <span class="p">}</span>
 
   <span class="p">)</span>
-  <span class="c1">#responds with informations about your token</span>
+
   <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
   <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  {</span>
-<span class="sd">    &quot;permissions&quot;: [</span>
+<span class="sd">    &quot;id&quot;: 0,</span>
+<span class="sd">    &quot;created&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;modified&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;url&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;branch&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;headers&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;enabled&quot;: false,</span>
+<span class="sd">    &quot;reloadTime&quot;: 0,</span>
+<span class="sd">    &quot;repositoryUrl&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;plugins&quot;: [</span>
 <span class="sd">      {</span>
-<span class="sd">        &quot;instance?&quot;: 0,</span>
-<span class="sd">        &quot;root?&quot;: false,</span>
-<span class="sd">        &quot;scopes&quot;: [</span>
-<span class="sd">          &quot;string&quot;</span>
-<span class="sd">        ]</span>
+<span class="sd">        &quot;name&quot;: &quot;string&quot;,</span>
+<span class="sd">        &quot;description&quot;: &quot;string&quot;,</span>
+<span class="sd">        &quot;uuid&quot;: &quot;string&quot;,</span>
+<span class="sd">        &quot;version&quot;: &quot;string&quot;</span>
 <span class="sd">      }</span>
-<span class="sd">    ],</span>
-<span class="sd">    &quot;token&quot;: {</span>
-<span class="sd">      &quot;id&quot;: 0,</span>
-<span class="sd">      &quot;username&quot;: &quot;string&quot;,</span>
-<span class="sd">      &quot;iat&quot;: 0</span>
-<span class="sd">    }</span>
+<span class="sd">    ]</span>
 <span class="sd">  }</span>
 <span class="sd">  &quot;&quot;&quot;</span>
 </code></pre></div>
 </div>
 </div>
 </details>
-<details class="done"><summary>POST /api/auth/invite <img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /></summary><p>use and consume a login token in order to gain access to an additional instance</p>
+<details class="error"><summary>DELETE /api/repository/{id} <img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /></summary><p>deletes the specified repository</p>
+<h4>Required Scopes:</h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> REPOSITORY#REMOVE</li>
+</ul>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>  <span class="kr">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;node-fetch&quot;</span><span class="p">)</span>
+  <span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
+
+  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/repository/{id}&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">method</span><span class="o">:</span> <span class="s2">&quot;DELETE&quot;</span><span class="p">,</span>
+    <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">Authorization</span><span class="o">:</span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span>
+    <span class="p">}</span>
+  <span class="p">})</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Python</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>  <span class="kn">import</span> <span class="nn">requests</span>
+  <span class="n">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
+
+  <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/api/repository/</span><span class="si">{id}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">Authorization</span><span class="p">:</span><span class="s2">&quot;Bearer </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">token</span>
+    <span class="p">}</span>
+
+  <span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</details>
+<details class="warning"><summary>PATCH /api/repository <img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /></summary><p>adds a new repository</p>
+<h4>Required Scopes:</h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> REPOSITORY#CREATE</li>
+</ul>
 <div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">JavaScript</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>  <span class="kr">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;node-fetch&quot;</span><span class="p">)</span>
   <span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
 
-  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/auth/invite&quot;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">method</span><span class="o">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/repository&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">method</span><span class="o">:</span> <span class="s2">&quot;PATCH&quot;</span><span class="p">,</span>
     <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
       <span class="nx">Authorization</span><span class="o">:</span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
       <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span><span class="s2">&quot;application/json&quot;</span>
     <span class="p">},</span>
     <span class="nx">body</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;password&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;token&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span>
+      <span class="s2">&quot;url?&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;branch?&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;headers?&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;enabled?&quot;</span><span class="o">:</span> <span class="kc">true</span>
     <span class="p">}</span>
   <span class="p">})</span>
 
@@ -879,7 +876,23 @@
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
   <span class="cm">/* </span>
 <span class="cm">  {</span>
-<span class="cm">    &quot;token&quot;: &quot;string&quot;</span>
+<span class="cm">    &quot;id&quot;: 0,</span>
+<span class="cm">    &quot;created&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;modified&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;url&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;branch&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;headers&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;enabled&quot;: false,</span>
+<span class="cm">    &quot;reloadTime&quot;: 0,</span>
+<span class="cm">    &quot;repositoryUrl&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;plugins&quot;: [</span>
+<span class="cm">      {</span>
+<span class="cm">        &quot;name&quot;: &quot;string&quot;,</span>
+<span class="cm">        &quot;description&quot;: &quot;string&quot;,</span>
+<span class="cm">        &quot;uuid&quot;: &quot;string&quot;,</span>
+<span class="cm">        &quot;version&quot;: &quot;string&quot;</span>
+<span class="cm">      }</span>
+<span class="cm">    ]</span>
 <span class="cm">  }</span>
 <span class="cm">  */</span>
 </code></pre></div>
@@ -888,15 +901,16 @@
 <div class="highlight"><pre><span></span><code>  <span class="kn">import</span> <span class="nn">requests</span>
   <span class="n">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
 
-  <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/api/auth/invite&quot;</span><span class="p">,</span>
+  <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/api/repository&quot;</span><span class="p">,</span>
     <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
       <span class="n">Authorization</span><span class="p">:</span><span class="s2">&quot;Bearer </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">token</span><span class="p">,</span><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="s2">&quot;application/json&quot;</span>
     <span class="p">}</span>
     <span class="n">body</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+      <span class="s2">&quot;url?&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;branch?&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;headers?&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;enabled?&quot;</span><span class="p">:</span> <span class="n">true</span>
     <span class="p">}</span>
 
   <span class="p">)</span>
@@ -904,59 +918,23 @@
   <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
   <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  {</span>
-<span class="sd">    &quot;token&quot;: &quot;string&quot;</span>
-<span class="sd">  }</span>
-<span class="sd">  &quot;&quot;&quot;</span>
-</code></pre></div>
-</div>
-</div>
-</details>
-<details class="done"><summary>POST /api/auth/register </summary><p>creates an user with an invite token</p>
-<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">JavaScript</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>  <span class="kr">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;node-fetch&quot;</span><span class="p">)</span>
-
-  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/auth/register&quot;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">method</span><span class="o">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
-    <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span><span class="s2">&quot;application/json&quot;</span>
-    <span class="p">},</span>
-    <span class="nx">body</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;password&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;token&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span>
-    <span class="p">}</span>
-  <span class="p">})</span>
-
-
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-  <span class="cm">/* </span>
-<span class="cm">  {</span>
-<span class="cm">    &quot;token&quot;: &quot;string&quot;</span>
-<span class="cm">  }</span>
-<span class="cm">  */</span>
-</code></pre></div>
-</div>
-<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Python</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>  <span class="kn">import</span> <span class="nn">requests</span>
-
-
-  <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/api/auth/register&quot;</span><span class="p">,</span>
-    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="s2">&quot;application/json&quot;</span>
-    <span class="p">}</span>
-    <span class="n">body</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
-    <span class="p">}</span>
-
-  <span class="p">)</span>
-
-  <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
-  <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">  {</span>
-<span class="sd">    &quot;token&quot;: &quot;string&quot;</span>
+<span class="sd">    &quot;id&quot;: 0,</span>
+<span class="sd">    &quot;created&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;modified&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;url&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;branch&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;headers&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;enabled&quot;: false,</span>
+<span class="sd">    &quot;reloadTime&quot;: 0,</span>
+<span class="sd">    &quot;repositoryUrl&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;plugins&quot;: [</span>
+<span class="sd">      {</span>
+<span class="sd">        &quot;name&quot;: &quot;string&quot;,</span>
+<span class="sd">        &quot;description&quot;: &quot;string&quot;,</span>
+<span class="sd">        &quot;uuid&quot;: &quot;string&quot;,</span>
+<span class="sd">        &quot;version&quot;: &quot;string&quot;</span>
+<span class="sd">      }</span>
+<span class="sd">    ]</span>
 <span class="sd">  }</span>
 <span class="sd">  &quot;&quot;&quot;</span>
 </code></pre></div>
@@ -981,7 +959,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../general/plugin/types/PluginRouter/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -990,19 +968,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                PluginRouter
+                /repository
               </div>
             </div>
           </a>
         
         
-          <a href="../repository/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../instance/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                /repository
+                /instance
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -1029,15 +1007,15 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.7e0ee788.min.js"></script>
-      <script src="../../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
-          base: "../..",
+          base: "../../..",
           features: ['navigation.instant', 'navigation.tabs', 'instant', 'tabs'],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
