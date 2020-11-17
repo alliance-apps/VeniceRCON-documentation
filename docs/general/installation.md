@@ -3,6 +3,14 @@
 * minimum NodeJS v14 installed
 * npm installed
 
+### Database Support
+
+Currently supported is:
+
+  * MariaDB
+  * PostgreSQL
+  * Sqlite
+
 ### Installation
 
 In order to install VeniceRCON you will need to have NodeJS and npm preinstalled on your server
