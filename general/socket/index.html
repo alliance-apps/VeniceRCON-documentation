@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://alliance-apps.github.io/VeniceRCON-documentation/general/faq/">
+        <link rel="canonical" href="https://alliance-apps.github.io/VeniceRCON-documentation/general/socket/">
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
@@ -16,7 +16,7 @@
     
     
       
-        <title>FAQ - VeniceRCON</title>
+        <title>General - VeniceRCON</title>
       
     
     
@@ -86,7 +86,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              FAQ
+              General
             
           </span>
         </div>
@@ -158,9 +158,7 @@
     <li class="md-tabs__item">
       
       
-        
-      
-      <a href="../installation/" class="md-tabs__link md-tabs__link--active">
+      <a href="../installation/" class="md-tabs__link">
         General
       </a>
     </li>
@@ -173,7 +171,9 @@
     <li class="md-tabs__item">
       
       
-      <a href="../socket/" class="md-tabs__link">
+        
+      
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Socket
       </a>
     </li>
@@ -250,12 +250,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
     <label class="md-nav__link" for="nav-1">
       General
       <span class="md-nav__icon md-icon"></span>
@@ -308,18 +306,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../faq/" class="md-nav__link">
       FAQ
     </a>
-    
   </li>
 
         
@@ -344,10 +335,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     <label class="md-nav__link" for="nav-2">
       Socket
       <span class="md-nav__icon md-icon"></span>
@@ -364,11 +357,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../socket/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       General
     </a>
+    
   </li>
 
         
@@ -378,7 +378,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../socket/instance/" class="md-nav__link">
+    <a href="instance/" class="md-nav__link">
       Instance
     </a>
   </li>
@@ -390,7 +390,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../socket/self/" class="md-nav__link">
+    <a href="self/" class="md-nav__link">
       Self
     </a>
   </li>
@@ -740,15 +740,39 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/alliance-apps/VeniceRCON-documentation/edit/master/docs/general/faq.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/alliance-apps/VeniceRCON-documentation/edit/master/docs/general/socket/index.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>FAQ</h1>
+                  <h1>General</h1>
                 
-                <h2>How do I reset my admin password?</h2>
-<p>In order to reset your admin password start the application with <code>npm start -- --override-password=YOUR_NEW_PASSWORD</code></p>
+                <h3>Socket</h3>
+<p>In order to connect with the Websocket we use Socket.io.
+To be able to connect to it and retrieve a list of instances you will need to send yout jwt token!</p>
+<p>Doing this with the <code>Manager</code> would look like following:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//insert your jwt token here</span>
+<span class="kr">const</span> <span class="nx">JWT_TOKEN</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="c1">//insert your backend address here</span>
+<span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<span class="c1">//this creates a socket.io manager</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">manager</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Manager</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span>
+  <span class="c1">//tell the socket not to connect automatically</span>
+  <span class="c1">//you can connect later with socket.connect()</span>
+  <span class="nx">autoConnect</span>: <span class="kt">false</span><span class="p">,</span>
+  <span class="c1">//this tells socket.io to only use websocket as transport</span>
+  <span class="c1">//if you want to have the option for long polling you can delete this line</span>
+  <span class="nx">transports</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;websocket&quot;</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1">//tell the socket to connect to the main namespace</span>
+<span class="c1">//only the default namespace under `&quot;/&quot;` will be used</span>
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">socket</span>: <span class="kt">Socket</span> <span class="o">=</span> <span class="nx">manager</span><span class="p">.</span><span class="nx">socket</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="c1">//this sets the JWT_TOKEN with which socket.io will authenticate with</span>
+  <span class="nx">auth</span><span class="o">:</span> <span class="p">{</span> <span class="nx">auth_token</span>: <span class="kt">JWT_TOKEN</span> <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div>
                 
               
               
@@ -767,7 +791,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../variables/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../proxy/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -776,19 +800,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Variables
+                Proxy
               </div>
             </div>
           </a>
         
         
-          <a href="../proxy/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="instance/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Proxy
+                Instance
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
