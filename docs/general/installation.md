@@ -43,3 +43,21 @@ If you use sqlite as database then the node version matters otherwise it does no
     ```
 
 {% endfor %}
+
+
+### Development
+
+If you want to make changes or use the current repository from github you can simply clone the repository from github:
+
+`git clone https://github.com/alliance-apps/VeniceRCON-backend`
+
+Then install the required dependencies from the `package-lock.json` with following command (this should also be done after every `git pull`):
+
+`npm ci`
+
+
+Finally in order to be able to run it use:
+
+`npm run start-dev`
+
+This command will first build the JS files from the TypeScript files and after will start the VeniceRCON!

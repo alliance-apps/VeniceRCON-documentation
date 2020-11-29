@@ -27,4 +27,4 @@ If you want other people to be able to use your rcon plugin you can let them ins
 
 ## Limitations
 
-If you use dependencies from yarn or npm then you will need to have those in your repository aswell, as those wont be automatically downloaded, in order to require those modules you will need to use reltive paths to those modules 
+If you use dependencies from yarn or npm then you will need to have those in your repository predownloaded aswell since vurcon does not automatically `npm install` these!

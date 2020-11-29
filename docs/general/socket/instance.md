@@ -46,7 +46,7 @@ socket.on("INSTANCE#REMOVE", event => {
 ```javascript
 /**
  * gets emitted when a chat event gets received from the server
- * @property {object} event see https://alliance-apps.github.io/VeniceRCON-documentation/api/#/Events/get_api_instances__instanceId__events_chat
+ * @property {object} event tbd
  */
 socket.on("INSTANCE#CHAT", event => {
   //do stuff here
@@ -58,7 +58,7 @@ socket.on("INSTANCE#CHAT", event => {
 ```javascript
 /**
  * gets emitted when a kill event gets received from the server
- * @property {object} event see https://alliance-apps.github.io/VeniceRCON-documentation/api/#/Events/get_api_instances__instanceId__events_kill
+ * @property {object} event tbd
  */
 socket.on("INSTANCE#KILL", event => {
   //do stuff here
@@ -90,4 +90,3 @@ socket.on("INSTANCE#CONSOLE", event => {
   //do stuff here
 })
 ```
-

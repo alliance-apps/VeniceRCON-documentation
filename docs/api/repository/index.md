@@ -13,21 +13,6 @@
 {{ route(
   method = "POST",
   path = "/api/repository",
-  description = "use and consume a login token in order to gain access to an additional instance",
-  loggedIn = True,
-  response = {
-    "token": "string"
-  },
-  body = {
-    "username": "string",
-    "password": "string",
-    "token": "string"
-  }
-) }}
-
-{{ route(
-  method = "POST",
-  path = "/api/repository",
   description = "adds a new repository",
   loggedIn = True,
   scopes = ["REPOSITORY#CREATE"],

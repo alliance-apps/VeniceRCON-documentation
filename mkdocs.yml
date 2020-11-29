@@ -33,6 +33,7 @@ nav:
     - FAQ: general/faq.md
     - Proxy: general/proxy.md
   - Socket:
+    - General: general/socket/index.md
     - Instance: general/socket/instance.md
     - Self: general/socket/self.md
   - Plugins:
