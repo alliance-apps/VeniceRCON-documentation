@@ -53,3 +53,57 @@
     "token": "string"
   }
 ) }}
+
+{{ route(
+  method = "POST",
+  path = "/api/auth/update-password",
+  description = "updates the current users password",
+  loggedIn = True,
+  body = {
+    "oldPassword": "string",
+    "newPassword": "string"
+  }
+) }}
+
+{{ route(
+  method = "POST",
+  path = "/api/auth/search-player",
+  description = "searches for a specific player, either by guid or name, or combined",
+  loggedIn = True,
+  body = {
+    "guid?": "string",
+    "name?": "string"
+  },
+  responseText = "collected player from this instance",
+  response = parse_schema(schemas.DatabasePlayers)
+) }}
+
+
+{{ route(
+  method = "GET",
+  path = "/api/auth/binding",
+  description = "lists bound players for your current token",
+  loggedIn = True,
+  responseText = "retrieves all player bindings for this user",
+  response = parse_schema(schemas.DatabasePlayers)
+) }}
+
+{{ route(
+  method = "POST",
+  path = "/api/auth/binding",
+  description = "creates a binding between your token and player",
+  loggedIn = True,
+  body = {
+    "playerId": 0
+  }
+) }}
+
+{{ route(
+  method = "DELETE",
+  path = "/api/auth/binding",
+  description = "removes a binding between your token and player",
+  loggedIn = True,
+  body = {
+    "playerId": 0
+  }
+) }}

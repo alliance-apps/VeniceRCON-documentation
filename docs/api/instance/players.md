@@ -11,20 +11,6 @@
 ) }}
 
 {{ route(
-  method = "POST",
-  path = "/api/instances/{instanceId}/players/search",
-  scopes = ["INSTANCE#ACCESS"],
-  description = "searches for a specific player, either by guid or name, or combined",
-  loggedIn = True,
-  body = {
-    "guid?": "string",
-    "name?": "string"
-  },
-  responseText = "collected player from this instance",
-  response = parse_schema(schemas.DatabasePlayers)
-) }}
-
-{{ route(
   method = "GET",
   path = "/api/instances/{instanceId}/players/{guid}",
   scopes = ["INSTANCEUSER#ACCESS"],
