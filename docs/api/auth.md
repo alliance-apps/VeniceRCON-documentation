@@ -56,12 +56,13 @@
 
 {{ route(
   method = "POST",
-  path = "/api/auth/update-password",
-  description = "updates the current users password",
+  path = "/api/auth/update-self",
+  description = "updates the current users password and email (if newEmail is null then it will get deleted",
   loggedIn = True,
   body = {
-    "oldPassword": "string",
-    "newPassword": "string"
+    "currentPassword": "string",
+    "newPassword?": "string",
+    "newEmail?": "string|null",
   }
 ) }}
 
