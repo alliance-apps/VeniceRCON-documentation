@@ -972,20 +972,21 @@
 </div>
 </div>
 </details>
-<details class="done"><summary>POST /api/auth/update-password <img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /></summary><p>updates the current users password</p>
+<details class="done"><summary>POST /api/auth/update-self <img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /></summary><p>updates the current users password and email (if newEmail is null then it will get deleted</p>
 <div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">JavaScript</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>  <span class="kr">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;node-fetch&quot;</span><span class="p">)</span>
   <span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
 
-  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/auth/update-password&quot;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/auth/update-self&quot;</span><span class="p">,</span> <span class="p">{</span>
     <span class="nx">method</span><span class="o">:</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span>
     <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
       <span class="nx">Authorization</span><span class="o">:</span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
       <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span><span class="s2">&quot;application/json&quot;</span>
     <span class="p">},</span>
     <span class="nx">body</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;oldPassword&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;newPassword&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span>
+      <span class="s2">&quot;currentPassword&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;newPassword?&quot;</span><span class="o">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;newEmail?&quot;</span><span class="o">:</span> <span class="s2">&quot;string|null&quot;</span>
     <span class="p">}</span>
   <span class="p">})</span>
 </code></pre></div>
@@ -995,13 +996,14 @@
   <span class="n">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
 
   <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/api/auth/update-password&quot;</span><span class="p">,</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/api/auth/update-self&quot;</span><span class="p">,</span>
     <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
       <span class="n">Authorization</span><span class="p">:</span><span class="s2">&quot;Bearer </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">token</span><span class="p">,</span><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="s2">&quot;application/json&quot;</span>
     <span class="p">}</span>
     <span class="n">body</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">&quot;oldPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;newPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
+      <span class="s2">&quot;currentPassword&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;newPassword?&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;newEmail?&quot;</span><span class="p">:</span> <span class="s2">&quot;string|null&quot;</span>
     <span class="p">}</span>
 
   <span class="p">)</span>
