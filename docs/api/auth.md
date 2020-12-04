@@ -56,13 +56,23 @@
 
 {{ route(
   method = "POST",
+  path = "/api/auth/forgot-password",
+  description = "sends a new password to the provided mail address if smtp has been setup",
+  loggedIn = False,
+  body = {
+    "email": "string"
+  }
+) }}
+
+{{ route(
+  method = "POST",
   path = "/api/auth/update-self",
   description = "updates the current users password and email (if newEmail is null then it will get deleted",
   loggedIn = True,
   body = {
     "currentPassword": "string",
-    "newPassword?": "string",
-    "newEmail?": "string|null",
+    "password?": "string",
+    "email?": "string|null",
   }
 ) }}
 
