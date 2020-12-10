@@ -4,11 +4,7 @@
      <lastmod>2020-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://alliance-apps.github.io/VeniceRCON-documentation/general/scopes/</loc>
-     <lastmod>2020-12-10</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://alliance-apps.github.io/VeniceRCON-documentation/general/variables/</loc>
+     <loc>https://alliance-apps.github.io/VeniceRCON-documentation/general/configuration/</loc>
      <lastmod>2020-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -20,15 +16,11 @@
      <lastmod>2020-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://alliance-apps.github.io/VeniceRCON-documentation/general/socket/</loc>
+     <loc>https://alliance-apps.github.io/VeniceRCON-documentation/general/advanced/scopes/</loc>
      <lastmod>2020-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://alliance-apps.github.io/VeniceRCON-documentation/general/socket/instance/</loc>
-     <lastmod>2020-12-10</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://alliance-apps.github.io/VeniceRCON-documentation/general/socket/self/</loc>
+     <loc>https://alliance-apps.github.io/VeniceRCON-documentation/general/advanced/variables/</loc>
      <lastmod>2020-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -53,6 +45,30 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://alliance-apps.github.io/VeniceRCON-documentation/general/plugin/types/PluginRouter/</loc>
+     <lastmod>2020-12-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://alliance-apps.github.io/VeniceRCON-documentation/general/plugin/types/PluginStore/</loc>
+     <lastmod>2020-12-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://alliance-apps.github.io/VeniceRCON-documentation/general/plugin/types/Engine/</loc>
+     <lastmod>2020-12-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://alliance-apps.github.io/VeniceRCON-documentation/general/socket/</loc>
+     <lastmod>2020-12-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://alliance-apps.github.io/VeniceRCON-documentation/general/socket/instance/</loc>
+     <lastmod>2020-12-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://alliance-apps.github.io/VeniceRCON-documentation/general/socket/self/</loc>
+     <lastmod>2020-12-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://alliance-apps.github.io/VeniceRCON-documentation/api/</loc>
      <lastmod>2020-12-10</lastmod>
      <changefreq>daily</changefreq>
     </url><url>

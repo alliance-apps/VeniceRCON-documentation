@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://alliance-apps.github.io/VeniceRCON-documentation/general/variables/">
+        <link rel="canonical" href="https://alliance-apps.github.io/VeniceRCON-documentation/general/configuration/">
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
@@ -16,7 +16,7 @@
     
     
       
-        <title>Variables - VeniceRCON</title>
+        <title>Configuration - VeniceRCON</title>
       
     
     
@@ -86,7 +86,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Variables
+              Configuration
             
           </span>
         </div>
@@ -173,8 +173,8 @@
     <li class="md-tabs__item">
       
       
-      <a href="../socket/" class="md-tabs__link">
-        Socket
+      <a href="../advanced/scopes/" class="md-tabs__link">
+        Advanced
       </a>
     </li>
   
@@ -199,7 +199,20 @@
     <li class="md-tabs__item">
       
       
-      <a href="../../api/auth/" class="md-tabs__link">
+      <a href="../socket/" class="md-tabs__link">
+        Socket
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+      <a href="../../api/" class="md-tabs__link">
         /api
       </a>
     </li>
@@ -284,18 +297,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../scopes/" class="md-nav__link">
-      Permissions
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -305,7 +306,7 @@
     
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      Variables
+      Configuration
     </a>
     
   </li>
@@ -349,13 +350,13 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
     <label class="md-nav__link" for="nav-2">
-      Socket
+      Advanced
       <span class="md-nav__icon md-icon"></span>
     </label>
-    <nav class="md-nav" aria-label="Socket" data-md-level="1">
+    <nav class="md-nav" aria-label="Advanced" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         <span class="md-nav__icon md-icon"></span>
-        Socket
+        Advanced
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -366,8 +367,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../socket/" class="md-nav__link">
-      General
+    <a href="../advanced/scopes/" class="md-nav__link">
+      Permissions
     </a>
   </li>
 
@@ -378,20 +379,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../socket/instance/" class="md-nav__link">
-      Instance
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../socket/self/" class="md-nav__link">
-      Self
+    <a href="../advanced/variables/" class="md-nav__link">
+      Variables
     </a>
   </li>
 
@@ -513,6 +502,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../plugin/types/PluginStore/" class="md-nav__link">
+      PluginStore
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../plugin/types/Engine/" class="md-nav__link">
+      Engine
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -532,16 +545,89 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     <label class="md-nav__link" for="nav-4">
+      Socket
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Socket" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Socket
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../socket/" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../socket/instance/" class="md-nav__link">
+      Instance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../socket/self/" class="md-nav__link">
+      Self
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    <label class="md-nav__link" for="nav-5">
       /api
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="/api" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         <span class="md-nav__icon md-icon"></span>
         /api
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/" class="md-nav__link">
+      General
+    </a>
+  </li>
+
         
           
           
@@ -740,340 +826,87 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/alliance-apps/VeniceRCON-documentation/edit/master/docs/general/variables.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/alliance-apps/VeniceRCON-documentation/edit/master/docs/general/configuration.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Variables</h1>
+                  <h1>Configuration</h1>
                 
-                <h2>Permission Scopes</h2>
-<p>Available <strong>Battlefield 3</strong> Variables are:</p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>renark</th>
-<th>type</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>serverName</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>string</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>autoBalance</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>friendlyFire</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>maxPlayers</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>serverDescription</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>string</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>serverMessage</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>string</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>killCam</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>miniMap</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>hud</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>3dSpotting</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>miniMapSpotting</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>nametag</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>3pCam</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>regenerateHealth</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>teamKillCountForKick</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>teamKillValueForKick</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>teamKillValueIncrease</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>teamKillValueDecreasePerSecond</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>teamKillKickForBan</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>idleTimeout</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>idleBanRounds</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>roundStartPlayerCount</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>roundRestartPlayerCount</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>roundLockdownCountdown</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>vehicleSpawnAllowed</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>vehicleSpawnDelay</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>soldierHealth</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>playerRespawnTime</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>playerManDownTime</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>bulletDamage</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>gameModeCounter</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>onlySquadLeaderSpawn</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>premiumStatus</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>ranked</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>boolean</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>unlockMode</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>number</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>gamePassword</code></td>
-<td><code>only unranked</code></td>
-<td><code>string</code></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>Available <strong>Venice Unleashed</strong> Variables are:</p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>renark</th>
-<th>type</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>DestructionEnabled</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>SuppressionMultiplier</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>DesertingAllowed</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>VehicleDisablingEnabled</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>HighPerformanceReplication</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>ServerBanner</code></td>
-<td><code>read&amp;write</code></td>
-<td><code>string</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>FrequencyMode</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>SpectatorCount</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>SunFlareEnabled</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>ColorCorrectionEnabled</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>TimeScale</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>SquadSize</code></td>
-<td><code>read&amp;write</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>FadeOutAll</code></td>
-<td><code>write only</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>FadeInAll</code></td>
-<td><code>write only</code></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+                <p>The base configuration for your current release can always be seen inside <code>config.default.yaml</code>.
+You should copy this file to <code>config.yaml</code> after installation</p>
+<h4>config.yaml</h4>
+<div class="highlight"><pre><span></span><code><span class="nt">database</span><span class="p">:</span>
+  <span class="c1">#this is a string and can either be &quot;sqlite&quot;, &quot;mariadb&quot;, &quot;postgres&quot;</span>
+  <span class="nt">use</span><span class="p">:</span> <span class="s">&quot;sqlite&quot;</span>
+  <span class="c1">#see https://github.com/typeorm/typeorm/blob/master/docs/connection-options.md for details</span>
+  <span class="c1">#depending on what database you are using you can choose between those 3 presets</span>
+  <span class="c1">#for performance reasons sqlite is only recommended if you intend to run maximum of 5 instances</span>
+  <span class="nt">sqlite</span><span class="p">:</span>
+    <span class="nt">database</span><span class="p">:</span> <span class="s">&quot;./rcon.db&quot;</span>
+  <span class="nt">mariadb</span><span class="p">:</span>
+    <span class="nt">host</span><span class="p">:</span> <span class="s">&quot;127.0.0.1&quot;</span>
+    <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3306</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+    <span class="nt">database</span><span class="p">:</span> <span class="s">&quot;battlefield&quot;</span>
+  <span class="nt">postgres</span><span class="p">:</span>
+    <span class="nt">host</span><span class="p">:</span> <span class="s">&quot;127.0.0.1&quot;</span>
+    <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5432</span>
+    <span class="nt">username</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+    <span class="nt">password</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+    <span class="nt">database</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+<span class="nt">logging</span><span class="p">:</span>
+  <span class="c1">#enable logging of query messages normally not needed for end users</span>
+  <span class="nt">orm</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="c1">#loglevel to use available options are &quot;verbose&quot;|&quot;info&quot;|&quot;warn&quot;|&quot;error&quot;</span>
+  <span class="c1">#&quot;verbose&quot;: debug mode, logs everything</span>
+  <span class="c1">#&quot;info&quot;: all informational messages and above</span>
+  <span class="c1">#&quot;warn&quot;: warning messages and above (which are not that bad)</span>
+  <span class="c1">#&quot;error&quot;: only critical errors will be logged</span>
+  <span class="nt">level</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">info</span>
+<span class="nt">webserver</span><span class="p">:</span>
+  <span class="c1">#port which the webserver listens to dont set any lower than 1024!</span>
+  <span class="nt">listenport</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8000</span>
+  <span class="c1">#set this to true when application runs behind a proxy</span>
+  <span class="c1">#this will tell the webserver to use the &quot;X-Forwarded-For&quot;, &quot;X-Forwarded-Proto&quot;, ... headers</span>
+  <span class="nt">proxy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="c1">#enable pretty json output for development purposes</span>
+  <span class="nt">prettyJson</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="nt">jwt</span><span class="p">:</span>
+    <span class="c1">#maxmimum token age in days</span>
+    <span class="nt">maxAge</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">7</span>
+    <span class="c1">#time in days after a new token gets issued</span>
+    <span class="nt">sendRefresh</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+  <span class="c1">#set cors when requests comes from one of those domains</span>
+  <span class="c1">#can be helpful if you run the backend on a different domain than the frontend</span>
+  <span class="nt">cors</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="s">&quot;https://alliance-apps.github.io&quot;</span>
+<span class="nt">instance</span><span class="p">:</span>
+  <span class="c1">#default time in ms of how many updates get sent to the rcon server</span>
+  <span class="c1">#lower number means more messages will be sent to the battlefield/vu server and socket updates will be faster</span>
+  <span class="nt">syncInterval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5000</span>
+  <span class="nt">plugins</span><span class="p">:</span>
+    <span class="c1">#location of the directory to read plugins from</span>
+    <span class="nt">baseDir</span><span class="p">:</span> <span class="s">&quot;./plugins&quot;</span>
+<span class="c1">#smtp settings in order to send forgot-password requests</span>
+<span class="nt">smtp</span><span class="p">:</span>
+  <span class="c1">#enable this feature?</span>
+  <span class="nt">enable</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+  <span class="c1">#email address to send mails from</span>
+  <span class="nt">senderAddress</span><span class="p">:</span> <span class="s">&quot;foo@example.com&quot;</span>
+  <span class="c1">#connection options, for more informations see https://nodemailer.com/smtp/</span>
+  <span class="nt">options</span><span class="p">:</span>
+    <span class="nt">host</span><span class="p">:</span> <span class="s">&quot;smpt.example.com&quot;</span>
+    <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">587</span>
+    <span class="nt">auth</span><span class="p">:</span>
+      <span class="nt">user</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+      <span class="nt">pass</span><span class="p">:</span> <span class="s">&quot;&quot;</span>
+  <span class="nt">content</span><span class="p">:</span>
+    <span class="c1">#you can use wildcards  %username% and %password% for subject and text</span>
+    <span class="nt">subject</span><span class="p">:</span> <span class="s">&quot;Forgot</span><span class="nv"> </span><span class="s">Password</span><span class="nv"> </span><span class="s">request&quot;</span>
+    <span class="nt">text</span><span class="p">:</span> <span class="s">&quot;Hello</span><span class="nv"> </span><span class="s">%username%,</span><span class="nv"> </span><span class="s">your</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">password</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">%password%&quot;</span>
+</code></pre></div>
                 
               
               
@@ -1092,7 +925,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../scopes/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../installation/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1101,7 +934,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Permissions
+                Installation
               </div>
             </div>
           </a>
