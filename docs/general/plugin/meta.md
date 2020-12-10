@@ -9,7 +9,7 @@ name: "Test Plugin"
 description: "plugin to test the rcon plugin interface"
 #the version string for the plugin
 version: "1.0.0"
-#plugin language type currently only "JS" is supported
+#plugin backend (options: "BF3", "VU"), when "BF3" is chosen then it will run on Venice Unleashed Servers and Vanilla BF3 Servers
 backend: "BF3"
 #plugin entry point
 entry: "index.js"

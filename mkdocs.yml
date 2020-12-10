@@ -28,14 +28,12 @@ markdown_extensions:
 nav:
   - General:
     - Installation: general/installation.md
-    - Permissions: general/scopes.md
-    - Variables: general/variables.md
+    - Configuration: general/configuration.md
     - FAQ: general/faq.md
     - Proxy: general/proxy.md
-  - Socket:
-    - General: general/socket/index.md
-    - Instance: general/socket/instance.md
-    - Self: general/socket/self.md
+  - Advanced:
+    - Permissions: general/advanced/scopes.md
+    - Variables: general/advanced/variables.md
   - Plugins:
     - Overview: general/plugin/overview.md
     - Meta: general/plugin/meta.md
@@ -44,7 +42,14 @@ nav:
     - Types:
       - Logger: general/plugin/types/Logger.md
       - PluginRouter: general/plugin/types/PluginRouter.md
+      - PluginStore: general/plugin/types/PluginStore.md
+      - Engine: general/plugin/types/Engine.md
+  - Socket:
+    - General: general/socket/index.md
+    - Instance: general/socket/instance.md
+    - Self: general/socket/self.md
   - /api:
+    - General: api/index.md
     - /auth: api/auth.md
     - /repository: api/repository/index.md
     - /repository/{repositoryId}: api/repository/repository.md

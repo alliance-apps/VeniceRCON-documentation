@@ -19,8 +19,12 @@ There is a dedicated Folder for Plugins, in order to create a new Plugin simply 
 !!! info "meta.yaml"
     meta.yaml will hold the basic configurations of your plugin
 
+    More details about the file layoout can be found [here](./meta.md)
+
 !!! info "index.js"
     this is the entry point for your plugin and should export a single function
+
+    More details about the file layoout can be found [here](./script.md)
 
 # Developing Plugins
 

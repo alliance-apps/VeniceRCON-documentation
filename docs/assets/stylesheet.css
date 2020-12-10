@@ -1,7 +1,7 @@
-.md-content {
-  max-width: 100% !important;
+.md-sidebar {
+  width: auto !important;
 }
 
-.md-sidebar {
-  width: 15rem !important;
+.md-content {
+  max-width: auto !important;
 }
