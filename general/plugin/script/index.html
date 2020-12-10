@@ -879,6 +879,38 @@
   <span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;somename&quot;</span><span class="p">,</span> <span class="p">({</span> <span class="nx">next</span> <span class="p">})</span> <span class="o">-&gt;</span> <span class="nx">next</span><span class="p">({</span> <span class="nx">message</span><span class="o">:</span> <span class="s2">&quot;Hello from the plugin&quot;</span> <span class="p">}))</span>
 <span class="p">}</span>
 </code></pre></div>
+<h5>Custom Commands</h5>
+<p>Venice Unleashed might implement custom commands for rcon which are being provided by mods, in order to use non default commands you can do it with the <code>battlefield.createCommand</code> function:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">battlefield</span>
+  <span class="c1">//sends the command &quot;player.isAlive&quot; with a single argument</span>
+  <span class="c1">//consecutive arguments can be set by adding another argument to the </span>
+  <span class="c1">//createCommand function</span>
+  <span class="p">.</span><span class="nx">createCommand</span><span class="p">(</span><span class="s2">&quot;player.isAlive&quot;</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span>
+  <span class="c1">//this function sets how the response will be formatted</span>
+  <span class="c1">//by default this callback gets called with an array of &quot;Words&quot;</span>
+  <span class="c1">//when you do not expect a response you can omit this line</span>
+  <span class="c1">//documentation about a &quot;Word&quot; can be found here:</span>
+  <span class="c1">//https://multivit4min.github.io/vu-rcon/classes/word.html</span>
+  <span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">words</span> <span class="p">=&gt;</span> <span class="nx">words</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">toBoolean</span><span class="p">())</span>
+  <span class="c1">//this finally dispatches the command and sends it to the server</span>
+  <span class="c1">//this function returns a promise which gets resolved and has the</span>
+  <span class="c1">//response from the format callback</span>
+  <span class="p">.</span><span class="nx">send</span><span class="p">()</span>
+</code></pre></div>
+<h5>Custom Events</h5>
+<p>All Events which are not recognized by the query will be dispatched via the catchall event named <code>"event"</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//register an eventhandler with name &quot;event&quot;</span>
+<span class="nx">battlefield</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;event&quot;</span><span class="p">,</span> <span class="p">({</span> <span class="nx">event</span><span class="p">,</span> <span class="nx">words</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="cm">/* this logs the event name which has been called */</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span>
+  <span class="cm">/** </span>
+<span class="cm">    * this is an array of words</span>
+<span class="cm">    * documentation what properties a Word has can be found here: </span>
+<span class="cm">    * https://multivit4min.github.io/vu-rcon/classes/word.html</span>
+<span class="cm">    */</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre></div>
                 
               
               
