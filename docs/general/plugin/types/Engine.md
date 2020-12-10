@@ -9,6 +9,6 @@ export interface Engine {
    * it will only respond with data when the user has an account on vurcon
    * and connected his soldier with his vurcon account
    */
-  requestPlayerPermissions(guid: string): string[]
+  requestPlayerPermissions(guid: string): Promise<string[]>
 }
 ```

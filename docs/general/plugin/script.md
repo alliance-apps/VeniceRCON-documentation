@@ -8,7 +8,7 @@ These are the keys which you receive as first argument of your function callback
 name         | type
 -------------|----------
 config       | Object
-battlefield  | [Battlefield](https://github.com/Multivit4min/vu-rcon)
+battlefield  | [Battlefield](https://multivit4min.github.io/vu-rcon/)
 dependency   | Object
 logger       | [Logger](types/Logger.md)
 router       | [PluginRouter](types/PluginRouter.md)
