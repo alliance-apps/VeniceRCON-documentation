@@ -12,7 +12,7 @@
       
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6910b76c.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.19753c6b.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
@@ -773,8 +773,9 @@
 <p>There is a dedicated Folder for Plugins, in order to create a new Plugin simply create an additional sub folder and create 2 files with following structure</p>
 <div class="highlight"><pre><span></span><code>| root
 |-- plugins
-|---- 2 //the instance id of your server where you want to test plugins
-|------ your_plugin_name
+|---- dev //here you can put all plugins you want to install manually
+|---- :instanceid: //the instance id of your server where you want to test plugins
+|------ :uuid: //a generated uuid for your plugin
 |-------- meta.yaml
 |-------- index.js
 </code></pre></div>
@@ -786,6 +787,11 @@
 <p class="admonition-title">index.js</p>
 <p>this is the entry point for your plugin and should export a single function</p>
 </div>
+<h1 id="developing-plugins">Developing Plugins</h1>
+<p>In order to develop Plugins you can create a folder inside your <code>plugins</code> folder and call it <code>dev</code> inside this folder you can create a new folder in which your plugin resides</p>
+<p>You then can download the plugin normally via your Instances Plugin page!
+(You might need to do a reload after creating your new plugin)</p>
+<p>In order to update the plugin to your instance you just "redownload" it</p>
 <h1 id="publishing">Publishing</h1>
 <p>If you want other people to be able to use your rcon plugin you can let them install it via a repository, for this you will need to put your plugin into a github repository and provide the commit string and github repository url to a repository provider like <a href="https://github.com/Multivit4min/vu-plugin-repo">this one</a></p>
 <h2>Limitations</h2>
@@ -856,8 +862,8 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/vendor.fd16492e.min.js"></script>
-      <script src="../../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({

@@ -17,6 +17,7 @@ Plugin:
       type: string
     store:
       type: string
+      nullable: true
     name:
       type: string
     state:
@@ -57,8 +58,6 @@ StoreItems:
 StoreItem:
   type: object
   properties:
-    store:
-      type: string
     name:
       type: string
     description:
