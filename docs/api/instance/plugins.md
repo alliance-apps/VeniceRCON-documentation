@@ -57,9 +57,9 @@
 
 {{ route(
   method = "POST",
-  path = "/api/instances/{instanceId}/plugins/store/{storeName}/{pluginName}",
+  path = "/api/instances/{instanceId}/plugins/store/{uuid}",
   scopes = ["PLUGIN#CREATE"],
-  description = "downloads a plugin to the instance plugin folder",
+  description = "downloads a plugin to the instance plugin folder, this route can also be used to update a plugin",
   loggedIn = True,
   response = {}
 ) }}

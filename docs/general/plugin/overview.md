@@ -9,8 +9,9 @@ There is a dedicated Folder for Plugins, in order to create a new Plugin simply 
 ```
 | root
 |-- plugins
-|---- 2 //the instance id of your server where you want to test plugins
-|------ your_plugin_name
+|---- dev //here you can put all plugins you want to install manually
+|---- :instanceid: //the instance id of your server where you want to test plugins
+|------ :uuid: //a generated uuid for your plugin
 |-------- meta.yaml
 |-------- index.js
 ```
@@ -20,6 +21,17 @@ There is a dedicated Folder for Plugins, in order to create a new Plugin simply 
 
 !!! info "index.js"
     this is the entry point for your plugin and should export a single function
+
+# Developing Plugins
+
+In order to develop Plugins you can create a folder inside your `plugins` folder and call it `dev` inside this folder you can create a new folder in which your plugin resides
+
+You then can download the plugin normally via your Instances Plugin page!
+(You might need to do a reload after creating your new plugin)
+
+In order to update the plugin to your instance you just "redownload" it
+
+
 
 # Publishing
 
