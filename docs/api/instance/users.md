@@ -55,7 +55,6 @@
   description = "updates permissions from a user for this instance",
   loggedIn = True,
   body = {
-    "add?": ["SCOPES"],
-    "remove?": ["SCOPES"]
+    "scopes": ["SCOPES"]
   }
 ) }}
