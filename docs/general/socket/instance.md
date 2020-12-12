@@ -83,6 +83,7 @@ socket.on("INSTANCE#LOG", event => {
 ```javascript
 /**
  * the received / sent console events
+ * in order to enable this event please check documentation under SELF#CMD_FEATURE
  * @property {object} event
  * @property {object[]} event.messages messages which has been sent/received
  */
