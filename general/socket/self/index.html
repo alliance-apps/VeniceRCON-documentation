@@ -841,6 +841,25 @@
   <span class="c1">//get new permissions via /api/auth/whoami</span>
 <span class="p">})</span>
 </code></pre></div>
+<h3>SELF#CMD_FEATURE</h3>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * this enables a specific feature for this socket connection</span>
+<span class="cm"> */</span>
+
+
+<span class="cm">/** this payload enables to get raw console commands to be received */</span>
+<span class="kr">const</span> <span class="nx">payload</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="c1">//the instanceid for which console commands should be enabled</span>
+  <span class="nx">id</span><span class="o">:</span> <span class="mf">123</span><span class="p">,</span>
+  <span class="c1">//this is a constant</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;raw&quot;</span><span class="p">,</span>
+  <span class="c1">//if set to false it will disable the feature after having it set to true</span>
+  <span class="nx">set</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+
+
+<span class="nx">socket</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;SELF#CMD_FEATURE&quot;</span><span class="p">,</span> <span class="nx">payload</span><span class="p">)</span>
+</code></pre></div>
                 
               
               
