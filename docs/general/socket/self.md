@@ -20,7 +20,7 @@ socket.on("SELF#PERMISSION_UPDATE", () => {
 /** this payload enables to get raw console commands to be received */
 const payload = {
   //the instanceid for which console commands should be enabled
-  id: 123,
+  instance: 123,
   //this is a constant
   name: "raw",
   //if set to false it will disable the feature after having it set to true

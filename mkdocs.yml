@@ -66,12 +66,7 @@ nav:
     - /instance/{instanceId}/mods: api/instance/mods.md
     - /instance/{instanceId}/logs: api/instance/logs.md
 extra:
-  current_release_version: "0.0.1"
-  supported_node_versions:
-    - 12
-    - 13
-    - 14
-    - 15
+  current_release_version: "0.1.1"
   backend_repo_url: https://github.com/alliance-apps/VeniceRCON-backend
   api:
     schema_path: docs/api/schemas

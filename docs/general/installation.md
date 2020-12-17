@@ -13,36 +13,33 @@ Currently supported is:
 
 ### Installation
 
-In order to install VeniceRCON you will need to have NodeJS and npm preinstalled on your server.
-If you use sqlite as database then the node version matters otherwise it does not. You can find out your installed node version with `node -v`
+In order to install VeniceRCON you will need to have NodeJS (version >= 12) and npm preinstalled on your server.
 
-{% for version in supported_node_versions %}
-=== "Node v{{version}}"
+```bash
+# download your release
+curl -OL https://github.com/alliance-apps/VeniceRCON/releases/download/{{current_release_version}}/venicercon-{{current_release_version}}.tar.gz
 
-    ```bash
-    # download your release
-    curl -OL https://github.com/alliance-apps/VeniceRCON-backend/releases/download/{{current_release_version}}/venicercon-node-{{version}}-{{current_release_version}}.tar.gz
+# unpack the files
+tar -xvf venicercon-{{current_release_version}}.tar.gz
 
-    # unpack the files
-    tar -xvf venicercon-node-{{version}}-{{current_release_version}}.tar.gz
-    
-    # rename the folder
-    mv venicercon-{{current_release_version}} venicercon
+# rename the folder
+mv venicercon-{{current_release_version}} venicercon
 
-    # switch into the downloaded folder
-    cd venicercon
+# switch into the downloaded folder
+cd venicercon
 
-    # copy the default config.default.yaml to config.yaml
-    cp config.default.yaml config.yaml
+# install dependencies via npm
+npm ci --only=prod
 
-    # edit the configuration to your needs
-    nano config.yaml
+# copy the default config.default.yaml to config.yaml
+cp config.default.yaml config.yaml
 
-    #start the tool
-    npm start
-    ```
+# edit the configuration to your needs
+nano config.yaml
 
-{% endfor %}
+#start the tool
+npm start
+```
 
 
 ### Development
