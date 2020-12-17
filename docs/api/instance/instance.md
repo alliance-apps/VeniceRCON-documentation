@@ -11,6 +11,19 @@
 ) }}
 
 {{ route(
+  method = "PATCH",
+  path = "/api/instance/{instanceId}",
+  scopes = ["INSTANCE#UPDATE"],
+  description = "modifies connection details to the battlefield server",
+  loggedIn = True,
+  body = {
+    "host": "string",
+    "port": "number",
+    "password": "string"
+  }
+) }}
+
+{{ route(
   method = "DELETE",
   path = "/api/instance/{instanceId}",
   scopes = ["INSTANCE#DELETE"],
