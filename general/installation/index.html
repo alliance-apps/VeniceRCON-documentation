@@ -846,20 +846,21 @@
 <li>Sqlite</li>
 </ul>
 <h3>Installation</h3>
-<p>In order to install VeniceRCON you will need to have NodeJS and npm preinstalled on your server.
-If you use sqlite as database then the node version matters otherwise it does not. You can find out your installed node version with <code>node -v</code></p>
-<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Node v12</label><div class="tabbed-content">
+<p>In order to install VeniceRCON you will need to have NodeJS (version &gt;= 12) and npm preinstalled on your server.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># download your release</span>
-curl -OL https://github.com/alliance-apps/VeniceRCON-backend/releases/download/0.0.1/venicercon-node-12-0.0.1.tar.gz
+curl -OL https://github.com/alliance-apps/VeniceRCON/releases/download/0.1.1/venicercon-0.1.1.tar.gz
 
 <span class="c1"># unpack the files</span>
-tar -xvf venicercon-node-12-0.0.1.tar.gz
+tar -xvf venicercon-0.1.1.tar.gz
 
 <span class="c1"># rename the folder</span>
-mv venicercon-0.0.1 venicercon
+mv venicercon-0.1.1 venicercon
 
 <span class="c1"># switch into the downloaded folder</span>
 <span class="nb">cd</span> venicercon
+
+<span class="c1"># install dependencies via npm</span>
+npm ci --only<span class="o">=</span>prod
 
 <span class="c1"># copy the default config.default.yaml to config.yaml</span>
 cp config.default.yaml config.yaml
@@ -870,77 +871,6 @@ nano config.yaml
 <span class="c1">#start the tool</span>
 npm start
 </code></pre></div>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Node v13</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="c1"># download your release</span>
-curl -OL https://github.com/alliance-apps/VeniceRCON-backend/releases/download/0.0.1/venicercon-node-13-0.0.1.tar.gz
-
-<span class="c1"># unpack the files</span>
-tar -xvf venicercon-node-13-0.0.1.tar.gz
-
-<span class="c1"># rename the folder</span>
-mv venicercon-0.0.1 venicercon
-
-<span class="c1"># switch into the downloaded folder</span>
-<span class="nb">cd</span> venicercon
-
-<span class="c1"># copy the default config.default.yaml to config.yaml</span>
-cp config.default.yaml config.yaml
-
-<span class="c1"># edit the configuration to your needs</span>
-nano config.yaml
-
-<span class="c1">#start the tool</span>
-npm start
-</code></pre></div>
-</div>
-<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Node v14</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="c1"># download your release</span>
-curl -OL https://github.com/alliance-apps/VeniceRCON-backend/releases/download/0.0.1/venicercon-node-14-0.0.1.tar.gz
-
-<span class="c1"># unpack the files</span>
-tar -xvf venicercon-node-14-0.0.1.tar.gz
-
-<span class="c1"># rename the folder</span>
-mv venicercon-0.0.1 venicercon
-
-<span class="c1"># switch into the downloaded folder</span>
-<span class="nb">cd</span> venicercon
-
-<span class="c1"># copy the default config.default.yaml to config.yaml</span>
-cp config.default.yaml config.yaml
-
-<span class="c1"># edit the configuration to your needs</span>
-nano config.yaml
-
-<span class="c1">#start the tool</span>
-npm start
-</code></pre></div>
-</div>
-<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Node v15</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="c1"># download your release</span>
-curl -OL https://github.com/alliance-apps/VeniceRCON-backend/releases/download/0.0.1/venicercon-node-15-0.0.1.tar.gz
-
-<span class="c1"># unpack the files</span>
-tar -xvf venicercon-node-15-0.0.1.tar.gz
-
-<span class="c1"># rename the folder</span>
-mv venicercon-0.0.1 venicercon
-
-<span class="c1"># switch into the downloaded folder</span>
-<span class="nb">cd</span> venicercon
-
-<span class="c1"># copy the default config.default.yaml to config.yaml</span>
-cp config.default.yaml config.yaml
-
-<span class="c1"># edit the configuration to your needs</span>
-nano config.yaml
-
-<span class="c1">#start the tool</span>
-npm start
-</code></pre></div>
-</div>
-</div>
 <h3>Development</h3>
 <p>If you want to make changes or use the current repository from github you can simply clone the repository from github:</p>
 <p><code>git clone https://github.com/alliance-apps/VeniceRCON-backend</code></p>
