@@ -27,7 +27,10 @@
   description = "creates a new invite token for this instance",
   loggedIn = True,
   responseText = "retrieves the invite token for this instance",
-  response = parse_schema(schemas.InviteToken)
+  response = parse_schema(schemas.InviteToken),
+  body = {
+    "scopes": ["INSTANCE#ACCESS", "INSTANCE#UPDATE"]
+  }
 ) }}
 
 {{ route(
