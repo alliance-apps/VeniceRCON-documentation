@@ -5,3 +5,37 @@ UserShort:
       type: number
     username:
       type: string
+Users:
+  type: array
+  items:
+    $ref: "#/User"
+User:
+  type: object
+  properties:
+    id:
+      type: number
+    created:
+      type: string
+    modified:
+      type: string
+    username:
+      type: string
+    email:
+      type: string
+    permissions:
+      type: array
+      items:
+        $ref: "#/UserPermission"
+UserPermission:
+  type: object
+  properties:
+    id:
+      type: number
+    root:
+      type: boolean
+    instanceId:
+      type: number
+    scopes:
+      type: array
+      items:
+        type: string

@@ -52,19 +52,21 @@ nav:
     - General: api/index.md
     - /auth: api/auth.md
     - /repository: api/repository/index.md
-    - /repository/{repositoryId}: api/repository/repository.md
+    - /repository/:repositoryId: api/repository/repository.md
+    - /users: api/user/index.md
+    - /users/:userId: api/user/user.md
     - /instance: api/instance/index.md
-    - /instance/{instanceId}: api/instance/instance.md
-    - /instance/{instanceId}/users: api/instance/users.md
-    - /instance/{instanceId}/players: api/instance/players.md
-    - /instance/{instanceId}/bans: api/instance/bans.md
-    - /instance/{instanceId}/maps: api/instance/maps.md
-    - /instance/{instanceId}/reservedslot: api/instance/reservedslot.md
-    - /instance/{instanceId}/vars: api/instance/vars.md
-    - /instance/{instanceId}/events: api/instance/events.md
-    - /instance/{instanceId}/plugins: api/instance/plugins.md
-    - /instance/{instanceId}/mods: api/instance/mods.md
-    - /instance/{instanceId}/logs: api/instance/logs.md
+    - /instance/:instanceId: api/instance/instance.md
+    - /instance/:instanceId/users: api/instance/users.md
+    - /instance/:instanceId/players: api/instance/players.md
+    - /instance/:instanceId/bans: api/instance/bans.md
+    - /instance/:instanceId/maps: api/instance/maps.md
+    - /instance/:instanceId/reservedslot: api/instance/reservedslot.md
+    - /instance/:instanceId/vars: api/instance/vars.md
+    - /instance/:instanceId/events: api/instance/events.md
+    - /instance/:instanceId/plugins: api/instance/plugins.md
+    - /instance/:instanceId/mods: api/instance/mods.md
+    - /instance/:instanceId/logs: api/instance/logs.md
 extra:
   current_release_version: "0.1.1"
   backend_repo_url: https://github.com/alliance-apps/VeniceRCON-backend
