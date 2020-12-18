@@ -9,21 +9,20 @@ Currently supported is:
 
   * MariaDB
   * PostgreSQL
-  * Sqlite
+  * Sqlite (default)
 
 ### Installation
 
 In order to install VeniceRCON you will need to have NodeJS (version >= 12) and npm preinstalled on your server.
 
+It is recommended to use this tool with a process manager like (PM2)[https://pm2.keymetrics.io/]
+
 ```bash
 # download your release
-curl -OL https://github.com/alliance-apps/VeniceRCON/releases/download/{{current_release_version}}/venicercon-{{current_release_version}}.tar.gz
+curl -OL https://github.com/alliance-apps/VeniceRCON/releases/latest/download/venicercon.tar.gz
 
 # unpack the files
-tar -xvf venicercon-{{current_release_version}}.tar.gz
-
-# rename the folder
-mv venicercon-{{current_release_version}} venicercon
+tar -xvf venicercon.tar.gz
 
 # switch into the downloaded folder
 cd venicercon
@@ -32,10 +31,9 @@ cd venicercon
 npm ci --only=prod
 
 # copy the default config.default.yaml to config.yaml
+# by default this config can be used as is
+# and does not require further editing
 cp config.default.yaml config.yaml
-
-# edit the configuration to your needs
-nano config.yaml
 
 #start the tool
 npm start
@@ -51,7 +49,6 @@ If you want to make changes or use the current repository from github you can si
 Then install the required dependencies from the `package-lock.json` with following command (this should also be done after every `git pull`):
 
 `npm ci`
-
 
 Finally in order to be able to run it use:
 
