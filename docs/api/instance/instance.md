@@ -63,6 +63,18 @@
 ) }}
 
 {{ route(
+  method = "PATCH",
+  path = "/api/instance/{instanceId}/ticketcount",
+  scopes = ["PLAYER#TICKETS"],
+  description = "sets the tickets a team should have",
+  loggedIn = True,
+  body = {
+    "team": 0,
+    "count": 0,
+  }
+) }}
+
+{{ route(
   method = "POST",
   path = "/api/instance/{instanceId}/raw",
   scopes = ["INSTANCE#CONSOLE"],
