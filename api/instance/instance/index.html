@@ -1178,12 +1178,53 @@
 </div>
 </div>
 </details>
+<details class="warning"><summary>PATCH /api/instance/{instanceId}/ticketcount <img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /></summary><p>sets the tickets a team should have</p>
+<h4>Required Scopes:</h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> PLAYER#TICKETS</li>
+</ul>
+<div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">JavaScript</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>  <span class="kr">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;node-fetch&quot;</span><span class="p">)</span>
+  <span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
+
+  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;/api/instance/{instanceId}/ticketcount&quot;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">method</span><span class="o">:</span> <span class="s2">&quot;PATCH&quot;</span><span class="p">,</span>
+    <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">Authorization</span><span class="o">:</span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">token</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+      <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span><span class="s2">&quot;application/json&quot;</span>
+    <span class="p">},</span>
+    <span class="nx">body</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;team&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+      <span class="s2">&quot;count&quot;</span><span class="o">:</span> <span class="mf">0</span>
+    <span class="p">}</span>
+  <span class="p">})</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">Python</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>  <span class="kn">import</span> <span class="nn">requests</span>
+  <span class="n">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
+
+  <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;/api/instance/</span><span class="si">{instanceId}</span><span class="s2">/ticketcount&quot;</span><span class="p">,</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">Authorization</span><span class="p">:</span><span class="s2">&quot;Bearer </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">token</span><span class="p">,</span><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="s2">&quot;application/json&quot;</span>
+    <span class="p">}</span>
+    <span class="n">body</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;team&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">}</span>
+
+  <span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</details>
 <details class="done"><summary>POST /api/instance/{instanceId}/raw <img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /></summary><p>sends a raw command to the instance</p>
 <h4>Required Scopes:</h4>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> INSTANCE#CONSOLE</li>
 </ul>
-<div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">JavaScript</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">JavaScript</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>  <span class="kr">const</span> <span class="nx">fetch</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;node-fetch&quot;</span><span class="p">)</span>
   <span class="kr">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
 
@@ -1201,7 +1242,7 @@
   <span class="p">})</span>
 </code></pre></div>
 </div>
-<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">Python</label><div class="tabbed-content">
+<input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">Python</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>  <span class="kn">import</span> <span class="nn">requests</span>
   <span class="n">token</span> <span class="o">=</span> <span class="s2">&quot;_YOUR_JWT_TOKEN_&quot;</span>
 

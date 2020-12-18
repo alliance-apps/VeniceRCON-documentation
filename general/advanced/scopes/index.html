@@ -954,6 +954,11 @@
 <td>moves a player</td>
 </tr>
 <tr>
+<td><code>PLAYER#TICKETS</code></td>
+<td><code>0x10000000</code></td>
+<td>allows to set the team ticket counts</td>
+</tr>
+<tr>
 <td><code>MAP#SWITCH</code></td>
 <td><code>0x0100000000</code></td>
 <td>change map</td>
@@ -989,6 +994,16 @@
 <td>modify settings of plugins</td>
 </tr>
 <tr>
+<td><code>PLUGIN#CREATE</code></td>
+<td><code>0x01000000000000</code></td>
+<td>add a plugin</td>
+</tr>
+<tr>
+<td><code>PLUGIN#REMOVE</code></td>
+<td><code>0x02000000000000</code></td>
+<td>remove a plugin</td>
+</tr>
+<tr>
 <td><code>VARIABLE#MODIFY</code></td>
 <td><code>0x0200000000000000</code></td>
 <td>modify variables</td>
@@ -997,6 +1012,11 @@
 <td><code>EVENT#CHAT</code></td>
 <td><code>0x010000000000000000</code></td>
 <td>access chat events</td>
+</tr>
+<tr>
+<td><code>EVENT#KILL</code></td>
+<td><code>0x020000000000000000</code></td>
+<td>access kill events</td>
 </tr>
 <tr>
 <td><code>MOD#ACCESS</code></td>
@@ -1037,6 +1057,26 @@
 <td><code>REPOSITORY#REMOVE</code></td>
 <td><code>0x080000000000000000000</code></td>
 <td>delete a repository</td>
+</tr>
+<tr>
+<td><code>USER#ACCESS</code></td>
+<td><code>0x01000000000000000000000</code></td>
+<td>allows access to the administrative instance user managment</td>
+</tr>
+<tr>
+<td><code>USER#CREATE</code></td>
+<td><code>0x02000000000000000000000</code></td>
+<td>not used at this moment</td>
+</tr>
+<tr>
+<td><code>USER#REMOVE</code></td>
+<td><code>0x04000000000000000000000</code></td>
+<td>deletes user</td>
+</tr>
+<tr>
+<td><code>USER#MODIFY</code></td>
+<td><code>0x08000000000000000000000</code></td>
+<td>modify email, password and permissions of users</td>
 </tr>
 </tbody>
 </table>
