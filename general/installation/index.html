@@ -867,18 +867,16 @@
 <ul>
 <li>MariaDB</li>
 <li>PostgreSQL</li>
-<li>Sqlite</li>
+<li>Sqlite (default)</li>
 </ul>
 <h3>Installation</h3>
 <p>In order to install VeniceRCON you will need to have NodeJS (version &gt;= 12) and npm preinstalled on your server.</p>
+<p>It is recommended to use this tool with a process manager like (PM2)[https://pm2.keymetrics.io/]</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># download your release</span>
-curl -OL https://github.com/alliance-apps/VeniceRCON/releases/download/0.1.1/venicercon-0.1.1.tar.gz
+curl -OL https://github.com/alliance-apps/VeniceRCON/releases/latest/download/venicercon.tar.gz
 
 <span class="c1"># unpack the files</span>
-tar -xvf venicercon-0.1.1.tar.gz
-
-<span class="c1"># rename the folder</span>
-mv venicercon-0.1.1 venicercon
+tar -xvf venicercon.tar.gz
 
 <span class="c1"># switch into the downloaded folder</span>
 <span class="nb">cd</span> venicercon
@@ -887,10 +885,9 @@ mv venicercon-0.1.1 venicercon
 npm ci --only<span class="o">=</span>prod
 
 <span class="c1"># copy the default config.default.yaml to config.yaml</span>
+<span class="c1"># by default this config can be used as is</span>
+<span class="c1"># and does not require further editing</span>
 cp config.default.yaml config.yaml
-
-<span class="c1"># edit the configuration to your needs</span>
-nano config.yaml
 
 <span class="c1">#start the tool</span>
 npm start
