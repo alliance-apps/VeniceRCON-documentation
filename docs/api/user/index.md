@@ -15,7 +15,7 @@
   path = "/api/users",
   description = "gets informations about all available users",
   loggedIn = True,
-  scopes = ["USER#ACCESS"],
+  scopes = ["USER#CREATE"],
   responseText = "responds with all users in the database",
   response = parse_schema(schemas.User),
   body = {

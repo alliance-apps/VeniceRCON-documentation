@@ -44,6 +44,6 @@ Permission Scopes are being saved as a bitmask, their validity can be for only a
 | `REPOSITORY#CREATE`   | `0x040000000000000000000` | add a repository
 | `REPOSITORY#REMOVE`   | `0x080000000000000000000` | delete a repository
 | `USER#ACCESS`         | `0x01000000000000000000000` | allows access to the administrative instance user managment
-| `USER#CREATE`         | `0x02000000000000000000000` | not used at this moment
+| `USER#CREATE`         | `0x02000000000000000000000` | allows user creation
 | `USER#REMOVE`         | `0x04000000000000000000000` | deletes user
 | `USER#MODIFY`         | `0x08000000000000000000000` | modify email, password and permissions of users
