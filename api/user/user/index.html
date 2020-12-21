@@ -952,6 +952,28 @@
       <span class="s2">&quot;email?&quot;</span><span class="o">:</span> <span class="s2">&quot;string|null&quot;</span>
     <span class="p">}</span>
   <span class="p">})</span>
+
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+  <span class="cm">/* </span>
+<span class="cm">  {</span>
+<span class="cm">    &quot;id&quot;: 0,</span>
+<span class="cm">    &quot;created&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;modified&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;username&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;email&quot;: &quot;string&quot;,</span>
+<span class="cm">    &quot;permissions&quot;: [</span>
+<span class="cm">      {</span>
+<span class="cm">        &quot;id&quot;: 0,</span>
+<span class="cm">        &quot;root&quot;: false,</span>
+<span class="cm">        &quot;instanceId&quot;: 0,</span>
+<span class="cm">        &quot;scopes&quot;: [</span>
+<span class="cm">          &quot;string&quot;</span>
+<span class="cm">        ]</span>
+<span class="cm">      }</span>
+<span class="cm">    ]</span>
+<span class="cm">  }</span>
+<span class="cm">  */</span>
 </code></pre></div>
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Python</label><div class="tabbed-content">
@@ -969,6 +991,27 @@
     <span class="p">}</span>
 
   <span class="p">)</span>
+
+  <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  {</span>
+<span class="sd">    &quot;id&quot;: 0,</span>
+<span class="sd">    &quot;created&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;modified&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;username&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;email&quot;: &quot;string&quot;,</span>
+<span class="sd">    &quot;permissions&quot;: [</span>
+<span class="sd">      {</span>
+<span class="sd">        &quot;id&quot;: 0,</span>
+<span class="sd">        &quot;root&quot;: false,</span>
+<span class="sd">        &quot;instanceId&quot;: 0,</span>
+<span class="sd">        &quot;scopes&quot;: [</span>
+<span class="sd">          &quot;string&quot;</span>
+<span class="sd">        ]</span>
+<span class="sd">      }</span>
+<span class="sd">    ]</span>
+<span class="sd">  }</span>
+<span class="sd">  &quot;&quot;&quot;</span>
 </code></pre></div>
 </div>
 </div>
