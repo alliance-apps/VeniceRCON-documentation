@@ -16,6 +16,7 @@
   description = "modifies certain properties of a user",
   loggedIn = True,
   scopes = ["USER#MODIFY"],
+  response = parse_schema(schemas.User),
   body = {
     "password?": "string",
     "email?": "string|null"
