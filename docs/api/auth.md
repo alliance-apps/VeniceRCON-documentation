@@ -28,7 +28,7 @@
   method = "POST",
   path = "/api/auth/invite",
   description = "use and consume a login token in order to gain access to an additional instance",
-  loggedIn = True
+  loggedIn = True,
   body = {
     "token": "string"
   }
