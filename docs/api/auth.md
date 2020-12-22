@@ -28,13 +28,8 @@
   method = "POST",
   path = "/api/auth/invite",
   description = "use and consume a login token in order to gain access to an additional instance",
-  loggedIn = True,
-  response = {
-    "token": "string"
-  },
+  loggedIn = True
   body = {
-    "username": "string",
-    "password": "string",
     "token": "string"
   }
 ) }}
@@ -111,10 +106,7 @@
 
 {{ route(
   method = "DELETE",
-  path = "/api/auth/binding",
+  path = "/api/auth/binding/:id",
   description = "removes a binding between your token and player",
-  loggedIn = True,
-  body = {
-    "playerId": 0
-  }
+  loggedIn = True
 ) }}
