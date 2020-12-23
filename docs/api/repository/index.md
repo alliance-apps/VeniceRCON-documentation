@@ -16,5 +16,10 @@
   description = "adds a new repository",
   loggedIn = True,
   scopes = ["REPOSITORY#CREATE"],
-  response = parse_schema(schemas.Repository)
+  response = parse_schema(schemas.Repository),
+  body = {
+    "url": "string",
+    "branch?": "string",
+    "headers?": "string"
+  }
 ) }}

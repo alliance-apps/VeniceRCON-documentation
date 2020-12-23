@@ -40,9 +40,10 @@
   description = "sends a message to the player/team/squad",
   loggedIn = True,
   body = {
-    "teamId": 0,
-    "squadId": 0,
-    "kill": True
+    "subset": "squad|team|player",
+    "message": "string",
+    "yell?": "boolean",
+    "yellDuration?": "number"
   }
 ) }}
 

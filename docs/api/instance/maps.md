@@ -55,7 +55,7 @@
 ) }}
 
 {{ route(
-  method = "POST",
+  method = "GET",
   path = "/api/instances/{instanceId}/maps/{index}",
   scopes = ["INSTANCE#ACCESS"],
   description = "retrieves the map data from the current index",
