@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://alliance-apps.github.io/VeniceRCON-documentation/general/socket/instance/">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
     
     
       
@@ -948,7 +948,6 @@
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;got added to instance&quot;</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">serverinfo</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
 <span class="p">})</span>
 </code></pre></div>
-
 <h3>INSTANCE#UPDATE</h3>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * instance property has been changed inside the state</span>
@@ -960,7 +959,6 @@
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`received updates for instance with id </span><span class="si">${</span><span class="nx">event</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">changes</span><span class="p">)</span>
 <span class="p">})</span>
 </code></pre></div>
-
 <h3>INSTANCE#REMOVE</h3>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * removes instance, either permissions have been revoked or instance has been deleted</span>
@@ -971,7 +969,6 @@
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`removed from instance </span><span class="si">${</span><span class="nx">event</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
 <span class="p">})</span>
 </code></pre></div>
-
 <h3>INSTANCE#CHAT</h3>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * gets emitted when a chat event gets received from the server</span>
@@ -981,7 +978,6 @@
   <span class="c1">//do stuff here</span>
 <span class="p">})</span>
 </code></pre></div>
-
 <h3>INSTANCE#KILL</h3>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * gets emitted when a kill event gets received from the server</span>
@@ -991,7 +987,6 @@
   <span class="c1">//do stuff here</span>
 <span class="p">})</span>
 </code></pre></div>
-
 <h3>INSTANCE#LOG</h3>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * gets emitted when one or more log messages gets received</span>
@@ -1001,7 +996,6 @@
   <span class="c1">//do stuff here</span>
 <span class="p">})</span>
 </code></pre></div>
-
 <h3>INSTANCE#CONSOLE</h3>
 <div class="highlight"><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> * the received / sent console events</span>

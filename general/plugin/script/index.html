@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://alliance-apps.github.io/VeniceRCON-documentation/general/plugin/script/">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
     
     
       
@@ -983,7 +983,6 @@
   <span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;somename&quot;</span><span class="p">,</span> <span class="p">({</span> <span class="nx">next</span> <span class="p">})</span> <span class="o">-&gt;</span> <span class="nx">next</span><span class="p">({</span> <span class="nx">message</span><span class="o">:</span> <span class="s2">&quot;Hello from the plugin&quot;</span> <span class="p">}))</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <h5>Custom Commands</h5>
 <p>Venice Unleashed might implement custom commands for rcon which are being provided by mods, in order to use non default commands you can do it with the <code>battlefield.createCommand</code> function:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">battlefield</span>
@@ -1002,7 +1001,6 @@
   <span class="c1">//response from the format callback</span>
   <span class="p">.</span><span class="nx">send</span><span class="p">()</span>
 </code></pre></div>
-
 <h5>Custom Events</h5>
 <p>All Events which are not recognized by the query will be dispatched via the catchall event named <code>"event"</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">//register an eventhandler with name &quot;event&quot;</span>
