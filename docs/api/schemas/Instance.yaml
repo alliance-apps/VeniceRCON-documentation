@@ -11,6 +11,8 @@ Instance:
       type: string
     port:
       type: number
+    name:
+      type: string
     version:
       type: string
       enum:
