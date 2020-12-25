@@ -38,6 +38,8 @@ Meta:
       type: string
     version:
       type: string
+    author:
+      type: string
     backend:
       type: string
     entry:

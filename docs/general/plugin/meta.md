@@ -7,6 +7,8 @@ The plugins `meta.yaml` describes multiple properties of a plugin, currently it 
 name: "Test Plugin"
 #description of the plugin
 description: "plugin to test the rcon plugin interface"
+#author name
+author: "Multivitamin <david.kartnaller@gmail.com>"
 #the version string for the plugin
 version: "1.0.0"
 #plugin backend (options: "BF3", "VU"), when "BF3" is chosen then it will run on Venice Unleashed Servers and Vanilla BF3 Servers
