@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://alliance-apps.github.io/VeniceRCON-documentation/general/plugin/meta/">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.73f7c429.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.3b61ea93.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.39b8e14a.min.css">
@@ -951,6 +951,11 @@
 <span class="nt">backend</span><span class="p">:</span> <span class="s">&quot;BF3&quot;</span>
 <span class="c1">#plugin entry point</span>
 <span class="nt">entry</span><span class="p">:</span> <span class="s">&quot;index.js&quot;</span>
+<span class="c1">#dependencies which are mandatory for this plugin</span>
+<span class="nt">dependencies</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class="c1">#require other dependencies</span>
+<span class="nt">optionalDependencies</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Other Plugin</span>
 <span class="nt">vars</span><span class="p">:</span>
     <span class="c1">#arbitary key to identify the config entry in the config object</span>
   <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="s">&quot;foo&quot;</span>
@@ -1052,6 +1057,9 @@ It enables fields based on certain conditions</p>
 <p><code>baz</code> equals <code>"optionA"</code> <strong>AND</strong> <code>bar</code> equals <code>true</code></p>
 <p><strong>OR</strong></p>
 <p><code>baz</code> equals <code>"optionB"</code></p>
+<h2>Dependencies</h2>
+<p>Plugins can have <strong>dependencies</strong>  and <strong>optionalDependencies</strong> those can be defined in the top section of the plugin config, these dependencies must be installed beforehand.</p>
+<p>Those dependencies are identified by the plugin meta.yaml name. The difference between <strong>dependencies</strong>  and <strong>optionalDependencies</strong> is that if a dependency defined under <strong>dependencies</strong> has not been found the plugin itself then wont start, where a dependency under <strong>optionalDependencies</strong> will start regardless</p>
                 
               
               
