@@ -942,10 +942,12 @@
                 <h2>PluginStore</h2>
 <p>a store to save simple data in order to persist over plugin restarts</p>
 <div class="highlight"><pre><span></span><code><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">PluginStore</span> <span class="p">{</span>
-  <span class="cm">/** saves data to the store which can be retrieved via .get */</span>
-  <span class="nx">save</span><span class="p">(</span><span class="nx">key</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">value</span>: <span class="kt">any</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span>
+  <span class="cm">/** sets data to the store which can be retrieved via .get */</span>
+  <span class="nx">set</span><span class="p">(</span><span class="nx">key</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">value</span>: <span class="kt">any</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span>
   <span class="cm">/** retrieves data by a certain key which has been set via the .save function */</span>
   <span class="nx">get</span><span class="p">(</span><span class="nx">key</span>: <span class="kt">string</span><span class="p">)</span><span class="o">:</span> <span class="nx">any</span>
+  <span class="cm">/** resets the store */</span>
+  <span class="nx">clear</span><span class="p">()</span><span class="o">:</span> <span class="k">void</span>
 <span class="p">}</span>
 </code></pre></div>
                 
