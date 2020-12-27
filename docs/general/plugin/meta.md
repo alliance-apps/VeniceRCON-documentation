@@ -16,9 +16,9 @@ backend: "BF3"
 #plugin entry point
 entry: "index.js"
 #dependencies which are mandatory for this plugin
-dependencies: []
+dependency: []
 #require other dependencies
-optionalDependencies:
+optionalDependency:
   - Other Plugin
 vars:
     #arbitary key to identify the config entry in the config object
@@ -94,6 +94,6 @@ Field `foo` will only be displayed when:
 
 ## Dependencies
 
-Plugins can have **dependencies**  and **optionalDependencies** those can be defined in the top section of the plugin config, these dependencies must be installed beforehand.
+Plugins can have **dependency**  and **optionalDependency** those can be defined in the top section of the plugin config, these dependencies must be installed beforehand.
 
-Those dependencies are identified by the plugin meta.yaml name. The difference between **dependencies**  and **optionalDependencies** is that if a dependency defined under **dependencies** has not been found the plugin itself then wont start, where a dependency under **optionalDependencies** will start regardless
+Those dependencies are identified by the plugin meta.yaml name. The difference between **dependency**  and **optionalDependency** is that if a dependency defined under **dependency** has not been found the plugin itself then wont start, where a dependency under **optionalDependency** will start regardless
