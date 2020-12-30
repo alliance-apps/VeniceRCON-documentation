@@ -9,31 +9,27 @@ RepositoryPluginItem:
       type: string
     description:
       type: string
-    uuid:
-      type: string
     version:
+      type: string
+    author:
+      type: string
+    uuid:
       type: string
 Repository:
   type: object
   properties:
+    type:
+      type: string
+      enum: ["DEV", "GITHUB"]
     id:
       type: number
     created:
       type: string
     modified:
       type: string
-    url:
-      type: string
-    branch:
-      type: string
-    headers:
-      type: string
-    enabled:
-      type: boolean
-    reloadTime:
-      type: number
-    repositoryUrl:
-      type: string
+    options:
+      type: object
+      properties: {}
     plugins:
       type: array
       items:
