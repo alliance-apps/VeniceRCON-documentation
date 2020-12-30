@@ -66,6 +66,10 @@ StoreItem:
       type: string
     version:
       type: string
+    author:
+      type: string
+    type:
+      type: string
     uuid:
       type: string
 PluginVariables:
