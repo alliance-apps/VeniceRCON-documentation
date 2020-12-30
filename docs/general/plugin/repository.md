@@ -10,38 +10,19 @@ At the moment there is a single key named `plugins` which is an array with follo
 
 field       | type   | description
 ------------|--------|-------------------------------------------------------------
-name        | string | arbitary plugin name under which the plugin gets identified
-description | string | a brief description of what the plugin does
-version     | string | a semantic version string of the plugin version
-repository  | string | a github url to the repository of the plugins source code
+username    | string | github username
+repository  | string | repository of the user
 commit      | string | the commit which should be downloaded
 
 An example would look like:
 ```yaml
 plugins:
-  - name: "showcase"
-    description: "simple showcase plugin"
-    version: "1.0.0"
-    repository: "https://github.com/Multivit4min/VeniceRCON-showcase-plugin"
-    commit: "57edeb66196e0c4fdf9c1e475965a9c8404219cc"
-  - name: "other_arbitary_plugin"
-    description: "arbitary non existing plugin"
-    version: "2.5.1"
-    repository: "https://github.com/doesnotexist/thisneither"
-    commit: "123456789abcdefghijklmnopqrstuvwxyz123456"
+  - username: "Multivit4min"
+    repository: "VeniceRCON-showcase-plugin"
+    commit: "476b6fdadfaf35431fcdeec0bc4cba73e0135328"
+  - username: "Multivit4min"
+    repository: "VeniceRCON-metrics-plugin"
+    commit: "476b6fdadfaf35431fcdeec0bc4cba73e0135328"
 ```
 
-Inside your VENICERCON config you add this repository to the path: `instance.plugins.repos`
-
-This should look like following: 
-```yaml
-instance:
-  plugins:
-    repos:
-      - name: "main"
-        repository: "https://github.com/Multivit4min/vu-plugin-repo/"
-```
-
-**name** this is the arbitary name to identify your plugin provider repository so it is possible to identify where to get updates for a specific plugin from
-
-**repository** this is the general to the repository which should contain the repository.yaml
+You can add this repository via webinterface to your instance
