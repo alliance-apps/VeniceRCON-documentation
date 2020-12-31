@@ -942,6 +942,8 @@
                 <h2>Engine</h2>
 <p>Internal useable functions for vurcon related data</p>
 <div class="highlight"><pre><span></span><code><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">Engine</span> <span class="p">{</span>
+  <span class="cm">/** this event gets emitted when frontend got variable changes */</span>
+  <span class="nx">on</span><span class="p">(</span><span class="nx">event</span><span class="o">:</span> <span class="s2">&quot;varsChanged&quot;</span><span class="p">,</span> <span class="nx">callback</span><span class="o">:</span> <span class="p">(</span><span class="nx">data</span>: <span class="kt">VarsChangedEventProps</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">void</span><span class="p">)</span><span class="o">:</span> <span class="k">this</span>
   <span class="cm">/** </span>
 <span class="cm">   * this will respond with a string of permissions a guid might have</span>
 <span class="cm">   * it will only respond with data when the user has an account on vurcon</span>
