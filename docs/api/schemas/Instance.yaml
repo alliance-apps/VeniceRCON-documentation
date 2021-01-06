@@ -13,9 +13,7 @@ Instance:
       type: number
     name:
       type: string
-    fpsLast:
-      type: number
-    load:
+    fps:
       type: array
       items:
         type: string
